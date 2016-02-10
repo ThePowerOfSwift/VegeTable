@@ -1,4 +1,4 @@
 # VegeTable
-Ever found yourself walking about like a lug in de forest, you wana eat the berries right? Welcome to VegeTable, the fruit and vegetable identification app for anyone in the grocery store to the wilderness. :evergreen_tree: :deciduous_tree:
+Ever been in the grocery store unsure whether or not to buy one vegetable or another? Welcome to VegeTable, the fruit and vegetable identification tool. We promise to keep you informed and educated about what you and your family eat. :evergreen_tree: :deciduous_tree:
 
 
