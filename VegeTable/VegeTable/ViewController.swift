@@ -26,6 +26,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       let picker = UIImagePickerController()
       
       picker.delegate = self
+      //implement isSourceTypeAvailable to make sure it is safe to use the source
       picker.sourceType = .SavedPhotosAlbum
       presentViewController(picker, animated: true, completion: nil)
    }
@@ -34,10 +35,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       let picker = UIImagePickerController()
       
       picker.delegate = self
+      //implement isSourceTypeAvailable to make sure it is safe to use the source
       picker.sourceType = .Camera
-      
       presentViewController(picker, animated: true, completion: nil)
-
    }
    
    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
