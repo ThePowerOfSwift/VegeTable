@@ -18,28 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VegeTable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asQ-6m-wLZ">
-                                <rect key="frame" x="184" y="42" width="232" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75e-f8-2V3">
-                                <rect key="frame" x="186" y="270" width="229" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Useless Button =)"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-vJ-ihO">
+                                <rect key="frame" x="425" y="28" width="155" height="30"/>
+                                <state key="normal" title="Choose Existing Photo"/>
+                                <connections>
+                                    <action selector="chooseImageFromPhotoLibrary" destination="dkx-z0-nzr" eventType="touchUpInside" id="jSf-ZO-B06"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3q-oW-CNd">
+                                <rect key="frame" x="20" y="20" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="chooseFromCamera" destination="dkx-z0-nzr" eventType="touchUpInside" id="SQ2-bc-otJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-6D-2k7">
+                                <rect key="frame" x="20" y="73" width="560" height="398"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="r7o-yK-fkd"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="r7o-yK-fkd"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="asQ-6m-wLZ" secondAttribute="trailing" constant="164" id="6Af-7P-Ad4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="75e-f8-2V3" secondAttribute="trailing" constant="165" id="GYo-F2-Ji5"/>
-                            <constraint firstItem="asQ-6m-wLZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="M9H-ea-Ydq"/>
-                            <constraint firstItem="75e-f8-2V3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="166" id="Wtk-Wo-Ope"/>
-                            <constraint firstItem="75e-f8-2V3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="cZi-pY-gvH"/>
-                            <constraint firstItem="asQ-6m-wLZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="164" id="swa-Dm-qfj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lJZ-6D-2k7" secondAttribute="trailing" id="31j-2G-s1A"/>
+                            <constraint firstItem="R3q-oW-CNd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4ey-lo-ZdW"/>
+                            <constraint firstItem="Ag2-vJ-ihO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="67e-J8-ICn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lJZ-6D-2k7" secondAttribute="bottom" constant="129" id="BzF-tV-EjT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ag2-vJ-ihO" secondAttribute="trailing" id="Gy7-If-wYJ"/>
+                            <constraint firstItem="lJZ-6D-2k7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MVu-i0-cAx"/>
+                            <constraint firstItem="lJZ-6D-2k7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-28" id="dQ2-Xd-IXf"/>
+                            <constraint firstItem="R3q-oW-CNd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ewC-9z-bQf"/>
+                            <constraint firstItem="lJZ-6D-2k7" firstAttribute="top" secondItem="Ag2-vJ-ihO" secondAttribute="bottom" constant="15" id="wdD-Uy-KB0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="lJZ-6D-2k7" id="ZZ1-Mz-vG2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
