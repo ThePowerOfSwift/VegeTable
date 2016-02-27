@@ -12,8 +12,10 @@ import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-   @IBOutlet weak var imageView: UIImageView!
+   @IBOutlet weak var takenImage: UIImageView!
    @IBOutlet weak var previewView: UIView!
+   @IBOutlet weak var snapPhotoButton: UIButton!
+   @IBOutlet weak var retakePhotoButton: UIButton!
    
    //captureSession will hold the image taken from the camera and output it in a still image format
    var captureSession: AVCaptureSession?                 //this object will orchestrate input from camera and its output image
@@ -22,6 +24,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      takenImage.hidden = true
       // Do any additional setup after loading the view, typically from a nib.
    }
 
@@ -104,10 +107,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
                //now finally, the UIImage is displayed on the imageView on our screen
                //NOTE: here is where you can send the image data to a server, or the VegeTable server for analysis
-               self.imageView.image = image
+               self.takenImage.image = image
+               
+               self.takenImage.hidden = false
+               self.previewView.hidden = true
+               self.snapPhotoButton.hidden = true
+               self.retakePhotoButton.hidden = false
+               
             }
          })
       }
+   }
+   
+   @IBAction func retakePhoto(sender: UIButton) {
+      //Set availability of buttons
+      self.snapPhotoButton.hidden = false
+      self.retakePhotoButton.hidden = true
+      
+      //Set availability of camera preview and taken pic
+      self.previewView.hidden = false
+      self.takenImage.hidden = true
+   
    }
 
 }
