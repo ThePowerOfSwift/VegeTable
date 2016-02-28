@@ -1,8 +1,0 @@
-#OpenCV
-Contains applications build in Ubuntu 15.10 using OpenCV libraries. As of 1/28/2016 applications include:
-
-demo - makefile project built using demo found at:
-http://milq.github.io/install-opencv-ubuntu-debian/
-Application works as intented.
-
-
