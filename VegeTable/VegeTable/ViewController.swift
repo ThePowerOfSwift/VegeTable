@@ -17,6 +17,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
    @IBOutlet weak var snapPhotoButton: UIButton!
    @IBOutlet weak var retakePhotoButton: UIButton!
    
+   override func  preferredStatusBarStyle()-> UIStatusBarStyle {
+    return UIStatusBarStyle.LightContent
+   }
+   
    //captureSession will hold the image taken from the camera and output it in a still image format
    var captureSession: AVCaptureSession?                 //this object will orchestrate input from camera and its output image
    var stillImageOutput: AVCaptureStillImageOutput?      //this object is the output the captureSession will be associated with
