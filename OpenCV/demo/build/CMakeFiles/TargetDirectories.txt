@@ -1,0 +1,1 @@
+/home/david/Desktop/OpenCV/demo/build/CMakeFiles/demo.dir
