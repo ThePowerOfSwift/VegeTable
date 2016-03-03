@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		A116A83E1C82A5870000FFB5 /* OrangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A83D1C82A5870000FFB5 /* OrangeButton.png */; };
 		A116A8401C82A6510000FFB5 /* SnapShotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A83F1C82A6500000FFB5 /* SnapShotButton.png */; };
-		A116A8421C8378400000FFB5 /* OrangeCamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A8411C8378400000FFB5 /* OrangeCamButton.png */; };
 		A116A8441C839CB50000FFB5 /* Damion-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A116A8431C839CB50000FFB5 /* Damion-Regular.ttf */; };
 		A116A8491C839D320000FFB5 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A116A8481C839D320000FFB5 /* Quicksand-Regular.ttf */; };
 		A116A84B1C839D430000FFB5 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A116A84A1C839D430000FFB5 /* DancingScript-Regular.ttf */; };
+		A116A84D1C83A28A0000FFB5 /* GrapeFruitCamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */; };
+		A116A84F1C83FF710000FFB5 /* SizedOrangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */; };
+		A15B6B2E1C869A370098A1D4 /* MoreVegetables.png in Resources */ = {isa = PBXBuildFile; fileRef = A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */; };
+		A15B6B321C869BC60098A1D4 /* Veges.png in Resources */ = {isa = PBXBuildFile; fileRef = A15B6B311C869BC60098A1D4 /* Veges.png */; };
 		A187C8821C7CA25800DC5C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8811C7CA25800DC5C23 /* AppDelegate.swift */; };
 		A187C8841C7CA25800DC5C23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8831C7CA25800DC5C23 /* ViewController.swift */; };
 		A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A187C8851C7CA25800DC5C23 /* Main.storyboard */; };
@@ -23,10 +26,13 @@
 /* Begin PBXFileReference section */
 		A116A83D1C82A5870000FFB5 /* OrangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrangeButton.png; sourceTree = "<group>"; };
 		A116A83F1C82A6500000FFB5 /* SnapShotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnapShotButton.png; sourceTree = "<group>"; };
-		A116A8411C8378400000FFB5 /* OrangeCamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrangeCamButton.png; sourceTree = "<group>"; };
 		A116A8431C839CB50000FFB5 /* Damion-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Damion-Regular.ttf"; sourceTree = "<group>"; };
 		A116A8481C839D320000FFB5 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		A116A84A1C839D430000FFB5 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.ttf"; sourceTree = "<group>"; };
+		A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrapeFruitCamButton.png; sourceTree = "<group>"; };
+		A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SizedOrangeButton.png; sourceTree = "<group>"; };
+		A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MoreVegetables.png; sourceTree = "<group>"; };
+		A15B6B311C869BC60098A1D4 /* Veges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Veges.png; sourceTree = "<group>"; };
 		A187C87E1C7CA25800DC5C23 /* VegeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VegeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A187C8811C7CA25800DC5C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A187C8831C7CA25800DC5C23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +56,10 @@
 		A116A8341C829E6F0000FFB5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A116A8411C8378400000FFB5 /* OrangeCamButton.png */,
+				A15B6B311C869BC60098A1D4 /* Veges.png */,
+				A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */,
+				A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */,
+				A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */,
 				A116A83F1C82A6500000FFB5 /* SnapShotButton.png */,
 				A116A83D1C82A5870000FFB5 /* OrangeButton.png */,
 			);
@@ -157,13 +166,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A116A84D1C83A28A0000FFB5 /* GrapeFruitCamButton.png in Resources */,
 				A187C88C1C7CA25800DC5C23 /* LaunchScreen.storyboard in Resources */,
+				A15B6B321C869BC60098A1D4 /* Veges.png in Resources */,
 				A187C8891C7CA25800DC5C23 /* Assets.xcassets in Resources */,
 				A116A83E1C82A5870000FFB5 /* OrangeButton.png in Resources */,
 				A116A8491C839D320000FFB5 /* Quicksand-Regular.ttf in Resources */,
+				A15B6B2E1C869A370098A1D4 /* MoreVegetables.png in Resources */,
 				A116A8401C82A6510000FFB5 /* SnapShotButton.png in Resources */,
 				A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */,
-				A116A8421C8378400000FFB5 /* OrangeCamButton.png in Resources */,
+				A116A84F1C83FF710000FFB5 /* SizedOrangeButton.png in Resources */,
 				A116A8441C839CB50000FFB5 /* Damion-Regular.ttf in Resources */,
 				A116A84B1C839D430000FFB5 /* DancingScript-Regular.ttf in Resources */,
 			);

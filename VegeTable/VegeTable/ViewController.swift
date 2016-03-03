@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
    @IBOutlet weak var snapPhotoButton: UIButton!
    @IBOutlet weak var retakePhotoButton: UIButton!
    
+   //Will make the time and battery bar appear white in app
    override func  preferredStatusBarStyle()-> UIStatusBarStyle {
     return UIStatusBarStyle.LightContent
    }
