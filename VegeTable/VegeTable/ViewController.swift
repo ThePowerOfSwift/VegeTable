@@ -77,7 +77,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 //like snapchat, when you move the camera around, you expect to see a preview
                 //we will have a previewLayer var which has a preview of our camera associated with our captureSession
                 previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                previewLayer!.videoGravity = AVLayerVideoGravityResizeAspect
+                //setting videoGravity will make the image resize to fit in its container
+                previewLayer!.videoGravity = AVLayerVideoGravityResize
                 previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
                 //here we add our previewLayer to the view on our screen
                 previewView.layer.addSublayer(previewLayer!)
@@ -112,6 +113,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
                //now finally, the UIImage is displayed on the imageView on our screen
                //NOTE: here is where you can send the image data to a server, or the VegeTable server for analysis
+               //side note, to make the image fill the view I went to mainstoryboard and set the mode of the imageview to Scale to Fill
                self.takenImage.image = image
                
                self.takenImage.hidden = false

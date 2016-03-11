@@ -9,6 +9,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Damion-Regular.ttf">
             <string>Damion</string>
+            <string>Damion</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -25,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8No-YB-Zvq">
-                                <rect key="frame" x="0.0" y="102.5" width="600" height="367.5"/>
+                                <rect key="frame" x="0.0" y="102" width="600" height="367.5"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8No-YB-Zvq" secondAttribute="height" multiplier="600:499" id="BPf-30-pKF"/>
@@ -37,8 +38,9 @@
                                 </variation>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XO6-S8-LMy">
-                                <rect key="frame" x="254" y="550" width="92" height="30"/>
+                                <rect key="frame" x="251.5" y="540" width="97" height="40"/>
                                 <color key="backgroundColor" red="0.045515038073062897" green="0.91369086503982544" blue="0.36828351020812988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="20"/>
                                 <state key="normal" title="Retake Photo">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -46,11 +48,11 @@
                                     <action selector="retakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKf-AI-Yr8"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-6D-2k7">
-                                <rect key="frame" x="0.0" y="102.5" width="600" height="367.5"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-6D-2k7">
+                                <rect key="frame" x="0.0" y="102" width="600" height="367.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VegeTable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-fp-6pZ">
-                                <rect key="frame" x="202.5" y="20" width="195" height="74.5"/>
+                                <rect key="frame" x="202" y="20" width="195" height="74.5"/>
                                 <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="54"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -89,8 +91,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="dIQ-2Y-WpS"/>
                                 <exclude reference="2E2-N6-H7w"/>
+                                <exclude reference="dIQ-2Y-WpS"/>
                                 <exclude reference="TX0-ND-mBE"/>
                                 <exclude reference="gWX-23-8wR"/>
                                 <exclude reference="aJq-aa-PT4"/>
