@@ -1,0 +1,13 @@
+Apple        2    - food
+Banana       39   - food
+Broccoli     2871 - v
+Carrots      2901 - v
+Grapes       2240 - f
+Lettuce      3002 - v (Iceberg)
+Onion        3030 - v
+Orange       2284 - f
+Peach        2311 - f
+Pear         2326 - f
+Peppers      3069 - v (sweet, green)
+Potatoes     3080 - v 
+Spinach      3167 - v
