@@ -113,6 +113,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                //a data provider is created with the JPEG formatted image
                let dataProvider = CGDataProviderCreateWithCFData(imageData)
                let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
+               //let cgImageRef = CGImageCreateWithPNGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
                //then the data provider is used to create a core graphics item to make a UIImage
                let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
                //now finally, the UIImage is displayed on the imageView on our screen
