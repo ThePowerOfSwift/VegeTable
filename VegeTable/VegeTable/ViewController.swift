@@ -12,6 +12,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+   var dataReady = true    //dummy bool that the pic analysis method will return
+
    @IBOutlet weak var takenImage: UIImageView!
    @IBOutlet weak var previewView: UIView!
    @IBOutlet weak var snapPhotoButton: UIButton!
@@ -106,36 +108,62 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if (sampleBuffer != nil) {
                //sampleBuffer is changed into JPEG format
                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
+                 
+               //All Code after this makes app act like SnapChat, where the taken image stay on the screen.
                //a data provider is created with the JPEG formatted image
                let dataProvider = CGDataProviderCreateWithCFData(imageData)
                let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
                //then the data provider is used to create a core graphics item to make a UIImage
                let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
                //now finally, the UIImage is displayed on the imageView on our screen
-               //NOTE: here is where you can send the image data to a server, or the VegeTable server for analysis
-               //side note, to make the image fill the view I went to mainstoryboard and set the mode of the imageview to Scale to Fill
                self.takenImage.image = image
+               self.hidePreviewImage(true)
                
-               self.takenImage.hidden = false
-               self.previewView.hidden = true
-               self.snapPhotoButton.hidden = true
-               self.retakePhotoButton.hidden = false
+               //run method here to send our imageData NSData to the server for analysis
+               //now with the return data, segue to our tableview controller and populate the cells with the data
                
+               if self.dataReady {
+                  //performSegue to the tableview controller
+                  self.performSegueWithIdentifier("ShowNutritionSegue", sender: sender)
+                  
+                  /* this code can possibly help transfer data from online to our model
+                  prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+                  {
+                     if ([[segue identifier] isEqualToString:@"MySegue"]) {
+
+                        // Get destination view
+                        SecondView *vc = [segue destinationViewController];
+
+                        // Get button tag number (or do whatever you need to do here, based on your object
+                        NSInteger tagIndex = [(UIButton *)sender tag];
+
+                        // Pass the information to your destination view
+                        [vc setSelectedButton:tagIndex];
+                     }
+                  }
+                  */
+               }
+               
+             
             }
          })
       }
    }
    
    @IBAction func retakePhoto(sender: UIButton) {
-      //Set availability of buttons
-      self.snapPhotoButton.hidden = false
-      self.retakePhotoButton.hidden = true
-      
-      //Set availability of camera preview and taken pic
-      self.previewView.hidden = false
-      self.takenImage.hidden = true
-   
+      hidePreviewImage(false)
    }
+   
+   func hidePreviewImage(decision: Bool) -> Void {
+      self.previewView.hidden = decision
+      self.snapPhotoButton.hidden = decision
+      self.takenImage.hidden = !decision
+      self.retakePhotoButton.hidden = !decision
+   }
+   
+
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
+    }
 
 }
 

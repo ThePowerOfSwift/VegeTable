@@ -10,6 +10,8 @@
         <mutableArray key="Damion-Regular.ttf">
             <string>Damion</string>
             <string>Damion</string>
+            <string>Damion</string>
+            <string>Damion</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -104,14 +106,137 @@
                         <outlet property="retakePhotoButton" destination="XO6-S8-LMy" id="UfE-jE-2Re"/>
                         <outlet property="snapPhotoButton" destination="ba7-y4-aHe" id="GXc-bv-oSq"/>
                         <outlet property="takenImage" destination="lJZ-6D-2k7" id="hMe-G8-qXV"/>
+                        <segue destination="ZdT-ZM-6v5" kind="show" identifier="ShowNutritionSegue" id="bB3-UK-zy6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="379" y="302"/>
         </scene>
+        <!--Nutrition View Controller-->
+        <scene sceneID="utY-re-byu">
+            <objects>
+                <viewController id="ZdT-ZM-6v5" customClass="NutritionViewController" customModule="VegeTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vll-og-Xb6"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZUk-lH-dqO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j99-z8-IBp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition Facts " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5K-zC-Y96">
+                                <rect key="frame" x="22" y="289" width="235" height="38.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Yq-i3-Inq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKt-Ut-NM9">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="276"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MT-K6-Hb1">
+                                                <rect key="frame" x="8" y="26" width="167" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="moI-57-IBe"/>
+                                                    <constraint firstAttribute="width" constant="167" id="uiJ-Dx-fUS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="24"/>
+                                                <state key="normal" title="&lt; Back to Camera">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backToCameraPress:" destination="ZdT-ZM-6v5" eventType="touchUpInside" id="wtA-yZ-EbD"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dragonfruit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-C4-FkU">
+                                                <rect key="frame" x="175" y="213" width="250" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="ePu-eH-coZ"/>
+                                                    <constraint firstAttribute="height" constant="55" id="gXd-h4-RDQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="40"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dragonfruitDatabase.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nfX-fm-yIP">
+                                                <rect key="frame" x="238" y="75" width="125" height="125"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="125" id="73G-Z7-tUK"/>
+                                                    <constraint firstAttribute="height" constant="125" id="Dhb-ru-38r"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.85375458002090454" blue="0.44287461042404175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="nfX-fm-yIP" firstAttribute="centerX" secondItem="KKt-Ut-NM9" secondAttribute="centerX" id="RYw-h2-gYP"/>
+                                            <constraint firstItem="HRF-C4-FkU" firstAttribute="centerX" secondItem="KKt-Ut-NM9" secondAttribute="centerX" id="ShB-5S-XAg"/>
+                                            <constraint firstAttribute="bottom" secondItem="HRF-C4-FkU" secondAttribute="bottom" constant="8" id="XLO-wI-4F4"/>
+                                            <constraint firstItem="HRF-C4-FkU" firstAttribute="top" secondItem="nfX-fm-yIP" secondAttribute="bottom" constant="13" id="dZs-YC-KRf"/>
+                                            <constraint firstAttribute="height" constant="276" id="huW-Qv-pVd"/>
+                                            <constraint firstItem="3MT-K6-Hb1" firstAttribute="leading" secondItem="KKt-Ut-NM9" secondAttribute="leadingMargin" id="rgY-RO-SfY"/>
+                                            <constraint firstItem="3MT-K6-Hb1" firstAttribute="top" secondItem="KKt-Ut-NM9" secondAttribute="top" constant="26" id="uKL-K3-yvu"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving Size 165 g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xK-BY-vbZ">
+                                        <rect key="frame" x="22" y="334" width="142" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIq-Ry-j64">
+                                        <rect key="frame" x="22" y="369" width="551" height="7"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="7" id="LCO-X7-oms"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KKt-Ut-NM9" secondAttribute="trailing" id="0Js-K0-MRm"/>
+                                    <constraint firstItem="KKt-Ut-NM9" firstAttribute="centerX" secondItem="7Yq-i3-Inq" secondAttribute="centerX" id="1PT-Js-wgN"/>
+                                    <constraint firstItem="KKt-Ut-NM9" firstAttribute="leading" secondItem="7Yq-i3-Inq" secondAttribute="leading" id="AjB-Vq-lnL"/>
+                                    <constraint firstAttribute="bottom" secondItem="KKt-Ut-NM9" secondAttribute="bottom" constant="324" id="RP9-pq-rz2"/>
+                                    <constraint firstItem="KKt-Ut-NM9" firstAttribute="top" secondItem="7Yq-i3-Inq" secondAttribute="top" id="ZAd-vO-yvm"/>
+                                    <constraint firstItem="3xK-BY-vbZ" firstAttribute="leading" secondItem="7Yq-i3-Inq" secondAttribute="leading" constant="22" id="nMv-uH-dyY"/>
+                                    <constraint firstItem="jIq-Ry-j64" firstAttribute="top" secondItem="3xK-BY-vbZ" secondAttribute="bottom" constant="15" id="teL-hf-ONj"/>
+                                    <constraint firstAttribute="trailing" secondItem="jIq-Ry-j64" secondAttribute="trailing" constant="27" id="vbg-xN-dEX"/>
+                                    <constraint firstItem="jIq-Ry-j64" firstAttribute="leading" secondItem="7Yq-i3-Inq" secondAttribute="leading" constant="22" id="yCH-Cy-YS0"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e5K-zC-Y96" firstAttribute="top" secondItem="KKt-Ut-NM9" secondAttribute="bottom" constant="13" id="BNZ-KY-dGC"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="height" secondItem="j99-z8-IBp" secondAttribute="height" id="MRu-0U-BEt"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="centerY" secondItem="j99-z8-IBp" secondAttribute="centerY" id="NaX-L8-Tnr"/>
+                            <constraint firstItem="3xK-BY-vbZ" firstAttribute="top" secondItem="e5K-zC-Y96" secondAttribute="bottom" constant="6.5" id="Qpe-YP-jXQ"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="height" secondItem="j99-z8-IBp" secondAttribute="height" id="cFD-ob-XJZ"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="centerX" secondItem="j99-z8-IBp" secondAttribute="centerX" id="dOd-U7-YhS"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="width" secondItem="j99-z8-IBp" secondAttribute="width" id="gfU-py-wec"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="leading" secondItem="e5K-zC-Y96" secondAttribute="trailing" constant="-257" id="r1l-dc-W3c"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cFD-ob-XJZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="NutritionScrollView" destination="7Yq-i3-Inq" id="x28-ZC-Sj6"/>
+                        <outlet property="databaseImage" destination="nfX-fm-yIP" id="0rv-Lp-1n0"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowCameraSegue" id="HuB-jN-fnX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONu-R7-D1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="302"/>
+        </scene>
     </scenes>
     <resources>
         <image name="SizedOrangeButton.png" width="96" height="96"/>
+        <image name="dragonfruitDatabase.jpg" width="628" height="371"/>
     </resources>
 </document>
