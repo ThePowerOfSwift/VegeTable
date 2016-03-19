@@ -94,13 +94,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       }
       
       //Draw opaque rectangle in the previewView here 
-      //previewLayer.drawRect(
-      
+      //previewView.drawRect(<#T##rect: CGRect##CGRect#>)
    }
    
    override func viewDidAppear(animated: Bool) {
       super.viewDidAppear(animated)
-      //set the bounds of the previewLayr to equal the same as the view on our screen
+      //set the bounds of the previewLayer to equal the same as the view on our screen
       previewLayer!.frame = previewView.bounds
       
    }
@@ -132,12 +131,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                //Setting the Nutrition Page picture the one we took, we dont actually want this when we are finalized
                //databaseImage.image = image
                
+         /*
                //Sending the image to our server
                var request = NSMutableURLRequest(URL: NSURL(string:"http://155.41.123.110:3001/text")!)
                request.HTTPMethod = "POST"
                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
                request.addValue("application/json", forHTTPHeaderField: "Accept")
-               
+       
                //convert our UIImage to a JPEG
                
                let imageToSend = UIImageJPEGRepresentation(image, 0.6)
@@ -152,13 +152,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                print("params were hypothetically printed")
             
                do {
-               
                   try request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions(rawValue: 0))
                }
                catch {
                   print("Failed to convert JSON to HTTPBody.")
                }
                
+            
                let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
                   let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
                   guard error == nil && data != nil else {
@@ -168,12 +168,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                   let hoge = NSString(data: data!, encoding: NSUTF8StringEncoding)
                   print("Image Response \(hoge)")
                }
-               task.resume()
+               task.resume()*/
                
-               /*
+               
+               
+               
+               
+               let send_string = "newDatafrom11AMios"
+               
                let request = NSMutableURLRequest(URL: NSURL(string: "http://155.41.123.110:3001/text")!)
                 request.HTTPMethod = "POST"
-                let postString = "data= newDatafrom11AMios"
+                let postString = "data=" + send_string
                 request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
                 let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
                     guard error == nil && data != nil else {                                                          // check for fundamental networking error
@@ -190,7 +195,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     print("responseString = \(responseString)")
                 }
                 task.resume()
-               */
+               
                
                
                //run method here to send our imageData NSData to the server for analysis

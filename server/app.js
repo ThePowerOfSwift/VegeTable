@@ -4,7 +4,9 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var port  = 3001;
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(express.bodyParser({limit : '50mb'}));
+//app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 // viewed at http://localhost:3001
 app.get('/', function(req, res) {
@@ -16,7 +18,8 @@ app.get('/', function(req, res) {
 });
 
 app.post('/text', function(req, res) {
-    console.log(req.body.data);
+    console.log(req.body);
+  //  console.log(JSON.stringify(req.body.params));
     res.send("successfully sent");
 });
 
