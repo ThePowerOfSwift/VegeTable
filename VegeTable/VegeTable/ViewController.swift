@@ -13,9 +13,10 @@ import AVFoundation
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
    var dataReady = true    //dummy bool that the pic analysis method will return
+   var riderid = 0
 
    @IBOutlet weak var takenImage: UIImageView!
-   @IBOutlet weak var previewView: UIView!
+   @IBOutlet weak var previewView: PreviewView!
    @IBOutlet weak var snapPhotoButton: UIButton!
    @IBOutlet weak var retakePhotoButton: UIButton!
    
@@ -42,6 +43,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
    override func viewWillAppear(animated: Bool) {
       super.viewWillAppear(animated);
+      //Question to consider, can this code be put in the viewDidLoad? Because everytime we return from the nutrition screen, this all happens all over again. Is this inefficient?
+      //Also, could I make this "previewView" a custom UIView and put all this code in there? Not sure if possible or necessary
       
       //captureSession is created here
       captureSession = AVCaptureSession()
@@ -85,15 +88,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 //here we add our previewLayer to the view on our screen
                 previewView.layer.addSublayer(previewLayer!)
                 
+                
                 captureSession!.startRunning()
             }
       }
+      
+      //Draw opaque rectangle in the previewView here 
+      //previewLayer.drawRect(
+      
    }
    
    override func viewDidAppear(animated: Bool) {
       super.viewDidAppear(animated)
       //set the bounds of the previewLayr to equal the same as the view on our screen
       previewLayer!.frame = previewView.bounds
+      
    }
 
    @IBAction func didPressTakePhoto(sender: UIButton) {
@@ -101,20 +110,70 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       if let videoConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
          videoConnection.videoOrientation = AVCaptureVideoOrientation.Portrait
          
-         //captureStillImageAsynchronouslyFromConnection function asynchronously calls it’s completion handler with the captured data in the sampleBuffer object
-         stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {(sampleBuffer, error) in
+            //captureStillImageAsynchronouslyFromConnection function asynchronously calls it’s completion handler with the captured data in the sampleBuffer object
+            stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {(sampleBuffer, error) in
             //sampleBuffer is the data that contains our image and can be useful in a number of different ways
             //for our purposes we just need to format it in a way so it can be displayed in our ImageView
             if (sampleBuffer != nil) {
                //sampleBuffer is changed into JPEG format
                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-                
-                
-                
-                
-                let request = NSMutableURLRequest(URL: NSURL(string: "http://155.41.124.12:3001/text")!)
+
+               //All Code after this makes app act like SnapChat, where the taken image stay on the screen.
+               //a data provider is created with the JPEG formatted image
+               let dataProvider = CGDataProviderCreateWithCFData(imageData)
+               let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
+               //let cgImageRef = CGImageCreateWithPNGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
+               //then the data provider is used to create a core graphics item to make a UIImage
+               let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
+               //now finally, the UIImage is displayed on the imageView on our screen
+               self.takenImage.image = image
+               self.hidePreviewImage(true)
+               
+               //Setting the Nutrition Page picture the one we took, we dont actually want this when we are finalized
+               //databaseImage.image = image
+               
+               //Sending the image to our server
+               var request = NSMutableURLRequest(URL: NSURL(string:"http://155.41.123.110:3001/text")!)
+               request.HTTPMethod = "POST"
+               request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+               request.addValue("application/json", forHTTPHeaderField: "Accept")
+               
+               //convert our UIImage to a JPEG
+               
+               let imageToSend = UIImageJPEGRepresentation(image, 0.6)
+               
+               //encoding our image
+               let base64String = imageToSend?.base64EncodedDataWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+               
+               let err: NSError? = nil
+ 
+               let params = ["image":[ "content_type": "image/jpeg", "filename":"apple.jpg", "file_data": "\(base64String)"]]
+               
+               print("params were hypothetically printed")
+            
+               do {
+               
+                  try request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions(rawValue: 0))
+               }
+               catch {
+                  print("Failed to convert JSON to HTTPBody.")
+               }
+               
+               let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+                  let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                  guard error == nil && data != nil else {
+                     print("error=\(error) strData=\(strData)")
+                     return
+                  }
+                  let hoge = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                  print("Image Response \(hoge)")
+               }
+               task.resume()
+               
+               /*
+               let request = NSMutableURLRequest(URL: NSURL(string: "http://155.41.123.110:3001/text")!)
                 request.HTTPMethod = "POST"
-                let postString = "data=fromIos"
+                let postString = "data= newDatafrom11AMios"
                 request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
                 let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
                     guard error == nil && data != nil else {                                                          // check for fundamental networking error
@@ -131,25 +190,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     print("responseString = \(responseString)")
                 }
                 task.resume()
-                
-                
-                
-                
-                
-                
-                
-                
-                
-               //All Code after this makes app act like SnapChat, where the taken image stay on the screen.
-               //a data provider is created with the JPEG formatted image
-               let dataProvider = CGDataProviderCreateWithCFData(imageData)
-               let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
-               //let cgImageRef = CGImageCreateWithPNGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
-               //then the data provider is used to create a core graphics item to make a UIImage
-               let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
-               //now finally, the UIImage is displayed on the imageView on our screen
-               self.takenImage.image = image
-               self.hidePreviewImage(true)
+               */
+               
                
                //run method here to send our imageData NSData to the server for analysis
                //now with the return data, segue to our tableview controller and populate the cells with the data
@@ -190,7 +232,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       self.previewView.hidden = decision
       self.snapPhotoButton.hidden = decision
       self.takenImage.hidden = !decision
-      self.retakePhotoButton.hidden = !decision
+      //self.retakePhotoButton.hidden = !decision
    }
    
 

@@ -14,12 +14,13 @@
 		A116A84B1C839D430000FFB5 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A116A84A1C839D430000FFB5 /* DancingScript-Regular.ttf */; };
 		A116A84D1C83A28A0000FFB5 /* GrapeFruitCamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */; };
 		A116A84F1C83FF710000FFB5 /* SizedOrangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */; };
+		A11A8B081C9D97C100B8D1B9 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */; };
 		A158BDDB1C9710980063E183 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A158BDDA1C9710980063E183 /* NutritionViewController.swift */; };
 		A158BDE21C97CA740063E183 /* dragonfruitUser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */; };
 		A158BDE31C97CA740063E183 /* dragonfruitDatabase.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */; };
-		A15909E31C94B3D100B07ABF /* VegeInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15909E21C94B3D100B07ABF /* VegeInfoTableViewController.swift */; };
 		A15B6B2E1C869A370098A1D4 /* MoreVegetables.png in Resources */ = {isa = PBXBuildFile; fileRef = A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */; };
 		A15B6B321C869BC60098A1D4 /* Veges.png in Resources */ = {isa = PBXBuildFile; fileRef = A15B6B311C869BC60098A1D4 /* Veges.png */; };
+		A16C41451C9ADD0E00509686 /* NutritionFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16C41441C9ADD0E00509686 /* NutritionFactsView.swift */; };
 		A187C8821C7CA25800DC5C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8811C7CA25800DC5C23 /* AppDelegate.swift */; };
 		A187C8841C7CA25800DC5C23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8831C7CA25800DC5C23 /* ViewController.swift */; };
 		A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A187C8851C7CA25800DC5C23 /* Main.storyboard */; };
@@ -35,12 +36,13 @@
 		A116A84A1C839D430000FFB5 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.ttf"; sourceTree = "<group>"; };
 		A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrapeFruitCamButton.png; sourceTree = "<group>"; };
 		A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SizedOrangeButton.png; sourceTree = "<group>"; };
+		A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		A158BDDA1C9710980063E183 /* NutritionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragonfruitUser.jpg; sourceTree = "<group>"; };
 		A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragonfruitDatabase.jpg; sourceTree = "<group>"; };
-		A15909E21C94B3D100B07ABF /* VegeInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VegeInfoTableViewController.swift; sourceTree = "<group>"; };
 		A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MoreVegetables.png; sourceTree = "<group>"; };
 		A15B6B311C869BC60098A1D4 /* Veges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Veges.png; sourceTree = "<group>"; };
+		A16C41441C9ADD0E00509686 /* NutritionFactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionFactsView.swift; sourceTree = "<group>"; };
 		A187C87E1C7CA25800DC5C23 /* VegeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VegeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A187C8811C7CA25800DC5C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A187C8831C7CA25800DC5C23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,9 +111,10 @@
 				A116A8341C829E6F0000FFB5 /* Images */,
 				A187C8811C7CA25800DC5C23 /* AppDelegate.swift */,
 				A187C8831C7CA25800DC5C23 /* ViewController.swift */,
-				A15909E21C94B3D100B07ABF /* VegeInfoTableViewController.swift */,
+				A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */,
 				A187C8851C7CA25800DC5C23 /* Main.storyboard */,
 				A158BDDA1C9710980063E183 /* NutritionViewController.swift */,
+				A16C41441C9ADD0E00509686 /* NutritionFactsView.swift */,
 				A187C8881C7CA25800DC5C23 /* Assets.xcassets */,
 				A187C88A1C7CA25800DC5C23 /* LaunchScreen.storyboard */,
 				A187C88D1C7CA25800DC5C23 /* Info.plist */,
@@ -151,7 +154,7 @@
 				TargetAttributes = {
 					A187C87D1C7CA25800DC5C23 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = FBDBZVP75K;
+						DevelopmentTeam = G724EY77FK;
 					};
 				};
 			};
@@ -202,10 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11A8B081C9D97C100B8D1B9 /* PreviewView.swift in Sources */,
 				A187C8841C7CA25800DC5C23 /* ViewController.swift in Sources */,
-				A15909E31C94B3D100B07ABF /* VegeInfoTableViewController.swift in Sources */,
 				A187C8821C7CA25800DC5C23 /* AppDelegate.swift in Sources */,
 				A158BDDB1C9710980063E183 /* NutritionViewController.swift in Sources */,
+				A16C41451C9ADD0E00509686 /* NutritionFactsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +325,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VegeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NicholasMaresco.VegeTable;
+				PRODUCT_BUNDLE_IDENTIFIER = BrianTan.VegeTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -334,7 +338,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VegeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NicholasMaresco.VegeTable;
+				PRODUCT_BUNDLE_IDENTIFIER = BrianTan.VegeTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

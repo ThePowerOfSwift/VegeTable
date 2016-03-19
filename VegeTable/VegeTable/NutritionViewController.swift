@@ -32,9 +32,13 @@ class NutritionViewController: UIViewController {
    @IBOutlet weak var fiberPercentage: UILabel!
    @IBOutlet weak var sugarValue: UILabel!
    @IBOutlet weak var proteinValue: UILabel!
+   @IBOutlet weak var nutriMin1: UILabel!
+   @IBOutlet weak var nutriMin2: UILabel!
+   @IBOutlet weak var nutriMin3: UILabel!
+   @IBOutlet weak var nutriMin4: UILabel!
    
    //Dummy data
-   var data = ["60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "100g"]
+   var data = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 3%"]
    
    
    override func viewDidLoad() {
@@ -48,7 +52,7 @@ class NutritionViewController: UIViewController {
       self.databaseImage.layer.borderWidth = 4.0
       self.databaseImage.layer.borderColor = UIColor(red:15/255.0, green:243/255.0, blue:106/255.0, alpha: 1.0).CGColor
       
-      setNutritionFacts(data); 
+      setNutritionFacts(data);
    }
 
     override func didReceiveMemoryWarning() {
@@ -69,32 +73,37 @@ class NutritionViewController: UIViewController {
 
    @IBAction func backToCameraPress(sender: UIButton) {
       self.performSegueWithIdentifier("ShowCameraSegue", sender: sender)
+      //HAVE THIS CALL THE HIDEPREVIEWIMAGE METHOD FROM VIEWCONTROLLER
+      
+      
    }
    
    func setNutritionFacts(facts: [String]) -> Void {
-      if facts.count != 18 {
+      if facts.count != 22 {
       //if we do not receive all facts, the placement of them on the view will be off
          return
       }
-      servingSizeValue.text = facts[17];
-      calorieValue.text = facts[0];
-      caloriesFromFat.text = facts[1];
-      totalFatValue.text = facts[2];
-      totalFatPercentage.text = facts[3];
-      saturatedFatValue.text = facts[4];
-      saturatedFatPercentage.text = facts[5];
-      transFatValue.text = facts[6];
-      cholesterolValue.text = facts[7];
-      cholesterolPercentage.text = facts[8];
-      sodiumValue.text = facts[9];
-      sodiumPercentage.text = facts[10];
-      totalCarbsValue.text = facts[11];
-      totalCarbsPercentage.text = facts[12];
-      fiberValue.text = facts[13];
-      fiberPercentage.text = facts[14];
-      sugarValue.text = facts[15];
-      proteinValue.text = facts[16];
-      
-      
+      servingSizeValue.text = facts[0];
+      calorieValue.text = facts[1];
+      caloriesFromFat.text = facts[2];
+      totalFatValue.text = facts[3];
+      totalFatPercentage.text = facts[4];
+      saturatedFatValue.text = facts[5];
+      saturatedFatPercentage.text = facts[6];
+      transFatValue.text = facts[7];
+      cholesterolValue.text = facts[8];
+      cholesterolPercentage.text = facts[9];
+      sodiumValue.text = facts[10];
+      sodiumPercentage.text = facts[11];
+      totalCarbsValue.text = facts[12];
+      totalCarbsPercentage.text = facts[13];
+      fiberValue.text = facts[14];
+      fiberPercentage.text = facts[15];
+      sugarValue.text = facts[16];
+      proteinValue.text = facts[17];
+      nutriMin1.text = facts[18];
+      nutriMin2.text = facts[19];
+      nutriMin3.text = facts[20];
+      nutriMin4.text = facts[21];
    }
 }
