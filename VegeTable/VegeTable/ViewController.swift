@@ -87,21 +87,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
                 //here we add our previewLayer to the view on our screen
                 previewView.layer.addSublayer(previewLayer!)
-                
-                
                 captureSession!.startRunning()
             }
       }
-      
-      //Draw opaque rectangle in the previewView here 
-      //previewView.drawRect(<#T##rect: CGRect##CGRect#>)
    }
    
    override func viewDidAppear(animated: Bool) {
       super.viewDidAppear(animated)
       //set the bounds of the previewLayer to equal the same as the view on our screen
-      previewLayer!.frame = previewView.bounds
-      
+      previewLayer!.frame = previewView.bounds      
    }
 
    @IBAction func didPressTakePhoto(sender: UIButton) {

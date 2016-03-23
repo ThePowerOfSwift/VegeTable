@@ -12,6 +12,8 @@ class NutritionViewController: UIViewController {
 
    @IBOutlet weak var NutritionScrollView: UIScrollView!
    @IBOutlet weak var databaseImage: UIImageView!
+   @IBOutlet weak var fruitNameLabel: UILabel!
+   @IBOutlet weak var servingSizeImage: UIImageView!
    
    //Nutrition Facts Labels
    @IBOutlet weak var servingSizeValue: UILabel!
@@ -46,11 +48,18 @@ class NutritionViewController: UIViewController {
       
       self.NutritionScrollView.scrollEnabled = true
       self.NutritionScrollView.contentSize.height = 1200
-        
+      
+      self.fruitNameLabel.text = "Mango"
+      
+      self.databaseImage.image = UIImage(named:"mango.jpg")
       self.databaseImage.layer.cornerRadius = self.databaseImage.frame.size.height/2
       self.databaseImage.clipsToBounds = true
       self.databaseImage.layer.borderWidth = 4.0
       self.databaseImage.layer.borderColor = UIColor(red:15/255.0, green:243/255.0, blue:106/255.0, alpha: 1.0).CGColor
+      
+      self.servingSizeImage.image = UIImage(named: "bowlOfMango.jpg");
+      self.servingSizeImage.layer.cornerRadius = self.servingSizeImage.frame.size.height/2
+      self.servingSizeImage.clipsToBounds = true
       
       setNutritionFacts(data);
    }

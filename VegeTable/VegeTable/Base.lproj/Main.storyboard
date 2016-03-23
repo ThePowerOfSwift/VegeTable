@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Damion-Regular.ttf">
+            <string>Damion</string>
             <string>Damion</string>
             <string>Damion</string>
             <string>Damion</string>
@@ -27,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8No-YB-Zvq" customClass="PreviewView" customModule="VegeTable" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8No-YB-Zvq" customClass="PreviewView" customModule="VegeTable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="102" width="600" height="967.5"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -39,7 +40,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XO6-S8-LMy">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XO6-S8-LMy">
                                 <rect key="frame" x="251" y="1140" width="97" height="40"/>
                                 <color key="backgroundColor" red="0.045515038073062897" green="0.91369086503982544" blue="0.36828351020812988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="20"/>
@@ -50,10 +51,10 @@
                                     <action selector="retakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKf-AI-Yr8"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-6D-2k7">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-6D-2k7">
                                 <rect key="frame" x="0.0" y="102" width="600" height="967.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VegeTable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-fp-6pZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="VegeTable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-fp-6pZ">
                                 <rect key="frame" x="202" y="20" width="195" height="74.5"/>
                                 <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="54"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -145,7 +146,7 @@
                                                     <action selector="backToCameraPress:" destination="ZdT-ZM-6v5" eventType="touchUpInside" id="wtA-yZ-EbD"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dragonfruit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-C4-FkU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FruitName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-C4-FkU">
                                                 <rect key="frame" x="175" y="213" width="250" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="ePu-eH-coZ"/>
@@ -155,7 +156,7 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dragonfruitDatabase.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nfX-fm-yIP">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nfX-fm-yIP">
                                                 <rect key="frame" x="225" y="63" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="ams-6q-Hp3"/>
@@ -643,6 +644,41 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19g-xy-mjy">
+                                        <rect key="frame" x="0.0" y="787" width="600" height="413"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Serving Size Looks Like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pl-T4-Uat">
+                                                <rect key="frame" x="19" y="8" width="563" height="38.5"/>
+                                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="33"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fcO-pA-oCv">
+                                                <rect key="frame" x="150" y="82" width="300" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="Ixs-bH-8H8"/>
+                                                    <constraint firstAttribute="width" constant="300" id="yQY-ce-jeJ"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.85375458002090454" blue="0.44287461042404175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="fcO-pA-oCv" firstAttribute="width" secondItem="19g-xy-mjy" secondAttribute="width" id="6iy-vo-iGE"/>
+                                            <constraint firstItem="0Pl-T4-Uat" firstAttribute="leading" secondItem="19g-xy-mjy" secondAttribute="leading" constant="19" id="LrJ-CV-LHp"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Pl-T4-Uat" secondAttribute="trailing" constant="18" id="a73-Tt-Uef"/>
+                                            <constraint firstItem="0Pl-T4-Uat" firstAttribute="top" secondItem="19g-xy-mjy" secondAttribute="top" constant="8" id="pVY-aj-nr5"/>
+                                            <constraint firstAttribute="bottom" secondItem="fcO-pA-oCv" secondAttribute="bottom" constant="31" id="rAr-FF-wPg"/>
+                                            <constraint firstItem="fcO-pA-oCv" firstAttribute="centerX" secondItem="19g-xy-mjy" secondAttribute="centerX" id="upc-3b-gJr"/>
+                                            <constraint firstAttribute="height" constant="341" id="zLg-lg-3cy"/>
+                                            <constraint firstAttribute="height" constant="413" id="zrf-D4-Q3Z"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="zLg-lg-3cy"/>
+                                                <exclude reference="6iy-vo-iGE"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="KKt-Ut-NM9" secondAttribute="trailing" id="0Js-K0-MRm"/>
@@ -652,10 +688,13 @@
                                     <constraint firstItem="KKt-Ut-NM9" firstAttribute="top" secondItem="7Yq-i3-Inq" secondAttribute="top" id="Asq-Eg-nRR"/>
                                     <constraint firstItem="BBF-F8-AtI" firstAttribute="centerX" secondItem="7Yq-i3-Inq" secondAttribute="centerX" id="Lhq-V6-Spz"/>
                                     <constraint firstAttribute="bottom" secondItem="BBF-F8-AtI" secondAttribute="bottom" constant="412.5" id="MmO-5J-co6"/>
+                                    <constraint firstItem="19g-xy-mjy" firstAttribute="top" secondItem="BBF-F8-AtI" secondAttribute="bottom" id="RAR-X3-1TO"/>
                                     <constraint firstAttribute="bottom" secondItem="KKt-Ut-NM9" secondAttribute="bottom" constant="324" id="RP9-pq-rz2"/>
                                     <constraint firstItem="KKt-Ut-NM9" firstAttribute="top" secondItem="7Yq-i3-Inq" secondAttribute="top" id="ZAd-vO-yvm"/>
                                     <constraint firstItem="BBF-F8-AtI" firstAttribute="top" secondItem="KKt-Ut-NM9" secondAttribute="bottom" id="ccg-OB-Xcv"/>
+                                    <constraint firstItem="19g-xy-mjy" firstAttribute="width" secondItem="7Yq-i3-Inq" secondAttribute="width" id="kWA-Hn-EDH"/>
                                     <constraint firstItem="EP1-Ox-CwB" firstAttribute="top" secondItem="AX4-uk-07I" secondAttribute="bottom" constant="3" id="lCt-aM-cOF"/>
+                                    <constraint firstItem="19g-xy-mjy" firstAttribute="centerX" secondItem="7Yq-i3-Inq" secondAttribute="centerX" id="lVt-Z9-cCS"/>
                                     <constraint firstItem="BBF-F8-AtI" firstAttribute="width" secondItem="7Yq-i3-Inq" secondAttribute="width" id="uCu-5Z-Ypb"/>
                                 </constraints>
                                 <variation key="default">
@@ -691,6 +730,7 @@
                         <outlet property="databaseImage" destination="nfX-fm-yIP" id="0rv-Lp-1n0"/>
                         <outlet property="fiberPercentage" destination="OHz-Q5-iPl" id="yuw-wA-sD8"/>
                         <outlet property="fiberValue" destination="yFM-BL-3cz" id="P3g-4H-mjK"/>
+                        <outlet property="fruitNameLabel" destination="HRF-C4-FkU" id="6nO-Ho-ETX"/>
                         <outlet property="nutriMin1" destination="oF9-pq-MEc" id="Ulp-bc-iSP"/>
                         <outlet property="nutriMin2" destination="eHb-pt-19z" id="BdR-VU-IUE"/>
                         <outlet property="nutriMin3" destination="MmH-CD-LQU" id="nAF-99-kDl"/>
@@ -698,6 +738,7 @@
                         <outlet property="proteinValue" destination="sA5-Jx-9cl" id="Nny-Eu-6R5"/>
                         <outlet property="saturatedFatPercentage" destination="GYc-Up-p6d" id="i67-Iv-UIj"/>
                         <outlet property="saturatedFatValue" destination="O01-bM-8Sh" id="CXJ-Xl-4uB"/>
+                        <outlet property="servingSizeImage" destination="fcO-pA-oCv" id="wII-F3-lgT"/>
                         <outlet property="servingSizeValue" destination="vY1-Ci-jOq" id="bDM-Ig-wQ6"/>
                         <outlet property="sodiumPercentage" destination="WL8-wq-Vd4" id="GQD-bt-A5V"/>
                         <outlet property="sodiumValue" destination="Eay-oe-kff" id="Kfa-Yd-1c7"/>
@@ -717,6 +758,5 @@
     </scenes>
     <resources>
         <image name="SizedOrangeButton.png" width="96" height="96"/>
-        <image name="dragonfruitDatabase.jpg" width="628" height="371"/>
     </resources>
 </document>

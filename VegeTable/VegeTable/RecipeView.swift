@@ -1,14 +1,14 @@
 //
-//  NutritionFactsView.swift
+//  RecipeView.swift
 //  VegeTable
 //
-//  Created by Brian Tan on 3/17/16.
+//  Created by Brian Tan on 3/22/16.
 //  Copyright © 2016 Brian Tan. All rights reserved.
 //
 
 import UIKit
 
-class NutritionFactsView: UIView {
+class RecipeView: UIView {
 
     /*
     // Only override drawRect: if you perform custom drawing.
