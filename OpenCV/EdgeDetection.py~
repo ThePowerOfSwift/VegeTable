@@ -4,8 +4,7 @@
 #	   number of distinct objects/contours limited
 #	2) Sort list of contours based on contour area, then limit loop
 #	   over list of contours to largest (10-20?)
-#	3) Investigate ways to close gaps in contours and limitations
-#	4) Set up so script will run automatically until it has processed
+#	3) Set up so script will run automatically until it has processed
 #	   all images in a directory
 
 import sys
