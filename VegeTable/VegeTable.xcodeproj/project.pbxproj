@@ -20,6 +20,9 @@
 		A158BDE31C97CA740063E183 /* dragonfruitDatabase.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */; };
 		A15B6B2E1C869A370098A1D4 /* MoreVegetables.png in Resources */ = {isa = PBXBuildFile; fileRef = A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */; };
 		A15B6B321C869BC60098A1D4 /* Veges.png in Resources */ = {isa = PBXBuildFile; fileRef = A15B6B311C869BC60098A1D4 /* Veges.png */; };
+		A16AF2781CA9D22D00407669 /* wholeFishWMango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A16AF2751CA9D22D00407669 /* wholeFishWMango.jpg */; };
+		A16AF2791CA9D22D00407669 /* stickyRiceWMango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A16AF2761CA9D22D00407669 /* stickyRiceWMango.jpg */; };
+		A16AF27A1CA9D22D00407669 /* mangoSorbet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A16AF2771CA9D22D00407669 /* mangoSorbet.jpg */; };
 		A187C8821C7CA25800DC5C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8811C7CA25800DC5C23 /* AppDelegate.swift */; };
 		A187C8841C7CA25800DC5C23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8831C7CA25800DC5C23 /* ViewController.swift */; };
 		A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A187C8851C7CA25800DC5C23 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragonfruitDatabase.jpg; sourceTree = "<group>"; };
 		A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MoreVegetables.png; sourceTree = "<group>"; };
 		A15B6B311C869BC60098A1D4 /* Veges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Veges.png; sourceTree = "<group>"; };
+		A16AF2751CA9D22D00407669 /* wholeFishWMango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wholeFishWMango.jpg; sourceTree = "<group>"; };
+		A16AF2761CA9D22D00407669 /* stickyRiceWMango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stickyRiceWMango.jpg; sourceTree = "<group>"; };
+		A16AF2771CA9D22D00407669 /* mangoSorbet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mangoSorbet.jpg; sourceTree = "<group>"; };
 		A187C87E1C7CA25800DC5C23 /* VegeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VegeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A187C8811C7CA25800DC5C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A187C8831C7CA25800DC5C23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +76,9 @@
 		A116A8341C829E6F0000FFB5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A16AF2751CA9D22D00407669 /* wholeFishWMango.jpg */,
+				A16AF2761CA9D22D00407669 /* stickyRiceWMango.jpg */,
+				A16AF2771CA9D22D00407669 /* mangoSorbet.jpg */,
 				A19C8D551CA1F2D20022592B /* bowlOfMango.jpg */,
 				A19C8D561CA1F2D20022592B /* mango.jpg */,
 				A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */,
@@ -191,11 +200,14 @@
 				A116A84D1C83A28A0000FFB5 /* GrapeFruitCamButton.png in Resources */,
 				A187C88C1C7CA25800DC5C23 /* LaunchScreen.storyboard in Resources */,
 				A15B6B321C869BC60098A1D4 /* Veges.png in Resources */,
+				A16AF2791CA9D22D00407669 /* stickyRiceWMango.jpg in Resources */,
 				A187C8891C7CA25800DC5C23 /* Assets.xcassets in Resources */,
 				A158BDE21C97CA740063E183 /* dragonfruitUser.jpg in Resources */,
 				A116A83E1C82A5870000FFB5 /* OrangeButton.png in Resources */,
 				A116A8491C839D320000FFB5 /* Quicksand-Regular.ttf in Resources */,
 				A15B6B2E1C869A370098A1D4 /* MoreVegetables.png in Resources */,
+				A16AF2781CA9D22D00407669 /* wholeFishWMango.jpg in Resources */,
+				A16AF27A1CA9D22D00407669 /* mangoSorbet.jpg in Resources */,
 				A116A8401C82A6510000FFB5 /* SnapShotButton.png in Resources */,
 				A19C8D581CA1F2D20022592B /* mango.jpg in Resources */,
 				A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */,

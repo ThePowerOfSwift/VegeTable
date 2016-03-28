@@ -39,15 +39,22 @@ class NutritionViewController: UIViewController {
    @IBOutlet weak var nutriMin3: UILabel!
    @IBOutlet weak var nutriMin4: UILabel!
    
+   //Meal Inspirations Images
+   @IBOutlet weak var mealInspImage1: UIImageView!
+   @IBOutlet weak var mealInspImage2: UIImageView!
+   @IBOutlet weak var mealInspImage3: UIImageView!
+   
+   
    //Dummy data
    var data = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 3%"]
+   
    
    
    override func viewDidLoad() {
       super.viewDidLoad()
       
       self.NutritionScrollView.scrollEnabled = true
-      self.NutritionScrollView.contentSize.height = 1200
+      self.NutritionScrollView.contentSize.height = 2380
       
       self.fruitNameLabel.text = "Mango"
       
@@ -58,8 +65,9 @@ class NutritionViewController: UIViewController {
       self.databaseImage.layer.borderColor = UIColor(red:15/255.0, green:243/255.0, blue:106/255.0, alpha: 1.0).CGColor
       
       self.servingSizeImage.image = UIImage(named: "bowlOfMango.jpg");
-      self.servingSizeImage.layer.cornerRadius = self.servingSizeImage.frame.size.height/2
-      self.servingSizeImage.clipsToBounds = true
+      self.mealInspImage1.image = UIImage(named: "mangoSorbet.jpg")
+      self.mealInspImage2.image = UIImage(named: "wholeFishWMango.jpg")
+      self.mealInspImage3.image = UIImage(named: "stickyRiceWMango.jpg") 
       
       setNutritionFacts(data);
    }
