@@ -15,7 +15,6 @@ class NutritionViewController: UIViewController {
    @IBOutlet weak var fruitNameLabel: UILabel!
    @IBOutlet weak var servingSizeImage: UIImageView!
    
-   
    //Nutrition Facts Labels
    @IBOutlet weak var servingSizeValue: UILabel!
    @IBOutlet weak var calorieValue: UILabel!
@@ -48,28 +47,21 @@ class NutritionViewController: UIViewController {
       super.viewDidLoad()
       
       self.NutritionScrollView.scrollEnabled = true
-      self.NutritionScrollView.contentSize.height = 1800
+      self.NutritionScrollView.contentSize.height = 1200
       
-      //Fruit Identity View
-      self.fruitNameLabel.text = "Strawberry"
-      self.databaseImage.image = UIImage(named:"strawberry.jpg")
+      self.fruitNameLabel.text = "Mango"
+      
+      self.databaseImage.image = UIImage(named:"mango.jpg")
       self.databaseImage.layer.cornerRadius = self.databaseImage.frame.size.height/2
       self.databaseImage.clipsToBounds = true
       self.databaseImage.layer.borderWidth = 4.0
       self.databaseImage.layer.borderColor = UIColor(red:15/255.0, green:243/255.0, blue:106/255.0, alpha: 1.0).CGColor
       
-      //Nutritional Facts View
-      setNutritionFacts(data);
-      
-      
-      //Serving Size View
-      self.servingSizeImage.image = UIImage(named: "servingOfStrawberries.jpg");
-      /*
+      self.servingSizeImage.image = UIImage(named: "bowlOfMango.jpg");
       self.servingSizeImage.layer.cornerRadius = self.servingSizeImage.frame.size.height/2
       self.servingSizeImage.clipsToBounds = true
-      self.servingSizeImage.layer.borderWidth = 2.0
-      self.servingSizeImage.layer.borderColor = UIColor.whiteColor().CGColor
-      */
+      
+      setNutritionFacts(data);
    }
 
     override func didReceiveMemoryWarning() {

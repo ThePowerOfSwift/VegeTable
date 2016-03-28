@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		A116A83E1C82A5870000FFB5 /* OrangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A83D1C82A5870000FFB5 /* OrangeButton.png */; };
+		A116A8401C82A6510000FFB5 /* SnapShotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A83F1C82A6500000FFB5 /* SnapShotButton.png */; };
 		A116A8441C839CB50000FFB5 /* Damion-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A116A8431C839CB50000FFB5 /* Damion-Regular.ttf */; };
 		A116A8491C839D320000FFB5 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A116A8481C839D320000FFB5 /* Quicksand-Regular.ttf */; };
 		A116A84B1C839D430000FFB5 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A116A84A1C839D430000FFB5 /* DancingScript-Regular.ttf */; };
+		A116A84D1C83A28A0000FFB5 /* GrapeFruitCamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */; };
 		A116A84F1C83FF710000FFB5 /* SizedOrangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */; };
 		A11A8B081C9D97C100B8D1B9 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */; };
 		A158BDDB1C9710980063E183 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A158BDDA1C9710980063E183 /* NutritionViewController.swift */; };
 		A158BDE21C97CA740063E183 /* dragonfruitUser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */; };
 		A158BDE31C97CA740063E183 /* dragonfruitDatabase.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */; };
+		A15B6B2E1C869A370098A1D4 /* MoreVegetables.png in Resources */ = {isa = PBXBuildFile; fileRef = A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */; };
+		A15B6B321C869BC60098A1D4 /* Veges.png in Resources */ = {isa = PBXBuildFile; fileRef = A15B6B311C869BC60098A1D4 /* Veges.png */; };
 		A187C8821C7CA25800DC5C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8811C7CA25800DC5C23 /* AppDelegate.swift */; };
 		A187C8841C7CA25800DC5C23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8831C7CA25800DC5C23 /* ViewController.swift */; };
 		A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A187C8851C7CA25800DC5C23 /* Main.storyboard */; };
@@ -24,21 +28,22 @@
 		A19C8D541CA1F0120022592B /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C8D531CA1F0120022592B /* RecipeView.swift */; };
 		A19C8D571CA1F2D20022592B /* bowlOfMango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A19C8D551CA1F2D20022592B /* bowlOfMango.jpg */; };
 		A19C8D581CA1F2D20022592B /* mango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A19C8D561CA1F2D20022592B /* mango.jpg */; };
-		A1B216971CA374CC0004941D /* strawberry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1B216951CA374CC0004941D /* strawberry.jpg */; };
-		A1B216981CA374CC0004941D /* servingOfStrawberries.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1B216961CA374CC0004941D /* servingOfStrawberries.jpg */; };
-		A1B2169A1CA37C0F0004941D /* ServingSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B216991CA37C0F0004941D /* ServingSizeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A116A83D1C82A5870000FFB5 /* OrangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrangeButton.png; sourceTree = "<group>"; };
+		A116A83F1C82A6500000FFB5 /* SnapShotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnapShotButton.png; sourceTree = "<group>"; };
 		A116A8431C839CB50000FFB5 /* Damion-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Damion-Regular.ttf"; sourceTree = "<group>"; };
 		A116A8481C839D320000FFB5 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		A116A84A1C839D430000FFB5 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.ttf"; sourceTree = "<group>"; };
+		A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrapeFruitCamButton.png; sourceTree = "<group>"; };
 		A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SizedOrangeButton.png; sourceTree = "<group>"; };
 		A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		A158BDDA1C9710980063E183 /* NutritionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragonfruitUser.jpg; sourceTree = "<group>"; };
 		A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragonfruitDatabase.jpg; sourceTree = "<group>"; };
+		A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MoreVegetables.png; sourceTree = "<group>"; };
+		A15B6B311C869BC60098A1D4 /* Veges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Veges.png; sourceTree = "<group>"; };
 		A187C87E1C7CA25800DC5C23 /* VegeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VegeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A187C8811C7CA25800DC5C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A187C8831C7CA25800DC5C23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,9 +54,6 @@
 		A19C8D531CA1F0120022592B /* RecipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		A19C8D551CA1F2D20022592B /* bowlOfMango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bowlOfMango.jpg; sourceTree = "<group>"; };
 		A19C8D561CA1F2D20022592B /* mango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mango.jpg; sourceTree = "<group>"; };
-		A1B216951CA374CC0004941D /* strawberry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = strawberry.jpg; sourceTree = "<group>"; };
-		A1B216961CA374CC0004941D /* servingOfStrawberries.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = servingOfStrawberries.jpg; sourceTree = "<group>"; };
-		A1B216991CA37C0F0004941D /* ServingSizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServingSizeView.swift; path = ../ServingSizeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +70,15 @@
 		A116A8341C829E6F0000FFB5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A1B216951CA374CC0004941D /* strawberry.jpg */,
-				A1B216961CA374CC0004941D /* servingOfStrawberries.jpg */,
 				A19C8D551CA1F2D20022592B /* bowlOfMango.jpg */,
 				A19C8D561CA1F2D20022592B /* mango.jpg */,
 				A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */,
 				A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */,
+				A15B6B311C869BC60098A1D4 /* Veges.png */,
+				A15B6B2D1C869A370098A1D4 /* MoreVegetables.png */,
 				A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */,
+				A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */,
+				A116A83F1C82A6500000FFB5 /* SnapShotButton.png */,
 				A116A83D1C82A5870000FFB5 /* OrangeButton.png */,
 			);
 			name = Images;
@@ -117,7 +121,6 @@
 				A19C8D531CA1F0120022592B /* RecipeView.swift */,
 				A187C8851C7CA25800DC5C23 /* Main.storyboard */,
 				A158BDDA1C9710980063E183 /* NutritionViewController.swift */,
-				A1B216991CA37C0F0004941D /* ServingSizeView.swift */,
 				A187C8881C7CA25800DC5C23 /* Assets.xcassets */,
 				A187C88A1C7CA25800DC5C23 /* LaunchScreen.storyboard */,
 				A187C88D1C7CA25800DC5C23 /* Info.plist */,
@@ -185,13 +188,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A158BDE31C97CA740063E183 /* dragonfruitDatabase.jpg in Resources */,
+				A116A84D1C83A28A0000FFB5 /* GrapeFruitCamButton.png in Resources */,
 				A187C88C1C7CA25800DC5C23 /* LaunchScreen.storyboard in Resources */,
-				A1B216981CA374CC0004941D /* servingOfStrawberries.jpg in Resources */,
+				A15B6B321C869BC60098A1D4 /* Veges.png in Resources */,
 				A187C8891C7CA25800DC5C23 /* Assets.xcassets in Resources */,
 				A158BDE21C97CA740063E183 /* dragonfruitUser.jpg in Resources */,
 				A116A83E1C82A5870000FFB5 /* OrangeButton.png in Resources */,
 				A116A8491C839D320000FFB5 /* Quicksand-Regular.ttf in Resources */,
-				A1B216971CA374CC0004941D /* strawberry.jpg in Resources */,
+				A15B6B2E1C869A370098A1D4 /* MoreVegetables.png in Resources */,
+				A116A8401C82A6510000FFB5 /* SnapShotButton.png in Resources */,
 				A19C8D581CA1F2D20022592B /* mango.jpg in Resources */,
 				A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */,
 				A116A84F1C83FF710000FFB5 /* SizedOrangeButton.png in Resources */,
@@ -212,7 +217,6 @@
 				A187C8841C7CA25800DC5C23 /* ViewController.swift in Sources */,
 				A187C8821C7CA25800DC5C23 /* AppDelegate.swift in Sources */,
 				A158BDDB1C9710980063E183 /* NutritionViewController.swift in Sources */,
-				A1B2169A1CA37C0F0004941D /* ServingSizeView.swift in Sources */,
 				A19C8D541CA1F0120022592B /* RecipeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
