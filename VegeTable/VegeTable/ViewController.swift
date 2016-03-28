@@ -25,6 +25,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     return UIStatusBarStyle.LightContent
    }
    
+   //backcamera variable
+   var backCamera: AVCaptureDevice?
+   
    //captureSession will hold the image taken from the camera and output it in a still image format
    var captureSession: AVCaptureSession?                 //this object will orchestrate input from camera and its output image
    var stillImageOutput: AVCaptureStillImageOutput?      //this object is the output the captureSession will be associated with
@@ -32,64 +35,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      takenImage.hidden = true
-      // Do any additional setup after loading the view, typically from a nib.
+      
+      //Capture session is created here
+      captureSession = AVCaptureSession()
+      
+      //This gives our captureSession a preset fit for high resolution image taking.
+      captureSession!.sessionPreset = AVCaptureSessionPresetPhoto
+      
+      //Create an array of AnyObjects? that will hold the phone's CaptureDevices.
+      let devices = AVCaptureDevice.devices()
+ 
+      //Loop through all the capture devices on this phone.
+      for device in devices {
+         //Make sure this particular device supports video.
+         if (device.hasMediaType(AVMediaTypeVideo)) {
+            //Finally check the position and confirm we've got the back camera.
+            if(device.position == AVCaptureDevicePosition.Back) {
+               backCamera = device as? AVCaptureDevice
+            }
+         }
+      }
+      
+      if backCamera != nil {
+         //This will create a CaptureSession and bind it with our backCamera as a device input.
+         beginSession()
+      }
    }
 
    override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
-      // Dispose of any resources that can be recreated.
-   }
-
-   override func viewWillAppear(animated: Bool) {
-      super.viewWillAppear(animated);
-      //Question to consider, can this code be put in the viewDidLoad? Because everytime we return from the nutrition screen, this all happens all over again. Is this inefficient?
-      //Also, could I make this "previewView" a custom UIView and put all this code in there? Not sure if possible or necessary
-      
-      //captureSession is created here
-      captureSession = AVCaptureSession()
-      
-      //this gives our captureSession a preset fit for high resolution image taking
-      captureSession!.sessionPreset = AVCaptureSessionPresetPhoto
-      
-      //setting up our capturing device as the rear camera
-      let backCamera = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-      
-      //setting up a variable to be our camera input
-      //before this input var was declared, our program only had reference to a device , the rear camera
-      //but now, with an input our program has a reference to a capture session
-      var error: NSError?
-      var input: AVCaptureDeviceInput!
-      do {
-         input = try AVCaptureDeviceInput(device: backCamera)     //try to set input here, and catch any errors
-      } catch let error1 as NSError {
-            error = error1
-            input = nil
-      }
-      
-      //if there is no error in setting up out rear camera input, then link input with our captureSession
-      if error == nil && captureSession!.canAddInput(input) {
-            captureSession!.addInput(input)
-            stillImageOutput = AVCaptureStillImageOutput()
-         
-            //setting up our output requires a data format, so we set out image to be a .jpeg file
-            stillImageOutput!.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-         
-            if captureSession!.canAddOutput(stillImageOutput) {
-                //if possible add our rear camera output to our captureSession, now we have an input AND output associated with our cameraSession
-                captureSession!.addOutput(stillImageOutput)
-               
-                //like snapchat, when you move the camera around, you expect to see a preview
-                //we will have a previewLayer var which has a preview of our camera associated with our captureSession
-                previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                //setting videoGravity will make the image resize to fit in its container
-                previewLayer!.videoGravity = AVLayerVideoGravityResize
-                previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
-                //here we add our previewLayer to the view on our screen
-                previewView.layer.addSublayer(previewLayer!)
-                captureSession!.startRunning()
-            }
-      }
    }
    
    override func viewDidAppear(animated: Bool) {
@@ -162,12 +136,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                   let hoge = NSString(data: data!, encoding: NSUTF8StringEncoding)
                   print("Image Response \(hoge)")
                }
-               task.resume()*/
-               
-               
-               
-               
-               
+               task.resume()
+         */
+
                let send_string = "newDatafrom11AMios"
                
                let request = NSMutableURLRequest(URL: NSURL(string: "http://155.41.123.110:3001/text")!)
@@ -223,20 +194,63 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       }
    }
    
-   @IBAction func retakePhoto(sender: UIButton) {
-      hidePreviewImage(false)
+   func configureDevice() {
+      if let device = backCamera {
+      do {
+         try device.lockForConfiguration()
+      } catch {
+         print("Device was not able to lock for configuration.")
+      }
+         device.focusMode = .Locked
+         device.unlockForConfiguration()
+      }
    }
    
+   func beginSession() {
+   
+      //configureDevice()
+   
+      //before this input var was declared, our program only had reference to a device , the rear camera
+      //but now, with an input our program has a reference to a capture session
+      var error: NSError?
+      var input: AVCaptureDeviceInput!
+      do {
+         input = try AVCaptureDeviceInput(device: backCamera)     //try to set input here, and catch any errors
+      } catch let error1 as NSError {
+         error = error1
+         input = nil
+      }
+
+      //if there is no error in setting up out rear camera input, then link input with our captureSession
+      if error == nil && captureSession!.canAddInput(input) {
+            captureSession!.addInput(input)
+            stillImageOutput = AVCaptureStillImageOutput()
+         
+            //setting up our output requires a data format, so we set out image to be a .jpeg file
+            stillImageOutput!.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
+         
+            if captureSession!.canAddOutput(stillImageOutput) {
+                //if possible add our rear camera output to our captureSession, now we have an input AND output associated with our cameraSession
+                captureSession!.addOutput(stillImageOutput)
+               
+                //like snapchat, when you move the camera around, you expect to see a preview
+                //we will have a previewLayer var which has a preview of our camera associated with our captureSession
+                previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                //setting videoGravity will make the image resize to fit in its container
+                previewLayer!.videoGravity = AVLayerVideoGravityResize
+                previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
+                //here we add our previewLayer to the view on our screen
+                previewView.layer.addSublayer(previewLayer!)
+                captureSession!.startRunning()
+            }
+      }
+   }
+
+   
+
    func hidePreviewImage(decision: Bool) -> Void {
       self.previewView.hidden = decision
-      self.snapPhotoButton.hidden = decision
       self.takenImage.hidden = !decision
-      //self.retakePhotoButton.hidden = !decision
    }
-   
-
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
-    }
-
 }
 
