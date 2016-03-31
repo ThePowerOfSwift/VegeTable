@@ -97,7 +97,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       //set the bounds of the previewLayer to equal the same as the view on our screen
       previewLayer!.frame = previewView.bounds      
    }
-
+    
    @IBAction func didPressTakePhoto(sender: UIButton) {
       //here we create a videoConnectiono object from the first connection in the array of connections on the stillImageOutput
       if let videoConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
@@ -124,58 +124,114 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                
                //Setting the Nutrition Page picture the one we took, we dont actually want this when we are finalized
                //databaseImage.image = image
+     
+                
+                
+                
+                
+                func generateBoundaryString() -> String {
+                    return "Boundary-\(NSUUID().UUIDString)"
+                }
+                
+                
+                
+                func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
+                    let body = NSMutableData();
+                    
+                    if parameters != nil {
+                        for (key, value) in parameters! {
+                            body.appendString("--\(boundary)\r\n")
+                            body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+                            body.appendString("\(value)\r\n")
+                        }
+                    }
+                    
+                    let filename = "user-profile.jpg"
+                    
+                    let mimetype = "image/jpg"
+                    
+                    body.appendString("--\(boundary)\r\n")
+                    body.appendString("Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
+                    body.appendString("Content-Type: \(mimetype)\r\n\r\n")
+                    body.appendData(imageDataKey)
+                    body.appendString("\r\n")
+                    
+                    
+                    
+                    body.appendString("--\(boundary)--\r\n")
+                    
+                    return body
+                }
+                
+                
+                let myUrl = NSURL(string: "http://155.41.83.16:3001/upload");
+                let request = NSMutableURLRequest(URL:myUrl!);
+                request.HTTPMethod = "POST";
+                
+                let param = [
+                    "title"  : "test.jpeg"
+                ]
+                
+                let boundary = generateBoundaryString()
+                
+                request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+                
+                
+                let imageData1 = UIImageJPEGRepresentation(image, 1)
+                
+                if(imageData1==nil)  { return; }
+                
+                request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData1!, boundary: boundary)
+                                
+                let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+                    data, response, error in
+                    
+                    if error != nil {
+                        print("error=\(error)")
+                        return
+                    }
+                    
+                    // You can print out response object
+                    print("******* response = \(response)")
+                    
+                    // Print out reponse body
+                    let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                    print("****** response data = \(responseString!)")
+                    
+                    var err: NSError?
+                    do {
+                        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary {
+                            // Success block...
+                        }
+                    } catch {
+                        print(error)
+                    }
+                    /*
+                    if let parseJSON = json {
+                    var firstNameValue = parseJSON["firstName"] as? String
+                    println("firstNameValue: \(firstNameValue)")
+                    }
+                    */
+                    
+                }
+                
+                task.resume()
+
+                
+                
                
-         /*
-               //Sending the image to our server
-               var request = NSMutableURLRequest(URL: NSURL(string:"http://155.41.123.110:3001/text")!)
-               request.HTTPMethod = "POST"
-               request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-               request.addValue("application/json", forHTTPHeaderField: "Accept")
-       
-               //convert our UIImage to a JPEG
-               
-               let imageToSend = UIImageJPEGRepresentation(image, 0.6)
-               
-               //encoding our image
-               let base64String = imageToSend?.base64EncodedDataWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
-               
-               let err: NSError? = nil
- 
-               let params = ["image":[ "content_type": "image/jpeg", "filename":"apple.jpg", "file_data": "\(base64String)"]]
-               
-               print("params were hypothetically printed")
-            
-               do {
-                  try request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions(rawValue: 0))
-               }
-               catch {
-                  print("Failed to convert JSON to HTTPBody.")
-               }
-               
-            
-               let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
-                  let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                  guard error == nil && data != nil else {
-                     print("error=\(error) strData=\(strData)")
-                     return
-                  }
-                  let hoge = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                  print("Image Response \(hoge)")
-               }
-               task.resume()*/
-               
-               
-               
-               
-               
-               let send_string = "newDatafrom11AMios"
-               
-               let request = NSMutableURLRequest(URL: NSURL(string: "http://155.41.123.110:3001/text")!)
+                
+                
+              // WORKING HTTP
+               /*
+               let send_string = "newDatafromIOS"
+               let request = NSMutableURLRequest(URL: NSURL(string: "http://155.41.83.16:3001/text")!)
                 request.HTTPMethod = "POST"
                 let postString = "data=" + send_string
                 request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-                let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
-                    guard error == nil && data != nil else {                                                          // check for fundamental networking error
+                let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response,
+                    error in guard error == nil && data != nil else {
+                        // check for fundamental networking error
                         print("error=\(error)")
                         return
                     }
@@ -188,8 +244,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
                     print("responseString = \(responseString)")
                 }
-                task.resume()
-               
+                task.resume()*/
+             
                
                
                //run method here to send our imageData NSData to the server for analysis
@@ -240,3 +296,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 }
 
+extension NSMutableData {
+    
+    func appendString(string: String) {
+        let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        appendData(data!)
+    }
+}
