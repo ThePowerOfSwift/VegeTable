@@ -133,8 +133,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     return "Boundary-\(NSUUID().UUIDString)"
                 }
                 
-                
-                
                 func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
                     let body = NSMutableData();
                     
@@ -146,7 +144,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         }
                     }
                     
-                    let filename = "user-profile.jpg"
+                    // create random image name
+                    var part1 = String(Int(arc4random_uniform(2147483648) + 1))
+                    var part2 = String(Int(arc4random_uniform(2147483648) + 1))
+                    let filename = part1 + part2 + ".jpg"
                     
                     let mimetype = "image/jpg"
                     
@@ -182,7 +183,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 if(imageData1==nil)  { return; }
                 
                 request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData1!, boundary: boundary)
-                                
+                
                 let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
                     data, response, error in
                     
