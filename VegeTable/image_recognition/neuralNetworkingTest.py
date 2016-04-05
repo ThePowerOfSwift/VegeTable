@@ -24,7 +24,7 @@ tstdata._convertToOneOfMany( )
 if  os.path.isfile('oliv.xml'):
  fnn = NetworkReader.readFrom('oliv.xml')
 else:
- fnn = buildNetwork( trndata.indim, 64 , trndata.outdim, outclass=SoftmaxLayer )
+ fnn = buildNetwork( trndata.indim, 32 , trndata.outdim, outclass=SoftmaxLayer )
 
 trainer = BackpropTrainer( fnn, dataset=trndata, momentum=0.1, learningrate=0.01 , verbose=True, weightdecay=0.01)
 
