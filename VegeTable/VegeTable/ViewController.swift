@@ -123,12 +123,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                self.hidePreviewImage(true)
                
                //Setting the Nutrition Page picture the one we took, we dont actually want this when we are finalized
-               //databaseImage.image = image
-     
-                
-                
-                
-                
+               //Image sending implementation based off of the tutorial found at: http://swiftdeveloperblog.com/image-upload-example/
                 func generateBoundaryString() -> String {
                     return "Boundary-\(NSUUID().UUIDString)"
                 }
@@ -165,7 +160,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
                 
                 
-                let myUrl = NSURL(string: "http://155.41.83.16:3001/upload");
+                let my_ip = "155.41.96.55"
+                let myUrl = NSURL(string: "http://" + my_ip + ":3001/upload");
                 let request = NSMutableURLRequest(URL:myUrl!);
                 request.HTTPMethod = "POST";
                 

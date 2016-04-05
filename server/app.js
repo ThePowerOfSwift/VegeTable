@@ -42,8 +42,8 @@ app.post('/upload', function (req, res){
 });
 
 // Show the upload form
-app.get('/', function (req, res){  // res.sendFile(path.join(__dirname + '/index.html'));
-  res.writeHead(200, {'Content-Type': 'text/html' }); //  'Add a title: <input name="title" type="text" /><br><br>' +
+app.get('/', function (req, res){
+  res.writeHead(200, {'Content-Type': 'text/html' });
   var form = 'Success!<br><br>'+
               '<form action="/upload" enctype="multipart/form-data" method="post">' +
 
