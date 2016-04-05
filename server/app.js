@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Use quickthumb
 app.use(qt.static(__dirname + '/'));
 
+// This is where the image is sent to
 app.post('/upload', function (req, res){
   var form = new formidable.IncomingForm();
   form.parse(req, function(err, fields, files) {
@@ -41,14 +42,9 @@ app.post('/upload', function (req, res){
     });
 
     var img_dir = new_location + file_name;
-    var options = {
-    // mode: 'text',
-    // pythonPath: '/',
-     //pythonOptions: ['-u'],
-     //scriptPath: 'path/to/my/scripts',
-     args: [img_dir]
-    };
+    var options = {args: [img_dir]};
 
+    // Run the image processing here.
     PythonShell.run('my_script.py', options, function (err, results) { // options,
      if (err) throw err;
      // results is an array consisting of messages collected during execution
