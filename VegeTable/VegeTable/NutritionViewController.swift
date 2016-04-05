@@ -39,10 +39,13 @@ class NutritionViewController: UIViewController {
    @IBOutlet weak var nutriMin3: UILabel!
    @IBOutlet weak var nutriMin4: UILabel!
    
-   //Meal Inspirations Images
+   //Meal Inspirations Images and Labels
    @IBOutlet weak var mealInspImage1: UIImageView!
    @IBOutlet weak var mealInspImage2: UIImageView!
    @IBOutlet weak var mealInspImage3: UIImageView!
+   @IBOutlet weak var mealInspLabel1: UILabel!
+   @IBOutlet weak var mealInspLabel2: UILabel!
+   @IBOutlet weak var mealInspLabel3: UILabel!
    
    
    //Dummy data
@@ -54,8 +57,9 @@ class NutritionViewController: UIViewController {
       super.viewDidLoad()
       
       self.NutritionScrollView.scrollEnabled = true
-      self.NutritionScrollView.contentSize.height = 2380
+      self.NutritionScrollView.contentSize.height = 2079
       
+      //Handle this in prepareToSegue func in ViewController
       self.fruitNameLabel.text = "Mango"
       
       self.databaseImage.image = UIImage(named:"mango.jpg")
@@ -64,10 +68,14 @@ class NutritionViewController: UIViewController {
       self.databaseImage.layer.borderWidth = 4.0
       self.databaseImage.layer.borderColor = UIColor(red:15/255.0, green:243/255.0, blue:106/255.0, alpha: 1.0).CGColor
       
+      //Handle this in prepareToSegue func in ViewController
       self.servingSizeImage.image = UIImage(named: "bowlOfMango.jpg");
       self.mealInspImage1.image = UIImage(named: "mangoSorbet.jpg")
       self.mealInspImage2.image = UIImage(named: "wholeFishWMango.jpg")
-      self.mealInspImage3.image = UIImage(named: "stickyRiceWMango.jpg") 
+      self.mealInspImage3.image = UIImage(named: "stickyRiceWMango.jpg")
+      self.mealInspLabel1.text = "Mango Sorbet"
+      self.mealInspLabel2.text = "Fried Fish w/ Mango"
+      self.mealInspLabel3.text = "Sticky Rice w/ Mango" 
       
       setNutritionFacts(data);
    }
@@ -87,6 +95,11 @@ class NutritionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+   
+   //Will make the time and battery bar appear white in app
+   override func  preferredStatusBarStyle()-> UIStatusBarStyle {
+    return UIStatusBarStyle.LightContent
+   } 
 
    @IBAction func backToCameraPress(sender: UIButton) {
       self.performSegueWithIdentifier("ShowCameraSegue", sender: sender)

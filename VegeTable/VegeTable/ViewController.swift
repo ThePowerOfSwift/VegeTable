@@ -14,7 +14,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
    var dataReady = true    //dummy bool that the pic analysis method will return
    var riderid = 0
-
+   var nutritionFacts = [String]()
+   
    @IBOutlet weak var takenImage: UIImageView!
    @IBOutlet weak var previewView: PreviewView!
    @IBOutlet weak var snapPhotoButton: UIButton!
@@ -97,7 +98,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       //set the bounds of the previewLayer to equal the same as the view on our screen
       previewLayer!.frame = previewView.bounds      
    }
-    
+   
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      if segue.identifier == "ShowNutritionSegue" {
+         if let destinationViewController = segue.destinationViewController as? NutritionViewController {
+            destinationViewController.data = nutritionFacts
+            //also send the data for the fruit image and meal inspiration images
+         }
+      }
+   
+   }
+   
    @IBAction func didPressTakePhoto(sender: UIButton) {
       //here we create a videoConnectiono object from the first connection in the array of connections on the stillImageOutput
       if let videoConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
@@ -210,64 +221,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
                 
                 task.resume()
-
-                
-                
                
-                
-                
-              // WORKING HTTP
-               /*
-               let send_string = "newDatafromIOS"
-               let request = NSMutableURLRequest(URL: NSURL(string: "http://155.41.83.16:3001/text")!)
-                request.HTTPMethod = "POST"
-                let postString = "data=" + send_string
-                request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-                let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response,
-                    error in guard error == nil && data != nil else {
-                        // check for fundamental networking error
-                        print("error=\(error)")
-                        return
-                    }
-                    
-                    if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
-                        print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                        print("response = \(response)")
-                    }
-                    
-                    let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                    print("responseString = \(responseString)")
-                }
-                task.resume()*/
-             
-               
-               
-               //run method here to send our imageData NSData to the server for analysis
-               //now with the return data, segue to our tableview controller and populate the cells with the data
+               //var returnDataFromServer =
                 
                if self.dataReady {
+                  //set nutritionFacts equal to the return value of the server code
+                  self.nutritionFacts = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 33%"]
                   //performSegue to the tableview controller
                   self.performSegueWithIdentifier("ShowNutritionSegue", sender: sender)
-                  
-                  /* this code can possibly help transfer data from online to our model
-                  prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-                  {
-                     if ([[segue identifier] isEqualToString:@"MySegue"]) {
-
-                        // Get destination view
-                        SecondView *vc = [segue destinationViewController];
-
-                        // Get button tag number (or do whatever you need to do here, based on your object
-                        NSInteger tagIndex = [(UIButton *)sender tag];
-
-                        // Pass the information to your destination view
-                        [vc setSelectedButton:tagIndex];
-                     }
-                  }
-                  */
                }
-               
-             
+   
             }
          })
       }
