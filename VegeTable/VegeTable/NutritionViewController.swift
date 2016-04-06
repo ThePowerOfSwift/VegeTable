@@ -47,17 +47,17 @@ class NutritionViewController: UIViewController {
    @IBOutlet weak var mealInspLabel2: UILabel!
    @IBOutlet weak var mealInspLabel3: UILabel!
    
-   
+   //Nutrition Facts in a String array
+   var data = [String]()
    //Dummy data
-   var data = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 3%"]
-   
+   // = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 3%"]
    
    
    override func viewDidLoad() {
       super.viewDidLoad()
       
       self.NutritionScrollView.scrollEnabled = true
-      self.NutritionScrollView.contentSize.height = 2079
+      //self.NutritionScrollView.contentSize.height = 2095
       
       //Handle this in prepareToSegue func in ViewController
       self.fruitNameLabel.text = "Mango"
