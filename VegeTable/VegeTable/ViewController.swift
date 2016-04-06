@@ -35,17 +35,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       super.viewDidLoad()
       takenImage.hidden = true
       // Do any additional setup after loading the view, typically from a nib.
-   }
-
-   override func didReceiveMemoryWarning() {
-      super.didReceiveMemoryWarning()
-      // Dispose of any resources that can be recreated.
-   }
-
-   override func viewWillAppear(animated: Bool) {
-      super.viewWillAppear(animated);
-      //Question to consider, can this code be put in the viewDidLoad? Because everytime we return from the nutrition screen, this all happens all over again. Is this inefficient?
-      //Also, could I make this "previewView" a custom UIView and put all this code in there? Not sure if possible or necessary
       
       //captureSession is created here
       captureSession = AVCaptureSession()
@@ -91,6 +80,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 captureSession!.startRunning()
             }
       }
+
+      
+   }
+
+   override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+   }
+
+   override func viewWillAppear(animated: Bool) {
+      super.viewWillAppear(animated);
+      //Question to consider, can this code be put in the viewDidLoad? Because everytime we return from the nutrition screen, this all happens all over again. Is this inefficient?
+      //Also, could I make this "previewView" a custom UIView and put all this code in there? Not sure if possible or necessary
+     
    }
    
    override func viewDidAppear(animated: Bool) {
