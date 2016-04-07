@@ -3,8 +3,5 @@ VegeTable/image_recognition/neuralNetwork.xml
 
 VegeTable/image_recognition/oliv.xml
 
-*.JPEG
-
 *.xml
-
-*.jpeg
+data/imagenet/source_images/*

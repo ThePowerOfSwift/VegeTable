@@ -7,6 +7,7 @@ import os.path
 import sys
 import xml.etree.ElementTree as ET
 import cv2
+import csv
 
 class BoundingBox(object):
   pass
@@ -91,15 +92,32 @@ def ProcessXMLAnnotation(xml_file):
 
 
 
-dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/Grape"
+dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/source_images/Apple"
 xmlFiles = GetListOfBoundingFiles(dataDir)
 
 print("Found "+str(len(xmlFiles))+" XML files for processing.")
 
 cv2.startWindowThread()
 
+# Check to see if an excluded images file already exists
+# This file stores all of the files that have been manually selected to be skipped due to image quality
+excludeFiles = []
+excludeFile = os.path.join(dataDir, "excludes.csv")
+if os.path.isfile(excludeFile):
+    useExistingExcludeFile = True
+    # Load all the rows in the exclude file, which is all the file names to be excluded from this image processing
+    with open(excludeFile, 'rb') as csvFile:
+        fileData = csv.reader(csvFile)
+        for row in fileData:
+            excludeFiles.append(row[0])
+else:
+    useExistingExcludeFile = False
+
 # Go through all of the XML files
-for xmlFile in xmlFiles:
+i = 0
+while (i >= 0) and (i < len(xmlFiles)):
+    xmlFile = xmlFiles[i]
+
     # Get the base name, it is some random number beginning with an 'n'
     nxxxx, xml = os.path.splitext(os.path.basename(xmlFile))
 
@@ -108,11 +126,11 @@ for xmlFile in xmlFiles:
 
     # Display the image with the bounding box
     imFile = os.path.join(dataDir, nxxxx+".JPEG")
-    if (os.path.isfile(imFile)):
+    if os.path.isfile(imFile):
         img = cv2.imread(imFile)
-        for i,bbox in enumerate(bboxes):
+        for k,bbox in enumerate(bboxes):
             # Guard against improperly specified boxes.
-            if (bbox.xmin_scaled >= bbox.xmax_scaled or bbox.ymin_scaled >= bbox.ymax_scaled):
+            if (bbox.xmin_scaled >= bbox.xmax_scaled) or (bbox.ymin_scaled >= bbox.ymax_scaled):
                 continue
 
             # show the bounding box
@@ -143,15 +161,58 @@ for xmlFile in xmlFiles:
             # cv2.imshow("edge",resize)
             # cv2.waitKey(1000)
 
+            # Move up two directory levels and set the training directory
+            base, fruitFolder = os.path.split(dataDir)
+            base, srcFolder = os.path.split(base)
+            trainFolder = os.path.join(base, "training_images",fruitFolder)
 
-            if not os.path.exists(dataDir+"/training/"):
-                os.makedirs(dataDir+"/training/")
+            if not os.path.exists(trainFolder):
+                os.makedirs(trainFolder)
 
-            cv2.imwrite(dataDir+"/training/"+os.path.splitext(os.path.basename(bbox.filename))[0]+"_"+str(i)+".JPEG",resize)
+            trainFile = os.path.splitext(os.path.basename(bbox.filename))[0]+"_"+str(k)+".JPEG"
+            trainPath = os.path.join(trainFolder,trainFile)
+
+            exFile = os.path.split(imFile)
+
+            if useExistingExcludeFile:
+                if exFile[1] not in excludeFiles:
+                    cv2.imwrite(trainPath,resize)
+
+                i += 1
+            else:
+                cv2.imshow("Image "+str(i+1)+" of "+str(len(xmlFiles)), resize)
+                cv2.moveWindow("Image "+str(i+1)+" of "+str(len(xmlFiles)),0,0)
+                key = cv2.waitKey(0)
+
+                if key == 32:
+                    # SPACEBAR
+                    # Skip this image, add it to the exclude files
+                    i += 1
+                    with open(excludeFile, 'a') as csvFile:
+                        csvWriter = csv.writer(csvFile)
+                        csvWriter.writerow([exFile[1]])
+                        print("Skip file: "+exFile[1])
+
+                if key == 63235:
+                    # RIGHT ARROW
+                    # Move to the next image, the user wants to keep this one
+                    i += 1
+
+                if key == 63234:
+                    # LEFT ARROW
+                    # Move back one image
+                    i -= 1
+
+                if key == 27:
+                    # ESCAPE KEY
+                    i = len(xmlFiles)
+
+                cv2.destroyAllWindows()
+
 
 
     else:
         print("File does not exist: "+imFile)
+        i += 1
 
 
-cv2.destroyAllWindows()
