@@ -671,7 +671,7 @@
                                                     <constraint firstAttribute="width" constant="286" id="uS6-zc-qjd"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -701,7 +701,7 @@
                                                     <constraint firstAttribute="height" constant="129.5" id="rZp-aM-9kt"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -731,7 +731,7 @@
                                                     <constraint firstAttribute="width" constant="215.5" id="kBM-Xw-DVT"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -869,7 +869,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.062745295464992523" green="0.84705883264541626" blue="0.45882350206375122" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.062745098039215685" green="0.84705882352941175" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="HRF-C4-FkU" firstAttribute="centerX" secondItem="KKt-Ut-NM9" secondAttribute="centerX" id="ShB-5S-XAg"/>
                                             <constraint firstAttribute="bottom" secondItem="HRF-C4-FkU" secondAttribute="bottom" constant="8" id="XLO-wI-4F4"/>
