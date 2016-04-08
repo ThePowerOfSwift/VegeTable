@@ -145,61 +145,9 @@
                                     <constraint firstAttribute="height" constant="60" id="qRb-HZ-yfQ"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yq-i3-Inq">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yq-i3-Inq">
                                 <rect key="frame" x="0.0" y="60" width="600" height="2100"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKt-Ut-NM9">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="276"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MT-K6-Hb1">
-                                                <rect key="frame" x="8" y="26" width="167" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="moI-57-IBe"/>
-                                                    <constraint firstAttribute="width" constant="167" id="uiJ-Dx-fUS"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="25"/>
-                                                <state key="normal" title="&lt; Camera">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="backToCameraPress:" destination="ZdT-ZM-6v5" eventType="touchUpInside" id="wtA-yZ-EbD"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FruitName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-C4-FkU">
-                                                <rect key="frame" x="175" y="213" width="250" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="250" id="ePu-eH-coZ"/>
-                                                    <constraint firstAttribute="height" constant="55" id="gXd-h4-RDQ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="40"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nfX-fm-yIP">
-                                                <rect key="frame" x="225" y="63" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="ams-6q-Hp3"/>
-                                                    <constraint firstAttribute="height" constant="150" id="nw2-Zm-u3Q"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.062745098039215685" green="0.84705882352941175" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="HRF-C4-FkU" firstAttribute="centerX" secondItem="KKt-Ut-NM9" secondAttribute="centerX" id="ShB-5S-XAg"/>
-                                            <constraint firstAttribute="bottom" secondItem="HRF-C4-FkU" secondAttribute="bottom" constant="8" id="XLO-wI-4F4"/>
-                                            <constraint firstItem="nfX-fm-yIP" firstAttribute="centerX" secondItem="KKt-Ut-NM9" secondAttribute="centerX" id="ekS-GO-D0K"/>
-                                            <constraint firstAttribute="height" constant="276" id="huW-Qv-pVd"/>
-                                            <constraint firstItem="HRF-C4-FkU" firstAttribute="top" secondItem="nfX-fm-yIP" secondAttribute="bottom" id="jOC-SY-hcF"/>
-                                            <constraint firstItem="3MT-K6-Hb1" firstAttribute="leading" secondItem="KKt-Ut-NM9" secondAttribute="leadingMargin" id="rgY-RO-SfY"/>
-                                            <constraint firstItem="3MT-K6-Hb1" firstAttribute="top" secondItem="KKt-Ut-NM9" secondAttribute="top" constant="26" id="uKL-K3-yvu"/>
-                                            <constraint firstAttribute="height" constant="276" id="zN4-uI-Rxg"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="huW-Qv-pVd"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBF-F8-AtI">
                                         <rect key="frame" x="0.0" y="276" width="600" height="511.5"/>
                                         <subviews>
@@ -886,6 +834,58 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKt-Ut-NM9">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="276"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MT-K6-Hb1">
+                                                <rect key="frame" x="8" y="26" width="167" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="moI-57-IBe"/>
+                                                    <constraint firstAttribute="width" constant="167" id="uiJ-Dx-fUS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="25"/>
+                                                <state key="normal" title="&lt; Camera">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backToCameraPress:" destination="ZdT-ZM-6v5" eventType="touchUpInside" id="wtA-yZ-EbD"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FruitName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-C4-FkU">
+                                                <rect key="frame" x="175" y="213" width="250" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="ePu-eH-coZ"/>
+                                                    <constraint firstAttribute="height" constant="55" id="gXd-h4-RDQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="40"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nfX-fm-yIP">
+                                                <rect key="frame" x="225" y="63" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="ams-6q-Hp3"/>
+                                                    <constraint firstAttribute="height" constant="150" id="nw2-Zm-u3Q"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.062745098039215685" green="0.84705882352941175" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="HRF-C4-FkU" firstAttribute="centerX" secondItem="KKt-Ut-NM9" secondAttribute="centerX" id="ShB-5S-XAg"/>
+                                            <constraint firstAttribute="bottom" secondItem="HRF-C4-FkU" secondAttribute="bottom" constant="8" id="XLO-wI-4F4"/>
+                                            <constraint firstItem="nfX-fm-yIP" firstAttribute="centerX" secondItem="KKt-Ut-NM9" secondAttribute="centerX" id="ekS-GO-D0K"/>
+                                            <constraint firstAttribute="height" constant="276" id="huW-Qv-pVd"/>
+                                            <constraint firstItem="HRF-C4-FkU" firstAttribute="top" secondItem="nfX-fm-yIP" secondAttribute="bottom" id="jOC-SY-hcF"/>
+                                            <constraint firstItem="3MT-K6-Hb1" firstAttribute="leading" secondItem="KKt-Ut-NM9" secondAttribute="leadingMargin" id="rgY-RO-SfY"/>
+                                            <constraint firstItem="3MT-K6-Hb1" firstAttribute="top" secondItem="KKt-Ut-NM9" secondAttribute="top" constant="26" id="uKL-K3-yvu"/>
+                                            <constraint firstAttribute="height" constant="276" id="zN4-uI-Rxg"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="huW-Qv-pVd"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="KKt-Ut-NM9" secondAttribute="trailing" id="0Js-K0-MRm"/>
@@ -893,7 +893,7 @@
                                     <constraint firstItem="KKt-Ut-NM9" firstAttribute="leading" secondItem="7Yq-i3-Inq" secondAttribute="leading" id="AjB-Vq-lnL"/>
                                     <constraint firstItem="KKt-Ut-NM9" firstAttribute="top" secondItem="7Yq-i3-Inq" secondAttribute="top" id="Asq-Eg-nRR"/>
                                     <constraint firstItem="BBF-F8-AtI" firstAttribute="centerX" secondItem="7Yq-i3-Inq" secondAttribute="centerX" id="Lhq-V6-Spz"/>
-                                    <constraint firstAttribute="bottom" secondItem="BBF-F8-AtI" secondAttribute="bottom" id="MmO-5J-co6"/>
+                                    <constraint firstAttribute="bottom" secondItem="BBF-F8-AtI" secondAttribute="bottom" constant="1312.5" id="MmO-5J-co6"/>
                                     <constraint firstItem="19g-xy-mjy" firstAttribute="top" secondItem="BBF-F8-AtI" secondAttribute="bottom" id="RAR-X3-1TO"/>
                                     <constraint firstAttribute="bottom" secondItem="KKt-Ut-NM9" secondAttribute="bottom" constant="324" id="RP9-pq-rz2"/>
                                     <constraint firstItem="KKt-Ut-NM9" firstAttribute="top" secondItem="7Yq-i3-Inq" secondAttribute="top" id="ZAd-vO-yvm"/>
@@ -907,7 +907,6 @@
                                     <mask key="constraints">
                                         <exclude reference="RP9-pq-rz2"/>
                                         <exclude reference="ZAd-vO-yvm"/>
-                                        <exclude reference="MmO-5J-co6"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -928,7 +927,6 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="MRu-0U-BEt"/>
-                                <exclude reference="NaX-L8-Tnr"/>
                                 <exclude reference="cFD-ob-XJZ"/>
                             </mask>
                         </variation>
