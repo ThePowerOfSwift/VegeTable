@@ -1,3 +1,14 @@
+'''
+This script is intended to be executed twice.
+
+The first instance will establish which files are to be excluded from the training set.
+This is an interactive execution requiring the user to go through the pictures with the left and right arrows.
+If an image is to be excluded the space bar needs to be hit.
+
+The second instance reads the exclusions file and processes all the images and stores them in the training
+images folder.
+
+'''
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -92,7 +103,7 @@ def ProcessXMLAnnotation(xml_file):
 
 
 
-dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/source_images/Apple"
+dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/source_images/Grape"
 xmlFiles = GetListOfBoundingFiles(dataDir)
 
 print("Found "+str(len(xmlFiles))+" XML files for processing.")
