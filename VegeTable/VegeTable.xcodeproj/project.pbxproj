@@ -14,6 +14,7 @@
 		A116A84B1C839D430000FFB5 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A116A84A1C839D430000FFB5 /* DancingScript-Regular.ttf */; };
 		A116A84D1C83A28A0000FFB5 /* GrapeFruitCamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */; };
 		A116A84F1C83FF710000FFB5 /* SizedOrangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */; };
+		A11A8B081C9D97C100B8D1B9 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */; };
 		A158BDDB1C9710980063E183 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A158BDDA1C9710980063E183 /* NutritionViewController.swift */; };
 		A158BDE21C97CA740063E183 /* dragonfruitUser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */; };
 		A158BDE31C97CA740063E183 /* dragonfruitDatabase.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */; };
@@ -27,6 +28,7 @@
 		A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A187C8851C7CA25800DC5C23 /* Main.storyboard */; };
 		A187C8891C7CA25800DC5C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A187C8881C7CA25800DC5C23 /* Assets.xcassets */; };
 		A187C88C1C7CA25800DC5C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A187C88A1C7CA25800DC5C23 /* LaunchScreen.storyboard */; };
+		A19C8D541CA1F0120022592B /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C8D531CA1F0120022592B /* RecipeView.swift */; };
 		A19C8D571CA1F2D20022592B /* bowlOfMango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A19C8D551CA1F2D20022592B /* bowlOfMango.jpg */; };
 		A19C8D581CA1F2D20022592B /* mango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A19C8D561CA1F2D20022592B /* mango.jpg */; };
 		A1AE7BFA1CB4990100D530A7 /* yesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A1AE7BF81CB4990100D530A7 /* yesButton.png */; };
@@ -54,6 +56,7 @@
 		A116A84A1C839D430000FFB5 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.ttf"; sourceTree = "<group>"; };
 		A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrapeFruitCamButton.png; sourceTree = "<group>"; };
 		A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SizedOrangeButton.png; sourceTree = "<group>"; };
+		A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		A158BDDA1C9710980063E183 /* NutritionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragonfruitUser.jpg; sourceTree = "<group>"; };
 		A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragonfruitDatabase.jpg; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		A187C8881C7CA25800DC5C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A187C88B1C7CA25800DC5C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A187C88D1C7CA25800DC5C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A19C8D531CA1F0120022592B /* RecipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		A19C8D551CA1F2D20022592B /* bowlOfMango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bowlOfMango.jpg; sourceTree = "<group>"; };
 		A19C8D561CA1F2D20022592B /* mango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mango.jpg; sourceTree = "<group>"; };
 		A1AE7BF81CB4990100D530A7 /* yesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yesButton.png; sourceTree = "<group>"; };
@@ -139,12 +143,14 @@
 			children = (
 				A116A8471C839CCF0000FFB5 /* Fonts */,
 				A116A8341C829E6F0000FFB5 /* Images */,
-				A187C8851C7CA25800DC5C23 /* Main.storyboard */,
+				A187C8811C7CA25800DC5C23 /* AppDelegate.swift */,
 				A187C8831C7CA25800DC5C23 /* ViewController.swift */,
+				A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */,
+				A19C8D531CA1F0120022592B /* RecipeView.swift */,
+				A187C8851C7CA25800DC5C23 /* Main.storyboard */,
 				A158BDDA1C9710980063E183 /* NutritionViewController.swift */,
 				A187C8881C7CA25800DC5C23 /* Assets.xcassets */,
 				A187C88A1C7CA25800DC5C23 /* LaunchScreen.storyboard */,
-				A187C8811C7CA25800DC5C23 /* AppDelegate.swift */,
 				A187C88D1C7CA25800DC5C23 /* Info.plist */,
 			);
 			path = VegeTable;
@@ -241,9 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11A8B081C9D97C100B8D1B9 /* PreviewView.swift in Sources */,
 				A187C8841C7CA25800DC5C23 /* ViewController.swift in Sources */,
 				A187C8821C7CA25800DC5C23 /* AppDelegate.swift in Sources */,
 				A158BDDB1C9710980063E183 /* NutritionViewController.swift in Sources */,
+				A19C8D541CA1F0120022592B /* RecipeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
