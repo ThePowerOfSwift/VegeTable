@@ -95,3 +95,4 @@ for folder in folders:
 	dir_path = fp + folder + '/'
 	obj_id = int(folder)
 	main(obj_id,dir_path)
+exit()
