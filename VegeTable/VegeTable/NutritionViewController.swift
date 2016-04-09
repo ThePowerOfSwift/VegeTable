@@ -57,7 +57,8 @@ class NutritionViewController: UIViewController {
       super.viewDidLoad()
       
       self.NutritionScrollView.scrollEnabled = true
-      //self.NutritionScrollView.contentSize.height = 2095
+      let edgeInsets = UIEdgeInsetsMake(60, 0, 0, 0)
+      self.NutritionScrollView.contentInset = edgeInsets
       
       //Handle this in prepareToSegue func in ViewController
       self.fruitNameLabel.text = "Mango"
