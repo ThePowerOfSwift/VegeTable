@@ -20,6 +20,9 @@ import xml.etree.ElementTree as ET
 import cv2
 import csv
 
+resizeX = 100
+resizeY = 100
+
 class BoundingBox(object):
   pass
 
@@ -168,7 +171,7 @@ while (i >= 0) and (i < len(xmlFiles)):
             # cv2.waitKey(1000)
 
             # resize the image to be a standard size
-            resize = cv2.resize(blur,(100,100))
+            resize = cv2.resize(blur,(resizeX,resizeY))
             # cv2.imshow("edge",resize)
             # cv2.waitKey(1000)
 
