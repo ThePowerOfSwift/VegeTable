@@ -57,7 +57,7 @@ class NutritionViewController: UIViewController {
       super.viewDidLoad()
       
       self.NutritionScrollView.scrollEnabled = true
-      //self.NutritionScrollView.contentSize.height = 2095
+      self.NutritionScrollView.contentSize.height = 2075
       
       //Handle this in prepareToSegue func in ViewController
       self.fruitNameLabel.text = "Mango"
