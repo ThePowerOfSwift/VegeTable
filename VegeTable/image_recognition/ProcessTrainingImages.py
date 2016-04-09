@@ -106,7 +106,7 @@ def ProcessXMLAnnotation(xml_file):
 
 
 
-dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/source_images/Grape"
+dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/source_images/Apple"
 xmlFiles = GetListOfBoundingFiles(dataDir)
 
 print("Found "+str(len(xmlFiles))+" XML files for processing.")
@@ -160,7 +160,7 @@ while (i >= 0) and (i < len(xmlFiles)):
 
             # perform a gaussian blur to remove sharp features
             blur = crop.copy()
-            blur = cv2.GaussianBlur(blur, (9,9),0)
+#            blur = cv2.GaussianBlur(blur, (9,9),0)
             # cv2.imshow("blurred",blur)
             # cv2.waitKey(1000)
 
