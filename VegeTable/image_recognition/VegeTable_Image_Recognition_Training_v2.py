@@ -61,7 +61,7 @@ tstdata._convertToOneOfMany( )
 # Build a new neural network
 print "Building the neural network, in-dimension: " + str(trndata.indim) + ", out-dimension: " + str(trndata.outdim)
 #fnn = buildNetwork( trndata.indim, int(0.5*trndata.indim), trndata.outdim, outclass=SoftmaxLayer )
-fnn = buildNetwork(trndata.indim, 5, trndata.outdim, outclass=SoftmaxLayer)
+fnn = buildNetwork(trndata.indim, 25, trndata.outdim, outclass=SoftmaxLayer)
 
 # Create a new backpropagation trainer
 print "Creating backpropagation trainer..."
@@ -71,15 +71,13 @@ trainer = BackpropTrainer(fnn, dataset=trndata, momentum=0.1, learningrate=0.01 
 # Perform epoch training
 print "Beginning "+str(numEpochs)+" training epochs..."
 start = timer()
-#trainer.trainEpochs(numEpochs)
-outp = trainer.trainUntilConvergence(verbose=True)
+trainer.trainEpochs(numEpochs)
+#outp = trainer.trainUntilConvergence(verbose=True)
 end = timer()
-#print "Time taken for "+str(numEpochs)+" epochs: " + str(end-start)
-print "Time taken for "+str(len(outp))+" epochs: " + str(end-start)
+print "Time taken for "+str(numEpochs)+" epochs: " + str(end-start)
+#print "Time taken for "+str(len(outp[0]))+" epochs: " + str(end-start)
 
-print 'Percent Error on Test dataset: ' , percentError( trainer.testOnClassData (
-           dataset=tstdata )
-           , tstdata['class'] )
+print 'Percent Error on Test dataset: ', percentError(trainer.testOnClassData(dataset=tstdata ), tstdata['class'] )
 
 print "Writing neural network to file..."
 NetworkWriter.writeToFile(fnn, 'VegeTable_PyBrain_Neural_Network.xml')

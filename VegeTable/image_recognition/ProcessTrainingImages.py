@@ -19,6 +19,9 @@ import sys
 import xml.etree.ElementTree as ET
 import cv2
 import csv
+import numpy as np
+
+
 
 resizeX = 100
 resizeY = 100
@@ -106,7 +109,7 @@ def ProcessXMLAnnotation(xml_file):
 
 
 
-dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/source_images/Apple"
+dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/source_images/Cucumber"
 xmlFiles = GetListOfBoundingFiles(dataDir)
 
 print("Found "+str(len(xmlFiles))+" XML files for processing.")
@@ -160,9 +163,20 @@ while (i >= 0) and (i < len(xmlFiles)):
 
             # perform a gaussian blur to remove sharp features
             blur = crop.copy()
-#            blur = cv2.GaussianBlur(blur, (9,9),0)
+            blur = cv2.GaussianBlur(blur, (15,15),0)
             # cv2.imshow("blurred",blur)
             # cv2.waitKey(1000)
+            hsv = cv2.cvtColor(blur,cv2.COLOR_BGR2HSV)
+
+            # define range of blue color in HSV
+            lower_hue = np.array([0,75,75])
+            upper_hue = np.array([25,255,255])
+
+            # Threshold the HSV image to get only blue colors
+            mask = cv2.inRange(hsv, lower_hue, upper_hue)
+
+            # Bitwise-AND mask and original image
+            res = cv2.bitwise_and(crop,crop, mask= mask)
 
             # perform a canny edge detection
             # canny = blur.copy()
@@ -171,7 +185,7 @@ while (i >= 0) and (i < len(xmlFiles)):
             # cv2.waitKey(1000)
 
             # resize the image to be a standard size
-            resize = cv2.resize(blur,(resizeX,resizeY))
+            resize = cv2.resize(res,(resizeX,resizeY))
             # cv2.imshow("edge",resize)
             # cv2.waitKey(1000)
 
