@@ -77,14 +77,16 @@ for imFile in allFiles:
     imgPIL = Image.open("temp.jpeg")
     imgArray = numpy.asarray(imgPIL.getdata())
 
+    start = timer()
     result = fnn.activate(ravel(imgArray))
+    end = timer()
 
     if result[0] > 0.3:
         matchRes = "Apple"
     else:
         matchRes = "Unknown"
 
-    print imFile + " Matched to: "+matchRes+" with prediction scores: ", result
+    print imFile + " Matched to: "+matchRes+" in "+str(end-start)+"sec with prediction scores: ", result
 
 
     res = cv2.putText(res, matchRes, (0,len(res[0,:,0])-10), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, [255,255,255])

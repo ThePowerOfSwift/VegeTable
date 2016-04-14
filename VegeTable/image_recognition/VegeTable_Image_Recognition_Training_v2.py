@@ -16,10 +16,10 @@ import numpy
 from timeit import default_timer as timer
 
 # Initialize some variables
-numEpochs = 15
+numEpochs = 23  # use 0 to epoch until convergence
 dataDir = "../../data/imagenet/training_images/"
 #supportedFruits = ['Apple', 'Orange', 'Banana']
-supportedFruits = ['Apple', 'Unknown']
+supportedFruits = ['Apple', 'Banana', 'Unknown']
 width = 100
 height = 100
 allFiles = []
@@ -53,15 +53,19 @@ for k in xrange(len(allFiles)):
 
 # Split the data set into 75/25, the 75% being the data that is used to train, the 25% will be used to test
 # the quality of the neural network training
-tstdata, trndata = ds.splitWithProportion( 0.25 )
+# train until convergence does an automatic split
+if numEpochs == 0:
+    tstdata, trndata = ds.splitWithProportion( 0.00 )
+else:
+    tstdata, trndata = ds.splitWithProportion( 0.25 )
 
 trndata._convertToOneOfMany( )
 tstdata._convertToOneOfMany( )
 
 # Build a new neural network
 print "Building the neural network, in-dimension: " + str(trndata.indim) + ", out-dimension: " + str(trndata.outdim)
-#fnn = buildNetwork( trndata.indim, int(0.5*trndata.indim), trndata.outdim, outclass=SoftmaxLayer )
-fnn = buildNetwork(trndata.indim, 25, trndata.outdim, outclass=SoftmaxLayer)
+#fnn = buildNetwork(trndata.indim, 25, trndata.outdim, outclass=SoftmaxLayer)  #25 worked ok
+fnn = buildNetwork(trndata.indim, 100, trndata.outdim, outclass=SoftmaxLayer)
 
 # Create a new backpropagation trainer
 print "Creating backpropagation trainer..."
@@ -69,16 +73,21 @@ print "Creating backpropagation trainer..."
 trainer = BackpropTrainer(fnn, dataset=trndata, momentum=0.1, learningrate=0.01 , verbose=True, weightdecay=0.01)
 
 # Perform epoch training
-print "Beginning "+str(numEpochs)+" training epochs..."
-start = timer()
-trainer.trainEpochs(numEpochs)
-#outp = trainer.trainUntilConvergence(verbose=True)
-end = timer()
-print "Time taken for "+str(numEpochs)+" epochs: " + str(end-start)
-#print "Time taken for "+str(len(outp[0]))+" epochs: " + str(end-start)
+if numEpochs == 0:
+    print "Beginning epoch until convergence..."
+    start = timer()
+    outp = trainer.trainUntilConvergence(verbose=True)
+    end = timer()
+    print "Time taken for "+str(len(outp[0]))+" epochs: " + str(end-start)
+else:
+    print "Beginning "+str(numEpochs)+" training epochs..."
+    start = timer()
+    trainer.trainEpochs(numEpochs)
+    end = timer()
+    print "Time taken for "+str(numEpochs)+" epochs: " + str(end-start)
 
 print 'Percent Error on Test dataset: ', percentError(trainer.testOnClassData(dataset=tstdata ), tstdata['class'] )
 
 print "Writing neural network to file..."
-NetworkWriter.writeToFile(fnn, 'VegeTable_PyBrain_Neural_Network.xml')
+NetworkWriter.writeToFile(fnn, 'VegeTable_PyBrain_Neural_Network_Apple_Banana.xml')
 
