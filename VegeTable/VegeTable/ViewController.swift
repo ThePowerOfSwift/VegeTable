@@ -171,7 +171,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
                 
                 
-                let my_ip = "155.41.96.55"
+                let my_ip = "155.41.15.76"
                 let myUrl = NSURL(string: "http://" + my_ip + ":3001/upload");
                 let request = NSMutableURLRequest(URL:myUrl!);
                 request.HTTPMethod = "POST";
@@ -210,6 +210,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     do {
                         if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary {
                             // Success block...
+                            print("Image was sent!")
                         }
                     } catch {
                         print(error)
