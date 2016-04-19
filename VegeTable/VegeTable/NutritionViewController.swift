@@ -13,7 +13,6 @@ class NutritionViewController: UIViewController {
    @IBOutlet weak var NutritionScrollView: UIScrollView!
    @IBOutlet weak var databaseImage: UIImageView!
    @IBOutlet weak var fruitNameLabel: UILabel!
-   @IBOutlet weak var servingSizeImage: UIImageView!
    
    //Nutrition Facts Labels
    @IBOutlet weak var servingSizeValue: UILabel!
@@ -39,6 +38,12 @@ class NutritionViewController: UIViewController {
    @IBOutlet weak var nutriMin3: UILabel!
    @IBOutlet weak var nutriMin4: UILabel!
    
+   //Serving Size Images and Labels
+   @IBOutlet weak var sSizeImage100g: UIImageView!
+   @IBOutlet weak var sSizeImage1cup: UIImageView!
+   @IBOutlet weak var sSize1cupLabel: UILabel!
+   
+   
    //Meal Inspirations Images and Labels
    @IBOutlet weak var mealInspImage1: UIImageView!
    @IBOutlet weak var mealInspImage2: UIImageView!
@@ -56,8 +61,9 @@ class NutritionViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      self.NutritionScrollView.scrollEnabled = true
-      self.NutritionScrollView.contentSize.height = 2100
+      //self.NutritionScrollView.scrollEnabled = true
+      //let screenSize: CGRect = UIScreen.mainScreen().bounds
+      //self.NutritionScrollView.contentSize.height = 1575 + screenSize.width
       
       //Handle this in prepareToSegue func in ViewController
       self.fruitNameLabel.text = "Mango"
@@ -69,7 +75,8 @@ class NutritionViewController: UIViewController {
       self.databaseImage.layer.borderColor = UIColor(red:15/255.0, green:243/255.0, blue:106/255.0, alpha: 1.0).CGColor
       
       //Handle this in prepareToSegue func in ViewController
-      self.servingSizeImage.image = UIImage(named: "bowlOfMango.jpg");
+      self.sSizeImage100g.image = UIImage(named: "bowlOfMango.jpg");
+      self.sSizeImage1cup.image = UIImage(named: "bowlOfMango.jpg");
       self.mealInspImage1.image = UIImage(named: "mangoSorbet.jpg")
       self.mealInspImage2.image = UIImage(named: "wholeFishWMango.jpg")
       self.mealInspImage3.image = UIImage(named: "stickyRiceWMango.jpg")
