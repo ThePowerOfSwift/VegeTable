@@ -9,6 +9,12 @@ var qt = require('quickthumb');
 var PythonShell = require('python-shell');
 var port  = 3001;
 
+var net = require('net');
+
+var pyHOST = '127.0.0.1';
+var pyPORT = 9999;
+var client = new net.Socket();
+
 app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(express.bodyParser({limit : '50mb'}));
 //app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
@@ -31,26 +37,33 @@ app.post('/upload', function (req, res){
     /* The file name of the uploaded file */
     var file_name = this.openedFiles[0].name;
     /* Location where we want to copy the uploaded file */
-    var new_location = 'uploads/';
+    var new_location = __dirname+'/uploads/';
 
     fs.copy(temp_path, new_location + file_name, function(err) {
       if (err) {
         console.error(err);
       } else {
-        console.log("success!")
+        console.log("File Uploaded!")
+        client.connect(pyPORT, pyHOST, function() {
+
+          console.log('CONNECTED TO: ' + pyHOST + ':' + pyPORT);
+          // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client 
+          client.write(img_dir);
+
+        });
       }
     });
 
     var img_dir = new_location + file_name;
     var options = {args: [img_dir]};
 
-    // Run the image processing here.
-    PythonShell.run('my_script.py', options, function (err, results) { // options,
-     if (err) throw err;
-     // results is an array consisting of messages collected during execution
-     console.log('%s', results);
-   });
-
+   //  // Run the image processing here.
+   //  PythonShell.run('../VegeTable/image_recognition/VegeTable_Neural_Network_Matching_Apple.py', options, function (err, results) { // options,
+   //   if (err) throw err;
+   //   // results is an array consisting of messages collected during execution
+   //   console.log('%s', results);
+   // });
+    
 
   });
 });
@@ -69,6 +82,21 @@ app.get('/', function (req, res){
 app.post('/text', function(req, res) {
     console.log(req.body);
     res.send("successfully sent"); //  console.log(JSON.stringify(req.body.params));
+});
+
+// Add a 'data' event handler for the client socket
+// data is what the server sent to this socket
+client.on('data', function(data) {
+    
+    console.log('Match Result: ' + data);
+    // Close the client socket completely
+    client.destroy();
+    
+});
+
+// Add a 'close' event handler for the client socket
+client.on('close', function() {
+    console.log('Connection closed');
 });
 
 app.listen(port);

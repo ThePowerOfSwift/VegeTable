@@ -56,14 +56,14 @@ else:
 # print imFile + " Matched to: "+matchRes+" in "+str(end-start)+"sec with prediction scores: ", result
 print matchRes
 
-res = cv2.putText(res, matchRes, (0,len(res[0,:,0])-10), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, [255,255,255])
-
-cv2.imshow("processed",res)
-cv2.imshow("original",img)
-cv2.moveWindow("processed",110,0)
-cv2.moveWindow("original",210,0)
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# res = cv2.putText(res, matchRes, (0,len(res[0,:,0])-10), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, [255,255,255])
+#
+# cv2.imshow("processed",res)
+# cv2.imshow("original",img)
+# cv2.moveWindow("processed",110,0)
+# cv2.moveWindow("original",210,0)
+#
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
 
