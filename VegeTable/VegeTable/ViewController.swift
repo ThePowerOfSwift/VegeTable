@@ -105,8 +105,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       if segue.identifier == "ShowNutritionSegue" {
          if let destinationViewController = segue.destinationViewController as? NutritionViewController {
-            destinationViewController.data = nutritionFacts
-            //also send the data for the fruit image and meal inspiration images
+            if(dataReady) {
+               destinationViewController.foundData = true
+               destinationViewController.data = nutritionFacts
+               //also send the data for the fruit image and meal inspiration images
+            } else {
+               destinationViewController.foundData = false
+            }
          }
       }
    
@@ -201,7 +206,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     
                     // You can print out response object
                     print("******* response = \(response)")
-                    
                     // Print out reponse body
                     let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
                     print("****** response data = \(responseString!)")
@@ -214,26 +218,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     } catch {
                         print(error)
                     }
-                    /*
-                    if let parseJSON = json {
-                    var firstNameValue = parseJSON["firstName"] as? String
-                    println("firstNameValue: \(firstNameValue)")
-                    }
-                    */
-                    
                 }
                 
                 task.resume()
                
-               //var returnDataFromServer =
-                
-               if self.dataReady {
-                  //set nutritionFacts equal to the return value of the server code
-                  self.nutritionFacts = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 33%"]
-                  //performSegue to the tableview controller
-                  self.performSegueWithIdentifier("ShowNutritionSegue", sender: sender)
-               }
-   
+               
+                //dataReady = bool returned from server indicating if information was found
+                self.dataReady = false   //this is a dummy statement used for testing
+                self.nutritionFacts = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 33%"]
+                self.performSegueWithIdentifier("ShowNutritionSegue", sender: sender)
             }
          })
       }

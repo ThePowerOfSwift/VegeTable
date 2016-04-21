@@ -15,6 +15,12 @@
 		A116A84D1C83A28A0000FFB5 /* GrapeFruitCamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */; };
 		A116A84F1C83FF710000FFB5 /* SizedOrangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */; };
 		A11A8B081C9D97C100B8D1B9 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */; };
+		A12C57001CC9000A00EB57A1 /* bananaPeel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A12C56FF1CC9000A00EB57A1 /* bananaPeel.jpg */; };
+		A12C57051CC98B4E00EB57A1 /* bananaPeel5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A12C57011CC98B4E00EB57A1 /* bananaPeel5.jpg */; };
+		A12C57061CC98B4E00EB57A1 /* bananaPeel4.png in Resources */ = {isa = PBXBuildFile; fileRef = A12C57021CC98B4E00EB57A1 /* bananaPeel4.png */; };
+		A12C57071CC98B4E00EB57A1 /* bananaPeel3.png in Resources */ = {isa = PBXBuildFile; fileRef = A12C57031CC98B4E00EB57A1 /* bananaPeel3.png */; };
+		A12C57081CC98B4E00EB57A1 /* bananaPeel2.png in Resources */ = {isa = PBXBuildFile; fileRef = A12C57041CC98B4E00EB57A1 /* bananaPeel2.png */; };
+		A12C570A1CC98B9300EB57A1 /* bananaPeel6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A12C57091CC98B9300EB57A1 /* bananaPeel6.jpg */; };
 		A158BDDB1C9710980063E183 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A158BDDA1C9710980063E183 /* NutritionViewController.swift */; };
 		A158BDE21C97CA740063E183 /* dragonfruitUser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */; };
 		A158BDE31C97CA740063E183 /* dragonfruitDatabase.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */; };
@@ -57,6 +63,12 @@
 		A116A84C1C83A28A0000FFB5 /* GrapeFruitCamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrapeFruitCamButton.png; sourceTree = "<group>"; };
 		A116A84E1C83FF710000FFB5 /* SizedOrangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SizedOrangeButton.png; sourceTree = "<group>"; };
 		A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		A12C56FF1CC9000A00EB57A1 /* bananaPeel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bananaPeel.jpg; sourceTree = "<group>"; };
+		A12C57011CC98B4E00EB57A1 /* bananaPeel5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bananaPeel5.jpg; sourceTree = "<group>"; };
+		A12C57021CC98B4E00EB57A1 /* bananaPeel4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bananaPeel4.png; sourceTree = "<group>"; };
+		A12C57031CC98B4E00EB57A1 /* bananaPeel3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bananaPeel3.png; sourceTree = "<group>"; };
+		A12C57041CC98B4E00EB57A1 /* bananaPeel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bananaPeel2.png; sourceTree = "<group>"; };
+		A12C57091CC98B9300EB57A1 /* bananaPeel6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bananaPeel6.jpg; sourceTree = "<group>"; };
 		A158BDDA1C9710980063E183 /* NutritionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		A158BDE01C97CA740063E183 /* dragonfruitUser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragonfruitUser.jpg; sourceTree = "<group>"; };
 		A158BDE11C97CA740063E183 /* dragonfruitDatabase.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragonfruitDatabase.jpg; sourceTree = "<group>"; };
@@ -93,6 +105,12 @@
 		A116A8341C829E6F0000FFB5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A12C57091CC98B9300EB57A1 /* bananaPeel6.jpg */,
+				A12C57011CC98B4E00EB57A1 /* bananaPeel5.jpg */,
+				A12C57021CC98B4E00EB57A1 /* bananaPeel4.png */,
+				A12C57031CC98B4E00EB57A1 /* bananaPeel3.png */,
+				A12C57041CC98B4E00EB57A1 /* bananaPeel2.png */,
+				A12C56FF1CC9000A00EB57A1 /* bananaPeel.jpg */,
 				A1AE7BF81CB4990100D530A7 /* yesButton.png */,
 				A1AE7BF91CB4990100D530A7 /* noButton.png */,
 				A16AF2751CA9D22D00407669 /* wholeFishWMango.jpg */,
@@ -221,19 +239,25 @@
 				A1AE7BFB1CB4990100D530A7 /* noButton.png in Resources */,
 				A187C88C1C7CA25800DC5C23 /* LaunchScreen.storyboard in Resources */,
 				A15B6B321C869BC60098A1D4 /* Veges.png in Resources */,
+				A12C57061CC98B4E00EB57A1 /* bananaPeel4.png in Resources */,
 				A16AF2791CA9D22D00407669 /* stickyRiceWMango.jpg in Resources */,
 				A1AE7BFA1CB4990100D530A7 /* yesButton.png in Resources */,
+				A12C57051CC98B4E00EB57A1 /* bananaPeel5.jpg in Resources */,
 				A187C8891C7CA25800DC5C23 /* Assets.xcassets in Resources */,
 				A158BDE21C97CA740063E183 /* dragonfruitUser.jpg in Resources */,
+				A12C57081CC98B4E00EB57A1 /* bananaPeel2.png in Resources */,
 				A116A83E1C82A5870000FFB5 /* OrangeButton.png in Resources */,
 				A116A8491C839D320000FFB5 /* Quicksand-Regular.ttf in Resources */,
 				A15B6B2E1C869A370098A1D4 /* MoreVegetables.png in Resources */,
 				A16AF2781CA9D22D00407669 /* wholeFishWMango.jpg in Resources */,
 				A16AF27A1CA9D22D00407669 /* mangoSorbet.jpg in Resources */,
+				A12C570A1CC98B9300EB57A1 /* bananaPeel6.jpg in Resources */,
 				A116A8401C82A6510000FFB5 /* SnapShotButton.png in Resources */,
 				A19C8D581CA1F2D20022592B /* mango.jpg in Resources */,
 				A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */,
 				A116A84F1C83FF710000FFB5 /* SizedOrangeButton.png in Resources */,
+				A12C57071CC98B4E00EB57A1 /* bananaPeel3.png in Resources */,
+				A12C57001CC9000A00EB57A1 /* bananaPeel.jpg in Resources */,
 				A19C8D571CA1F2D20022592B /* bowlOfMango.jpg in Resources */,
 				A116A8441C839CB50000FFB5 /* Damion-Regular.ttf in Resources */,
 				A116A84B1C839D430000FFB5 /* DancingScript-Regular.ttf in Resources */,

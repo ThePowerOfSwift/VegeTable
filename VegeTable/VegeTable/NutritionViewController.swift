@@ -11,8 +11,11 @@ import UIKit
 class NutritionViewController: UIViewController {
 
    @IBOutlet weak var NutritionScrollView: UIScrollView!
+   
+   //Fruit Identity View
    @IBOutlet weak var databaseImage: UIImageView!
    @IBOutlet weak var fruitNameLabel: UILabel!
+   @IBOutlet weak var errorLabel: UILabel!
    
    //Nutrition Facts Labels
    @IBOutlet weak var servingSizeValue: UILabel!
@@ -37,6 +40,12 @@ class NutritionViewController: UIViewController {
    @IBOutlet weak var nutriMin2: UILabel!
    @IBOutlet weak var nutriMin3: UILabel!
    @IBOutlet weak var nutriMin4: UILabel!
+   @IBOutlet weak var nutriMin5: UILabel!
+   @IBOutlet weak var nutriMin6: UILabel!
+   @IBOutlet weak var nutriMin7: UILabel!
+   @IBOutlet weak var nutriMin8: UILabel!
+   @IBOutlet weak var nutriMin9: UILabel!
+   @IBOutlet weak var nutriMin10: UILabel!
    
    //Serving Size Images and Labels
    @IBOutlet weak var sSizeImage100g: UIImageView!
@@ -56,35 +65,26 @@ class NutritionViewController: UIViewController {
    var data = [String]()
    //Dummy data
    // = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 3%"]
+   var foundData = true
    
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      
-      //self.NutritionScrollView.scrollEnabled = true
-      //let screenSize: CGRect = UIScreen.mainScreen().bounds
-      //self.NutritionScrollView.contentSize.height = 1575 + screenSize.width
-      
-      //Handle this in prepareToSegue func in ViewController
-      self.fruitNameLabel.text = "Mango"
-      
-      self.databaseImage.image = UIImage(named:"mango.jpg")
+
       self.databaseImage.layer.cornerRadius = self.databaseImage.frame.size.height/2
       self.databaseImage.clipsToBounds = true
       self.databaseImage.layer.borderWidth = 4.0
       self.databaseImage.layer.borderColor = UIColor(red:15/255.0, green:243/255.0, blue:106/255.0, alpha: 1.0).CGColor
       
-      //Handle this in prepareToSegue func in ViewController
-      self.sSizeImage100g.image = UIImage(named: "bowlOfMango.jpg");
-      self.sSizeImage1cup.image = UIImage(named: "bowlOfMango.jpg");
-      self.mealInspImage1.image = UIImage(named: "mangoSorbet.jpg")
-      self.mealInspImage2.image = UIImage(named: "wholeFishWMango.jpg")
-      self.mealInspImage3.image = UIImage(named: "stickyRiceWMango.jpg")
-      self.mealInspLabel1.text = "Mango Sorbet"
-      self.mealInspLabel2.text = "Fried Fish w/ Mango"
-      self.mealInspLabel3.text = "Sticky Rice w/ Mango" 
+      if(foundData) {
+         grabPictures()
+         setNutritionFacts(data)
+         fruitNameLabel.hidden = false
+         errorLabel.hidden = true
+      } else {
+         showError()
+      }
       
-      setNutritionFacts(data);
    }
 
     override func didReceiveMemoryWarning() {
@@ -142,5 +142,65 @@ class NutritionViewController: UIViewController {
       nutriMin2.text = facts[19];
       nutriMin3.text = facts[20];
       nutriMin4.text = facts[21];
+   }
+   
+   func grabPictures() -> Void {
+      //find URLs in final iteration
+       
+
+      self.fruitNameLabel.text = "Mango" //put this in setNutrition
+      self.databaseImage.image = UIImage(named:"mango.jpg")
+      
+      self.sSizeImage100g.image = UIImage(named: "bowlOfMango.jpg");
+      self.sSizeImage1cup.image = UIImage(named: "bowlOfMango.jpg");
+      self.mealInspImage1.image = UIImage(named: "mangoSorbet.jpg")
+      self.mealInspImage2.image = UIImage(named: "wholeFishWMango.jpg")
+      self.mealInspImage3.image = UIImage(named: "stickyRiceWMango.jpg")
+      self.mealInspLabel1.text = "Mango Sorbet" //put this in setNutrition
+      self.mealInspLabel2.text = "Fried Fish w/ Mango" //put this in setNutrition
+      self.mealInspLabel3.text = "Sticky Rice w/ Mango" //put this in setNutrition
+   }
+   
+   func showError() -> Void {
+      databaseImage.image = UIImage(named: "bananaPeel.jpg" )
+      fruitNameLabel.hidden = true
+      errorLabel.hidden = false
+      servingSizeValue.text = "100g"
+      calorieValue.text = "0"
+      caloriesFromFat.text = "0g"
+      totalFatValue.text = "0g"
+      totalFatPercentage.text = "0%"
+      saturatedFatValue.text = "0g"
+      saturatedFatPercentage.text = "0%"
+      transFatValue.text = "0g"
+      cholesterolValue.text = "0g";
+      cholesterolPercentage.text = "0%"
+      sodiumValue.text = "0g"
+      sodiumPercentage.text = "0%"
+      totalCarbsValue.text = "0g"
+      totalCarbsPercentage.text = "0%"
+      fiberValue.text = "0g"
+      fiberPercentage.text = "0%"
+      sugarValue.text = "0g"
+      proteinValue.text = "0g"
+      nutriMin1.text = "Vibranium 43g"
+      nutriMin2.text = "Vitamin-C Yes"
+      nutriMin3.text = "Cyanide 0.2mg"
+      nutriMin4.text = "Fluff 500g"
+      nutriMin5.text = "Midichlorians 0.1ug"
+      nutriMin6.text = "X-factor 3.4g"
+      nutriMin7.text = "Vitamin-Z 50g"
+      nutriMin8.text = "Humanity 73mg"
+      nutriMin9.text = "Mana 2 Points"
+      nutriMin10.text = "Valyrium 6mg"
+      
+      self.sSizeImage100g.image = UIImage(named: "bananaPeel2.png");
+      self.sSizeImage1cup.image = UIImage(named: "bananaPeel3.png");
+      self.mealInspImage1.image = UIImage(named: "bananaPeel4.png")
+      self.mealInspImage2.image = UIImage(named: "bananaPeel5.jpg")
+      self.mealInspImage3.image = UIImage(named: "bananaPeel6.jpg")
+      self.mealInspLabel1.text = "Chicken Cacciatore"
+      self.mealInspLabel2.text = "Bangers and Mash"
+      self.mealInspLabel3.text = "Eggplant Parmesan"
    }
 }
