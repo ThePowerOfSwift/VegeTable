@@ -29,6 +29,8 @@
 		A16AF2781CA9D22D00407669 /* wholeFishWMango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A16AF2751CA9D22D00407669 /* wholeFishWMango.jpg */; };
 		A16AF2791CA9D22D00407669 /* stickyRiceWMango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A16AF2761CA9D22D00407669 /* stickyRiceWMango.jpg */; };
 		A16AF27A1CA9D22D00407669 /* mangoSorbet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A16AF2771CA9D22D00407669 /* mangoSorbet.jpg */; };
+		A1857CFE1CCBD27F009DD4E8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A1857CFD1CCBD27F009DD4E8 /* Podfile */; };
+		A1857D001CCBDA85009DD4E8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1857CFF1CCBDA85009DD4E8 /* SwiftyJSON.framework */; };
 		A187C8821C7CA25800DC5C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8811C7CA25800DC5C23 /* AppDelegate.swift */; };
 		A187C8841C7CA25800DC5C23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187C8831C7CA25800DC5C23 /* ViewController.swift */; };
 		A187C8871C7CA25800DC5C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A187C8851C7CA25800DC5C23 /* Main.storyboard */; };
@@ -39,6 +41,7 @@
 		A19C8D581CA1F2D20022592B /* mango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A19C8D561CA1F2D20022592B /* mango.jpg */; };
 		A1AE7BFA1CB4990100D530A7 /* yesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A1AE7BF81CB4990100D530A7 /* yesButton.png */; };
 		A1AE7BFB1CB4990100D530A7 /* noButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A1AE7BF91CB4990100D530A7 /* noButton.png */; };
+		C24185751C2F99ACDA6E1366 /* Pods_VegeTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65C93E82E0A530FD5E4A6E5 /* Pods_VegeTable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2407CC716B678DEADCB02614 /* Pods-VegeTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegeTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VegeTable/Pods-VegeTable.debug.xcconfig"; sourceTree = "<group>"; };
+		877AA8B9369329AC9415561E /* Pods-VegeTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegeTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-VegeTable/Pods-VegeTable.release.xcconfig"; sourceTree = "<group>"; };
 		A116A83D1C82A5870000FFB5 /* OrangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrangeButton.png; sourceTree = "<group>"; };
 		A116A83F1C82A6500000FFB5 /* SnapShotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnapShotButton.png; sourceTree = "<group>"; };
 		A116A8431C839CB50000FFB5 /* Damion-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Damion-Regular.ttf"; sourceTree = "<group>"; };
@@ -77,6 +82,8 @@
 		A16AF2751CA9D22D00407669 /* wholeFishWMango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wholeFishWMango.jpg; sourceTree = "<group>"; };
 		A16AF2761CA9D22D00407669 /* stickyRiceWMango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stickyRiceWMango.jpg; sourceTree = "<group>"; };
 		A16AF2771CA9D22D00407669 /* mangoSorbet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mangoSorbet.jpg; sourceTree = "<group>"; };
+		A1857CFD1CCBD27F009DD4E8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1857CFF1CCBDA85009DD4E8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/VegeTable-frmdzeqnojmkwdcwkdmuqhfzwtxb/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		A187C87E1C7CA25800DC5C23 /* VegeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VegeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A187C8811C7CA25800DC5C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A187C8831C7CA25800DC5C23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +96,7 @@
 		A19C8D561CA1F2D20022592B /* mango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mango.jpg; sourceTree = "<group>"; };
 		A1AE7BF81CB4990100D530A7 /* yesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yesButton.png; sourceTree = "<group>"; };
 		A1AE7BF91CB4990100D530A7 /* noButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noButton.png; sourceTree = "<group>"; };
+		F65C93E82E0A530FD5E4A6E5 /* Pods_VegeTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VegeTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1857D001CCBDA85009DD4E8 /* SwiftyJSON.framework in Frameworks */,
+				C24185751C2F99ACDA6E1366 /* Pods_VegeTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +155,8 @@
 			children = (
 				A187C8801C7CA25800DC5C23 /* VegeTable */,
 				A187C87F1C7CA25800DC5C23 /* Products */,
+				B6350E470BD1892DA6F418C0 /* Pods */,
+				B317CFD62CF9B65CAD94617E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +173,7 @@
 			children = (
 				A116A8471C839CCF0000FFB5 /* Fonts */,
 				A116A8341C829E6F0000FFB5 /* Images */,
+				A1857CFD1CCBD27F009DD4E8 /* Podfile */,
 				A187C8811C7CA25800DC5C23 /* AppDelegate.swift */,
 				A187C8831C7CA25800DC5C23 /* ViewController.swift */,
 				A11A8B071C9D97C100B8D1B9 /* PreviewView.swift */,
@@ -174,6 +187,24 @@
 			path = VegeTable;
 			sourceTree = "<group>";
 		};
+		B317CFD62CF9B65CAD94617E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1857CFF1CCBDA85009DD4E8 /* SwiftyJSON.framework */,
+				F65C93E82E0A530FD5E4A6E5 /* Pods_VegeTable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6350E470BD1892DA6F418C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2407CC716B678DEADCB02614 /* Pods-VegeTable.debug.xcconfig */,
+				877AA8B9369329AC9415561E /* Pods-VegeTable.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,10 +212,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A187C8901C7CA25800DC5C23 /* Build configuration list for PBXNativeTarget "VegeTable" */;
 			buildPhases = (
+				283B0A2E543C9B5C50B3362E /* Check Pods Manifest.lock */,
 				A187C87A1C7CA25800DC5C23 /* Sources */,
 				A187C87B1C7CA25800DC5C23 /* Frameworks */,
 				A187C87C1C7CA25800DC5C23 /* Resources */,
 				3EFD98F81CAD73BF00BBA2BD /* Embed Frameworks */,
+				F3B485DEEDBB8E17FEF459A1 /* Embed Pods Frameworks */,
+				2E0190439A4F872F95852DC1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +241,7 @@
 				TargetAttributes = {
 					A187C87D1C7CA25800DC5C23 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = FBDBZVP75K;
+						DevelopmentTeam = G724EY77FK;
 					};
 				};
 			};
@@ -260,11 +294,60 @@
 				A12C57001CC9000A00EB57A1 /* bananaPeel.jpg in Resources */,
 				A19C8D571CA1F2D20022592B /* bowlOfMango.jpg in Resources */,
 				A116A8441C839CB50000FFB5 /* Damion-Regular.ttf in Resources */,
+				A1857CFE1CCBD27F009DD4E8 /* Podfile in Resources */,
 				A116A84B1C839D430000FFB5 /* DancingScript-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		283B0A2E543C9B5C50B3362E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2E0190439A4F872F95852DC1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VegeTable/Pods-VegeTable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3B485DEEDBB8E17FEF459A1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VegeTable/Pods-VegeTable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A187C87A1C7CA25800DC5C23 /* Sources */ = {
@@ -386,6 +469,7 @@
 		};
 		A187C8911C7CA25800DC5C23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2407CC716B678DEADCB02614 /* Pods-VegeTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -393,7 +477,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = VegeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NicholasMaresco.VegeTable;
+				PRODUCT_BUNDLE_IDENTIFIER = BrianTan.VegeTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,6 +486,7 @@
 		};
 		A187C8921C7CA25800DC5C23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 877AA8B9369329AC9415561E /* Pods-VegeTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -409,7 +494,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = VegeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NicholasMaresco.VegeTable;
+				PRODUCT_BUNDLE_IDENTIFIER = BrianTan.VegeTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
