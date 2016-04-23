@@ -63,8 +63,6 @@ class NutritionViewController: UIViewController {
    
    //Nutrition Facts in a String array
    var data = [String]()
-   //Dummy data
-   // = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 3%"]
    var foundData = true
    
    
@@ -77,10 +75,8 @@ class NutritionViewController: UIViewController {
       self.databaseImage.layer.borderColor = UIColor(red:15/255.0, green:243/255.0, blue:106/255.0, alpha: 1.0).CGColor
       
       if(foundData) {
-         grabPictures()
          setNutritionFacts(data)
-         fruitNameLabel.hidden = false
-         errorLabel.hidden = true
+         grabPictures()
       } else {
          showError()
       }
@@ -92,17 +88,6 @@ class NutritionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-   
    //Will make the time and battery bar appear white in app
    override func  preferredStatusBarStyle()-> UIStatusBarStyle {
     return UIStatusBarStyle.LightContent
@@ -116,55 +101,64 @@ class NutritionViewController: UIViewController {
    }
    
    func setNutritionFacts(facts: [String]) -> Void {
-      if facts.count != 22 {
+      if facts.count != 32 {
       //if we do not receive all facts, the placement of them on the view will be off
          return
       }
-      servingSizeValue.text = facts[0];
-      calorieValue.text = facts[1];
-      caloriesFromFat.text = facts[2];
-      totalFatValue.text = facts[3];
-      totalFatPercentage.text = facts[4];
-      saturatedFatValue.text = facts[5];
-      saturatedFatPercentage.text = facts[6];
-      transFatValue.text = facts[7];
-      cholesterolValue.text = facts[8];
-      cholesterolPercentage.text = facts[9];
-      sodiumValue.text = facts[10];
-      sodiumPercentage.text = facts[11];
-      totalCarbsValue.text = facts[12];
-      totalCarbsPercentage.text = facts[13];
-      fiberValue.text = facts[14];
-      fiberPercentage.text = facts[15];
-      sugarValue.text = facts[16];
-      proteinValue.text = facts[17];
-      nutriMin1.text = facts[18];
-      nutriMin2.text = facts[19];
-      nutriMin3.text = facts[20];
-      nutriMin4.text = facts[21];
+      
+      fruitNameLabel.hidden = false
+      errorLabel.hidden = true
+      
+      fruitNameLabel.text = facts[0]
+      servingSizeValue.text = facts[1]
+      calorieValue.text = facts[2]
+      caloriesFromFat.text = facts[3]
+      totalFatValue.text = facts[4]
+      totalFatPercentage.text = facts[5]
+      saturatedFatValue.text = facts[6]
+      saturatedFatPercentage.text = facts[7]
+      transFatValue.text = facts[8]
+      cholesterolValue.text = facts[9]
+      cholesterolPercentage.text = facts[10]
+      sodiumValue.text = facts[11]
+      sodiumPercentage.text = facts[12]
+      totalCarbsValue.text = facts[13]
+      totalCarbsPercentage.text = facts[14]
+      fiberValue.text = facts[15]
+      fiberPercentage.text = facts[16]
+      sugarValue.text = facts[17]
+      proteinValue.text = facts[18]
+      nutriMin1.text = facts[19]
+      nutriMin2.text = facts[20]
+      nutriMin3.text = facts[21]
+      nutriMin4.text = facts[22]
+      nutriMin5.text = facts[23]
+      nutriMin6.text = facts[24]
+      nutriMin7.text = facts[25]
+      nutriMin8.text = facts[26]
+      nutriMin9.text = facts[27]
+      nutriMin10.text = facts[28]
+      mealInspLabel1.text = facts[29]
+      mealInspLabel2.text = facts[30]
+      mealInspLabel3.text = facts[31]
    }
    
    func grabPictures() -> Void {
       //find URLs in final iteration
-       
-
-      self.fruitNameLabel.text = "Mango" //put this in setNutrition
       self.databaseImage.image = UIImage(named:"mango.jpg")
       
-      self.sSizeImage100g.image = UIImage(named: "bowlOfMango.jpg");
-      self.sSizeImage1cup.image = UIImage(named: "bowlOfMango.jpg");
+      self.sSizeImage100g.image = UIImage(named: "bowlOfMango.jpg")
+      self.sSizeImage1cup.image = UIImage(named: "bowlOfMango.jpg")
       self.mealInspImage1.image = UIImage(named: "mangoSorbet.jpg")
       self.mealInspImage2.image = UIImage(named: "wholeFishWMango.jpg")
       self.mealInspImage3.image = UIImage(named: "stickyRiceWMango.jpg")
-      self.mealInspLabel1.text = "Mango Sorbet" //put this in setNutrition
-      self.mealInspLabel2.text = "Fried Fish w/ Mango" //put this in setNutrition
-      self.mealInspLabel3.text = "Sticky Rice w/ Mango" //put this in setNutrition
    }
    
    func showError() -> Void {
-      databaseImage.image = UIImage(named: "bananaPeel.jpg" )
       fruitNameLabel.hidden = true
       errorLabel.hidden = false
+      
+      databaseImage.image = UIImage(named: "bananaPeel.jpg" )
       servingSizeValue.text = "100g"
       calorieValue.text = "0"
       caloriesFromFat.text = "0g"

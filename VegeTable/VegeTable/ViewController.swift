@@ -224,8 +224,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                
                
                 //dataReady = bool returned from server indicating if information was found
-                self.dataReady = false   //this is a dummy statement used for testing
-                self.nutritionFacts = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 33%"]
+                self.dataReady = true   //this is a dummy statement used for testing
+                self.nutritionFacts = ["Mango", "100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 33%", "Vitamin D 3%", "Potassium 1%", "Thiacin 3%", "Folate 4%", "Vitamin B 0%", "Vitamin K 1%", "Mango Sorbet", "Fried Fish w/ Mango", "Sticky Rice w/ Mango"]
                 self.performSegueWithIdentifier("ShowNutritionSegue", sender: sender)
             }
          })
