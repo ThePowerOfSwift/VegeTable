@@ -9,25 +9,25 @@ def parseLine(line):
 		if (c != ','):
 			s = s + c
 		else:
-			if (field == 1):
-				d = float(s)
-			else:
+			if (field == 0):
 				d = int(s)
+			else:
+				d = float(s)
 			field += 1
 			s = ''
 			data.append(d)
-	d = int(s)
+	d = float(s)
 	data.append(d)
 	data.append(1)
 	return (data)
 
 all_data = 'data.csv'
-main_data = 'data_avgs.csv'
+main_data = 'data_avg.csv'
 if (len(sys.argv)>1):
 	all_data = sys.argv[1]
 if (len(sys.argv)>2):
 	main_data = sys.argv[2]
-out_file = open(main_data,'w+')
+out_file = open(main_data,'w')
 data_list = []
 with open(all_data,'r') as f:
 	for line in f:
@@ -35,13 +35,13 @@ with open(all_data,'r') as f:
 		i = 0
 		match = False
 		while (i < len(data_list)):
-			if (data_list[i][0] == data[0]):
+			data_element = data_list[i]
+			if (data_element[0] == data[0]):
 				match = True
-				data_list[i][1] += data[1]
-				data_list[i][2] += data[2]
-				data_list[i][3] += data[3]
-				data_list[i][4] += data[4]
-				data_list[i][5] += data[5]
+				j = 1
+				while (j < len(data_list[i])):
+					data_list[i][j] += data[j]
+					j += 1
 				break
 			i += 1
 		if (match == False):

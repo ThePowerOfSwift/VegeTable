@@ -69,6 +69,13 @@ def getColor(mask,image):
 	r_avg = r / pixels
 	return (b_avg, g_avg, r_avg)
 
+def getArea(mask):
+	total = 0
+	for row in mask:
+		for pixel in row:
+			total += pixel
+	return (total)
+
 def processImage(image,output_file,object_id):
 	img = image.copy()
 	height, width, channels = img.shape
@@ -77,8 +84,10 @@ def processImage(image,output_file,object_id):
 	img, contour = getContours(img,mask)
 	b, g, r = getColor(mask,img)
 	convex_hull = cv2.convexHull(contour,returnPoints=True)
-	total_convex = (perimeter(contour))/ (perimeter(convex_hull))
-	output = str(object_id) + ',' + str(total_convex) + ',' + str(b) + ',' + str(g) + ',' + str(r) + '\n'
+	perim = perimeter(contour)
+	total_convex = (perim)/ (perimeter(convex_hull))
+	perim_area = (perim/getArea(mask))
+	output = str(object_id) + ',' + str(total_convex) + ',' + str(perim_area) + ',' + str(b) + ',' + str(g) + ',' + str(r) + '\n'
 	f = open(output_file,'a')
 	f.write(output)
 
@@ -87,12 +96,16 @@ def main(obj_id,fp):
 	for img_file in img_files:
 		img_file_path = fp + img_file
 		img = cv2.imread(img_file_path)
+		cv2.imshow('image',img)
+		cv2.moveWindow('image',0,0)
 		processImage(img,'data.csv',obj_id)
+		cv2.destroyAllWindows()
 
-fp = os.path.dirname(__file__) + 'images/simple/'
+clear_file = open('data.csv','w')
+clear_file.close()
+fp = os.path.dirname(__file__) + 'images/simple/learning/'
 folders = os.listdir(fp)
 for folder in folders:
 	dir_path = fp + folder + '/'
 	obj_id = int(folder)
 	main(obj_id,dir_path)
-exit()
