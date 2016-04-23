@@ -176,7 +176,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
                 
                 
-                let my_ip = "155.41.96.55"
+                let my_ip = "172.20.10.4"
                 let myUrl = NSURL(string: "http://" + my_ip + ":3001/upload");
                 let request = NSMutableURLRequest(URL:myUrl!);
                 request.HTTPMethod = "POST";
@@ -195,7 +195,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 if(imageData1==nil)  { return; }
                 
                 request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData1!, boundary: boundary)
-                
+                var responseString:NSString?
                 let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
                     data, response, error in
                     
@@ -207,8 +207,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     // You can print out response object
                     print("******* response = \(response)")
                     // Print out reponse body
-                    let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                    print("****** response data = \(responseString!)")
+                    responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                    
+                    print("****** Server Response Data: \(responseString!)")
                     
                     var err: NSError?
                     do {
@@ -222,6 +223,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 task.resume()
                
+                // use responseString (type: NSString) ->
+                
+                /* Add your json code herer! */
                
                 //dataReady = bool returned from server indicating if information was found
                 self.dataReady = true   //this is a dummy statement used for testing

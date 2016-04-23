@@ -20,9 +20,9 @@ app.use(qt.static(__dirname + '/'));
 app.post('/upload', function (req, res){
   var form = new formidable.IncomingForm();
   form.parse(req, function(err, fields, files) {
-    res.writeHead(200, {'content-type': 'text/plain'});
+    /*res.writeHead(200, {'content-type': 'text/plain'});
     res.write('received upload:\n\n');
-    res.end(util.inspect({fields: fields, files: files}));
+    res.end(util.inspect({fields: fields, files: files}));*/
   });
 
   form.on('end', function(fields, files) {
@@ -47,8 +47,13 @@ app.post('/upload', function (req, res){
     // Run the image processing here.
     PythonShell.run('my_script.py', options, function (err, results) { // options,
      if (err) throw err;
+     var string_results = JSON.stringify(results);
      // results is an array consisting of messages collected during execution
-     console.log('%s', results);
+     console.log('%s', string_results);
+
+    res.writeHead(200, {'content-type': 'text/plain'}); // respond to IOS with result of the identification
+    res.end(string_results);
+
    });
 
 
