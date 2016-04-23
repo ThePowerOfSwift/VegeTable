@@ -35,10 +35,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8No-YB-Zvq" customClass="PreviewView" customModule="VegeTable" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="600" height="1683.5"/>
+                                <rect key="frame" x="0.0" y="86" width="600" height="1684"/>
                                 <subviews>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-6D-2k7">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1861.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1862"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -216,7 +216,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBF-F8-AtI" userLabel="NutritionFactsView">
-                                        <rect key="frame" x="0.0" y="275" width="600" height="593.5"/>
+                                        <rect key="frame" x="0.0" y="275" width="600" height="594"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition Facts " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5K-zC-Y96">
                                                 <rect key="frame" x="17" y="17" width="235" height="39"/>
@@ -588,7 +588,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrient/Mineral7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hO-hn-qt9">
-                                                <rect key="frame" x="17" y="534" width="133.5" height="21"/>
+                                                <rect key="frame" x="17" y="534" width="134" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -633,7 +633,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrient/Mineral9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24b-CP-Ysk">
-                                                <rect key="frame" x="17" y="563" width="134.5" height="21"/>
+                                                <rect key="frame" x="17" y="563" width="135" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -822,7 +822,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100g" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4Q-WP-pJN">
-                                                <rect key="frame" x="523" y="134" width="69" height="38.5"/>
+                                                <rect key="frame" x="523" y="134" width="69" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="286" id="0lA-ib-zRJ"/>
                                                     <constraint firstAttribute="height" constant="129.5" id="sF2-Wt-gT3"/>
@@ -1005,8 +1005,8 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 cup" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agy-aC-Eg7">
-                                                <rect key="frame" x="520" y="263.5" width="71.5" height="38.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 cup" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agy-aC-Eg7">
+                                                <rect key="frame" x="520" y="264" width="72" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="286" id="9sr-Lu-X4u"/>
                                                 </constraints>
