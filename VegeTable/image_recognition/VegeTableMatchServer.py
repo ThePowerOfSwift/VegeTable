@@ -128,14 +128,14 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
             # ********************** Picking which result logic
             # Put the neural network results into a list
             results = [appleResult[0], bananaResult[0], cucumberResult[0]]
-            resLabels = ['apple', 'banana', 'cucumber']
+            resLabels = ['Apple', 'Banana', 'Cucumber']
             maxIndex = results.index(max(results))
 
             # Only call this the result if the greatest match percentage is above 30%, otherwise unknown
             if results[maxIndex] > 0.3:
                 matchRes = resLabels[maxIndex]
             else:
-                matchRes = 'unknown'
+                matchRes = 'Unknown'
         else:
             # print main(imPath)
             matchRes = "File Read Error"
