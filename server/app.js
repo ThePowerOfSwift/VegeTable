@@ -10,20 +10,14 @@ var PythonShell = require('python-shell');
 var AWS = require('aws-sdk');
 var port  = 3001;
 
-<<<<<<< HEAD
-// Open Connection to DB
-// Set your region for future requests.
-//AWS.config.region = 'us-east-1';
 AWS.config.update({region: "us-east-1",endpoint: "https://dynamodb.us-east-1.amazonaws.com"});
 var docClient = new AWS.DynamoDB.DocumentClient();
 var table = "FruitsAndVegetables";
-=======
-var net = require('net');
 
+var net = require('net');
 var pyHOST = '127.0.0.1';
 var pyPORT = 9999;
 var client = new net.Socket();
->>>>>>> origin/imageRecognitionTesting_JK
 
 app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(express.bodyParser({limit : '50mb'}));
@@ -54,22 +48,21 @@ app.post('/upload', function (req, res){
         console.error(err);
       } else {
         console.log("File Uploaded!")
-        client.connect(pyPORT, pyHOST, function() {
-
-          console.log('CONNECTED TO: ' + pyHOST + ':' + pyPORT);
-          // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client 
-          client.write(img_dir);
-
-        });
       }
     });
 
     var img_dir = new_location + file_name;
     var options = {args: [img_dir]};
 
-<<<<<<< HEAD
+  /*  client.connect(pyPORT, pyHOST, function() {
+    console.log('CONNECTED TO: ' + pyHOST + ':' + pyPORT);
+    // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client
+    client.write(img_dir);
+  });*/
+
+
     // Run the image processing here.
-    PythonShell.run('my_script.py', options, function (err, results) { // options,
+  PythonShell.run('my_script.py', options, function (err, results) { // options,
      if (err) throw err;
      var string_results = JSON.stringify(results);
      // results is an array consisting of messages collected during execution
@@ -93,26 +86,12 @@ app.post('/upload', function (req, res){
      });
 
      // HERE HERE - Set the "string_result <= "data" variable from above"
-
      string_results = "{'Count':1,'Items':[{'Niacin':{'N':'0.091'},'Vitamin_B12_unit':{'S':'ug'},'Vitamin_A_RAE_unit':{'S':'ug'},'Sodium':{'N':'1'},'Monosaturated_Fat':{'N':'0.007'},'Thiamin':{'N':'0.017'},'Sugar':{'N':'10.39'},'Water_unit':{'S':'g'},'Carbohydrate_unit':{'S':'g'},'Iron_unit':{'S':'mg'},'Trans_Fat':{'N':'0'},'Sodium_unit':{'S':'mg'},'Saturated_Fat':{'N':'0.028'},'Vitamin_E':{'N':'0.18'},'Fiber':{'N':'2.4'},'Magnesium_unit':{'S':'mg'},'Saturated_Fat_unit':{'S':'g'},'Potassium':{'S':'mg'},'Protein_unit':{'S':'g'},'Water':{'N':'85.56'},'Energy_unit':{'S':'kcal'},'Cholesterol_unit':{'S':'mg'},'Vitamin_B6':{'N':'0.041'},'Fiber_unit':{'S':'g'},'Phosphorus':{'S':'mg'},'Zinc':{'N':'0.04'},'Folate_unit':{'S':'ug'},'Vitamin_C_unit':{'S':'mg'},'Vitamin_B12':{'N':'0'},'Calcium':{'N':'6'},'Vitamin_K_unit':{'S':'ug'},'Magnesium':{'N':'5'},'Iron':{'N':'0.12'},'Cholesterol':{'N':'0'},'Sugar_unit':{'S':'g'},'Fat_unit':{'S':'g'},'Fat':{'N':'0.17'},'Niacin_unit':{'S':'mg'},'FoodName':{'S':'Apple'},'Thiamin_unit':{'S':'mg'},'Monosaturated_Fat_unit':{'S':'g'},'Vitamin_K':{'N':'2.2'},'Polyunsaturated_Fat_unit':{'S':'g'},'Vitamin_C':{'N':'4.6'},'Energy':{'N':'52'},'Calcium_unit':{'S':'mg'},'Trans_Fat_unit':{'S':'g'},'Vitamin_D':{'S':'ug'},'Polyunsaturated_Fat':{'N':'0.051'},'Carbohydrate':{'N':'13.81'},'Zinc_unit':{'S':'mg'},'Vitamin_B6_unit':{'S':'mg'},'Vitamin_A_RAE':{'N':'3'},'Vitamin_E_unit':{'S':'mg'},'Protein':{'N':'0.26'},'Folate':{'N':'3'}}],'ScannedCount':1,'ConsumedCapacity':null}";
-
-
 
     res.writeHead(200, {'content-type': 'text/plain'}); // respond to IOS with result of the identification
     res.end(string_results);
 
    });
-
-=======
-   //  // Run the image processing here.
-   //  PythonShell.run('../VegeTable/image_recognition/VegeTable_Neural_Network_Matching_Apple.py', options, function (err, results) { // options,
-   //   if (err) throw err;
-   //   // results is an array consisting of messages collected during execution
-   //   console.log('%s', results);
-   // });
-    
->>>>>>> origin/imageRecognitionTesting_JK
-
   });
 });
 
@@ -135,11 +114,10 @@ app.post('/text', function(req, res) {
 // Add a 'data' event handler for the client socket
 // data is what the server sent to this socket
 client.on('data', function(data) {
-    
     console.log('Match Result: ' + data);
     // Close the client socket completely
     client.destroy();
-    
+
 });
 
 // Add a 'close' event handler for the client socket
@@ -151,7 +129,7 @@ var getNetworkIP = (function () {
     var ignoreRE = /^(127\.0\.0\.1|::1|fe80(:1)?::1(%.*)?)$/i;
 
     var exec = require('child_process').exec;
-    var cached;    
+    var cached;
     var command;
     var filterRE;
 
@@ -208,6 +186,3 @@ getNetworkIP(function (error, ip) {
         console.log('error:', error);
     }
 }, false);
-
-
-
