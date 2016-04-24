@@ -16,10 +16,10 @@ import numpy
 from timeit import default_timer as timer
 
 # Initialize some variables
-numEpochs = 23  # use 0 to epoch until convergence
+numEpochs = 25  # use 0 to epoch until convergence
 dataDir = "../../data/imagenet/training_images/"
 #supportedFruits = ['Apple', 'Orange', 'Banana']
-supportedFruits = ['Apple', 'Banana', 'Unknown']
+supportedFruits = ['Banana', 'Unknown']
 width = 100
 height = 100
 allFiles = []
@@ -31,7 +31,6 @@ for fruit in supportedFruits:
     dirlist = listdir(dataDir+fruit)
     nPic = 0
     for f in dirlist:
-#        if isfile(join(dataDir+fruit, f)) and (f[0] is not '.') and (nPic < 20):
         if isfile(join(dataDir+fruit, f)) and (f[0] is not '.'):
             filename = [dataDir + fruit + "/" + f]
             allFiles.extend(filename)
@@ -40,14 +39,13 @@ for fruit in supportedFruits:
 
 print str(len(allFiles)) + " files found for training..."
 
-# Now initialize the neural network, use width*height for the size of the data because all of the images need to
-# be resized, greyscaled, and then flattened
+# Now initialize the neural network, use width*height*3 for the size of the data because all of the images need to
+# be resized and then flattened
 print "Loading image files..."
 ds = ClassificationDataSet(width*height*3)
 for k in xrange(len(allFiles)):
     img = Image.open(allFiles[k])
     img = img.resize([width, height],PIL.Image.ANTIALIAS)
-#    img = img.convert("L")
     imgArray = numpy.asarray(img.getdata())
     ds.addSample(ravel(imgArray), supportedFruits.index(allTargets[k]))
 
@@ -64,7 +62,7 @@ tstdata._convertToOneOfMany( )
 
 # Build a new neural network
 print "Building the neural network, in-dimension: " + str(trndata.indim) + ", out-dimension: " + str(trndata.outdim)
-#fnn = buildNetwork(trndata.indim, 25, trndata.outdim, outclass=SoftmaxLayer)  #25 worked ok
+# fnn = buildNetwork(trndata.indim, 25, trndata.outdim, outclass=SoftmaxLayer)  #25 worked ok
 fnn = buildNetwork(trndata.indim, 100, trndata.outdim, outclass=SoftmaxLayer)
 
 # Create a new backpropagation trainer
@@ -89,5 +87,5 @@ else:
 print 'Percent Error on Test dataset: ', percentError(trainer.testOnClassData(dataset=tstdata ), tstdata['class'] )
 
 print "Writing neural network to file..."
-NetworkWriter.writeToFile(fnn, 'VegeTable_PyBrain_Neural_Network_Apple_Banana.xml')
+NetworkWriter.writeToFile(fnn, 'VegeTable_PyBrain_Neural_Network_Banana.xml')
 

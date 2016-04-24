@@ -109,7 +109,7 @@ def ProcessXMLAnnotation(xml_file):
 
 
 
-dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/source_images/Cucumber"
+dataDir = "/Users/jkonz/Documents/EC500/VegeTable/VegeTable/data/imagenet/source_images/Orange"
 xmlFiles = GetListOfBoundingFiles(dataDir)
 
 print("Found "+str(len(xmlFiles))+" XML files for processing.")
@@ -169,8 +169,18 @@ while (i >= 0) and (i < len(xmlFiles)):
             hsv = cv2.cvtColor(blur,cv2.COLOR_BGR2HSV)
 
             # define range of blue color in HSV
-            lower_hue = np.array([0,75,75])
-            upper_hue = np.array([25,255,255])
+            # apple
+            # lower_hue = np.array([0,75,75])
+            # upper_hue = np.array([25,255,255])
+
+            # banana
+            # lower_hue = np.array([20,75,75])
+            # upper_hue = np.array([40,255,255])
+
+            # cucumber
+            lower_hue = np.array([40,25,25])
+            upper_hue = np.array([90,255,255])
+
 
             # Threshold the HSV image to get only blue colors
             mask = cv2.inRange(hsv, lower_hue, upper_hue)

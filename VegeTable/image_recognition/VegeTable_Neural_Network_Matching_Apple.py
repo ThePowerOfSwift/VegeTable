@@ -16,13 +16,13 @@ width = 100
 height = 100
 
 # Load the neural network
-# print "Loading neural network..."
+print "Loading neural network..."
 start = timer()
-fnn = NetworkReader.readFrom('VegeTable_PyBrain_Neural_Network.xml')
+fnn = NetworkReader.readFrom('VegeTable_PyBrain_Neural_Network_Apple.xml')
 end = timer()
-# print "Time taken to load neural network: " + str(end-start)
+print "Time taken to load neural network: " + str(end-start)
 
-# print "Matching images..."
+print "Matching images..."
 imFile = sys.argv[1]
 img = cv2.imread(imFile)
 
@@ -53,7 +53,7 @@ if result[0] > 0.3:
 else:
     matchRes = "Unknown"
 
-# print imFile + " Matched to: "+matchRes+" in "+str(end-start)+"sec with prediction scores: ", result
+print imFile + " Matched to: "+matchRes+" in "+str(end-start)+"sec with prediction scores: ", result
 print matchRes
 
 # res = cv2.putText(res, matchRes, (0,len(res[0,:,0])-10), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, [255,255,255])

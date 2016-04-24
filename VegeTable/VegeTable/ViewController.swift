@@ -172,6 +172,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 
                 let my_ip = "192.168.1.7"
+             //   let my_ip = "172.20.10.2"
                 let myUrl = NSURL(string: "http://" + my_ip + ":3001/upload");
                 let request = NSMutableURLRequest(URL:myUrl!);
                 request.HTTPMethod = "POST";
