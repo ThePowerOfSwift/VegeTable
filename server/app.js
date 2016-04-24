@@ -10,12 +10,20 @@ var PythonShell = require('python-shell');
 var AWS = require('aws-sdk');
 var port  = 3001;
 
+<<<<<<< HEAD
 // Open Connection to DB
 // Set your region for future requests.
 //AWS.config.region = 'us-east-1';
 AWS.config.update({region: "us-east-1",endpoint: "https://dynamodb.us-east-1.amazonaws.com"});
 var docClient = new AWS.DynamoDB.DocumentClient();
 var table = "FruitsAndVegetables";
+=======
+var net = require('net');
+
+var pyHOST = '127.0.0.1';
+var pyPORT = 9999;
+var client = new net.Socket();
+>>>>>>> origin/imageRecognitionTesting_JK
 
 app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(express.bodyParser({limit : '50mb'}));
@@ -39,19 +47,27 @@ app.post('/upload', function (req, res){
     /* The file name of the uploaded file */
     var file_name = this.openedFiles[0].name;
     /* Location where we want to copy the uploaded file */
-    var new_location = 'uploads/';
+    var new_location = __dirname+'/uploads/';
 
     fs.copy(temp_path, new_location + file_name, function(err) {
       if (err) {
         console.error(err);
       } else {
-        console.log("success!")
+        console.log("File Uploaded!")
+        client.connect(pyPORT, pyHOST, function() {
+
+          console.log('CONNECTED TO: ' + pyHOST + ':' + pyPORT);
+          // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client 
+          client.write(img_dir);
+
+        });
       }
     });
 
     var img_dir = new_location + file_name;
     var options = {args: [img_dir]};
 
+<<<<<<< HEAD
     // Run the image processing here.
     PythonShell.run('my_script.py', options, function (err, results) { // options,
      if (err) throw err;
@@ -87,6 +103,15 @@ app.post('/upload', function (req, res){
 
    });
 
+=======
+   //  // Run the image processing here.
+   //  PythonShell.run('../VegeTable/image_recognition/VegeTable_Neural_Network_Matching_Apple.py', options, function (err, results) { // options,
+   //   if (err) throw err;
+   //   // results is an array consisting of messages collected during execution
+   //   console.log('%s', results);
+   // });
+    
+>>>>>>> origin/imageRecognitionTesting_JK
 
   });
 });
@@ -107,5 +132,82 @@ app.post('/text', function(req, res) {
     res.send("successfully sent"); //  console.log(JSON.stringify(req.body.params));
 });
 
+// Add a 'data' event handler for the client socket
+// data is what the server sent to this socket
+client.on('data', function(data) {
+    
+    console.log('Match Result: ' + data);
+    // Close the client socket completely
+    client.destroy();
+    
+});
+
+// Add a 'close' event handler for the client socket
+client.on('close', function() {
+    console.log('Connection closed');
+});
+
+var getNetworkIP = (function () {
+    var ignoreRE = /^(127\.0\.0\.1|::1|fe80(:1)?::1(%.*)?)$/i;
+
+    var exec = require('child_process').exec;
+    var cached;    
+    var command;
+    var filterRE;
+
+    switch (process.platform) {
+    // TODO: implement for OSs without ifconfig command
+    case 'darwin':
+         command = 'ifconfig';
+         filterRE = /\binet\s+([^\s]+)/g;
+         // filterRE = /\binet6\s+([^\s]+)/g; // IPv6
+         break;
+    default:
+         command = 'ifconfig';
+         filterRE = /\binet\b[^:]+:\s*([^\s]+)/g;
+         // filterRE = /\binet6[^:]+:\s*([^\s]+)/g; // IPv6
+         break;
+    }
+
+    return function (callback, bypassCache) {
+         // get cached value
+        if (cached && !bypassCache) {
+            callback(null, cached);
+            return;
+        }
+        // system call
+        exec(command, function (error, stdout, sterr) {
+            var ips = [];
+            // extract IPs
+            var matches = stdout.match(filterRE);
+            // JS has no lookbehind REs, so we need a trick
+            for (var i = 0; i < matches.length; i++) {
+                ips.push(matches[i].replace(filterRE, '$1'));
+            }
+
+            // filter BS
+            for (var i = 0, l = ips.length; i < l; i++) {
+                if (!ignoreRE.test(ips[i])) {
+                    //if (!error) {
+                        cached = ips[i];
+                    //}
+                    callback(error, ips[i]);
+                    return;
+                }
+            }
+            // nothing found
+            callback(error, null);
+        });
+    };
+})();
+
 app.listen(port);
-console.log('server started on port %s', port);
+getNetworkIP(function (error, ip) {
+    console.log('server started on %s:%s',ip,port);
+    if (error) {
+        console.log('error:', error);
+    }
+}, false);
+
+
+
