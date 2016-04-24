@@ -176,7 +176,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     return body
                 }
                 
-                
 //                let my_ip = "192.168.1.7"
                 let my_ip = "52.90.45.148"  // EC2 instance
 

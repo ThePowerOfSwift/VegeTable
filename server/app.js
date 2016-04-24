@@ -18,7 +18,6 @@ var docClient = new AWS.DynamoDB.DocumentClient();
 var table = "FruitsAndVegetables";
 
 var net = require('net');
-
 var pyHOST = '127.0.0.1';
 var pyPORT = 9999;
 var client = new net.Socket();
@@ -52,13 +51,6 @@ app.post('/upload', function (req, res){
         console.error(err);
       } else {
         console.log("File Uploaded!")
-        client.connect(pyPORT, pyHOST, function() {
-
-          console.log('CONNECTED TO: ' + pyHOST + ':' + pyPORT);
-          // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client 
-          client.write(img_dir);
-
-        });
       }
     });
 
@@ -101,7 +93,7 @@ app.post('/upload', function (req, res){
 
       res.writeHead(200, {'content-type': 'text/plain'}); // respond to IOS with result of the identification
       res.end(string_results);
-      
+
   });
 });
 
@@ -122,7 +114,6 @@ app.post('/text', function(req, res) {
 });
 
 
-
 // Add a 'close' event handler for the client socket
 client.on('close', function() {
     console.log('Connection closed');
@@ -132,7 +123,7 @@ var getNetworkIP = (function () {
     var ignoreRE = /^(127\.0\.0\.1|::1|fe80(:1)?::1(%.*)?)$/i;
 
     var exec = require('child_process').exec;
-    var cached;    
+    var cached;
     var command;
     var filterRE;
 
@@ -189,6 +180,3 @@ getNetworkIP(function (error, ip) {
         console.log('error:', error);
     }
 }, false);
-
-
-
