@@ -39,6 +39,7 @@ class NutritionViewController: UIViewController {
    @IBOutlet weak var nutriMin3: UILabel!
    @IBOutlet weak var nutriMin4: UILabel!
    
+<<<<<<< HEAD
    //Meal Inspirations Images
    @IBOutlet weak var mealInspImage1: UIImageView!
    @IBOutlet weak var mealInspImage2: UIImageView!
@@ -48,14 +49,34 @@ class NutritionViewController: UIViewController {
    //Dummy data
    var data = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 3%"]
    
+=======
+   //Meal Inspirations Images and Labels
+   @IBOutlet weak var mealInspImage1: UIImageView!
+   @IBOutlet weak var mealInspImage2: UIImageView!
+   @IBOutlet weak var mealInspImage3: UIImageView!
+   @IBOutlet weak var mealInspLabel1: UILabel!
+   @IBOutlet weak var mealInspLabel2: UILabel!
+   @IBOutlet weak var mealInspLabel3: UILabel!
+   
+   //Nutrition Facts in a String array
+   var data = [String]()
+   //Dummy data
+   // = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 3%"]
+>>>>>>> imageRecognitionTesting_JK
    
    
    override func viewDidLoad() {
       super.viewDidLoad()
       
       self.NutritionScrollView.scrollEnabled = true
+<<<<<<< HEAD
       self.NutritionScrollView.contentSize.height = 2380
       
+=======
+      self.NutritionScrollView.contentSize.height = 2075
+      
+      //Handle this in prepareToSegue func in ViewController
+>>>>>>> imageRecognitionTesting_JK
       self.fruitNameLabel.text = "Mango"
       
       self.databaseImage.image = UIImage(named:"mango.jpg")
@@ -64,10 +85,21 @@ class NutritionViewController: UIViewController {
       self.databaseImage.layer.borderWidth = 4.0
       self.databaseImage.layer.borderColor = UIColor(red:15/255.0, green:243/255.0, blue:106/255.0, alpha: 1.0).CGColor
       
+<<<<<<< HEAD
       self.servingSizeImage.image = UIImage(named: "bowlOfMango.jpg");
       self.mealInspImage1.image = UIImage(named: "mangoSorbet.jpg")
       self.mealInspImage2.image = UIImage(named: "wholeFishWMango.jpg")
       self.mealInspImage3.image = UIImage(named: "stickyRiceWMango.jpg") 
+=======
+      //Handle this in prepareToSegue func in ViewController
+      self.servingSizeImage.image = UIImage(named: "bowlOfMango.jpg");
+      self.mealInspImage1.image = UIImage(named: "mangoSorbet.jpg")
+      self.mealInspImage2.image = UIImage(named: "wholeFishWMango.jpg")
+      self.mealInspImage3.image = UIImage(named: "stickyRiceWMango.jpg")
+      self.mealInspLabel1.text = "Mango Sorbet"
+      self.mealInspLabel2.text = "Fried Fish w/ Mango"
+      self.mealInspLabel3.text = "Sticky Rice w/ Mango" 
+>>>>>>> imageRecognitionTesting_JK
       
       setNutritionFacts(data);
    }
@@ -87,6 +119,14 @@ class NutritionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+<<<<<<< HEAD
+=======
+   
+   //Will make the time and battery bar appear white in app
+   override func  preferredStatusBarStyle()-> UIStatusBarStyle {
+    return UIStatusBarStyle.LightContent
+   } 
+>>>>>>> imageRecognitionTesting_JK
 
    @IBAction func backToCameraPress(sender: UIButton) {
       self.performSegueWithIdentifier("ShowCameraSegue", sender: sender)

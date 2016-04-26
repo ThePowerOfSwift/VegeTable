@@ -3,36 +3,57 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "IconSettings@2x.png",
+=======
+      "filename" : "2xiPhoneSettingsFinal.png",
+>>>>>>> imageRecognitionTesting_JK
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "IconSettings3x.png",
+=======
+      "filename" : "3xiPhoneSettingsFinal.png",
+>>>>>>> imageRecognitionTesting_JK
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "Icon-40Spotlight2x.png",
+=======
+      "filename" : "2xiPhoneSpotLightFinal.png",
+>>>>>>> imageRecognitionTesting_JK
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "Icon-60Spotlight2x.png",
+=======
+      "filename" : "3xiPhoneSpotlightFinal.png",
+>>>>>>> imageRecognitionTesting_JK
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "IconApp2x.png",
+=======
+      "filename" : "2xiPhoneAppFinal.png",
+>>>>>>> imageRecognitionTesting_JK
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "IconApp@3x.png",
       "scale" : "3x"
     },
@@ -64,6 +85,45 @@
     {
       "idiom" : "ipad",
       "size" : "76x76",
+=======
+      "filename" : "3xiPhoneAppFinal.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "1xiPadSettingsFinal.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "2xiPadSettingsFinal.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "1xiPadSpotlightFinal.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "2xiPadSpotlightFinal.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "1xiPadAppFinal.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "2xiPadAppFinal.png",
+>>>>>>> imageRecognitionTesting_JK
       "scale" : "2x"
     },
     {

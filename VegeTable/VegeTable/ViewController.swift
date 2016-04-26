@@ -14,7 +14,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
    var dataReady = true    //dummy bool that the pic analysis method will return
    var riderid = 0
+<<<<<<< HEAD
 
+=======
+   var nutritionFacts = [String]()
+   
+>>>>>>> imageRecognitionTesting_JK
    @IBOutlet weak var takenImage: UIImageView!
    @IBOutlet weak var previewView: PreviewView!
    @IBOutlet weak var snapPhotoButton: UIButton!
@@ -34,6 +39,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       super.viewDidLoad()
       takenImage.hidden = true
       // Do any additional setup after loading the view, typically from a nib.
+<<<<<<< HEAD
    }
 
    override func didReceiveMemoryWarning() {
@@ -45,6 +51,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       super.viewWillAppear(animated);
       //Question to consider, can this code be put in the viewDidLoad? Because everytime we return from the nutrition screen, this all happens all over again. Is this inefficient?
       //Also, could I make this "previewView" a custom UIView and put all this code in there? Not sure if possible or necessary
+=======
+>>>>>>> imageRecognitionTesting_JK
       
       //captureSession is created here
       captureSession = AVCaptureSession()
@@ -90,6 +98,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 captureSession!.startRunning()
             }
       }
+<<<<<<< HEAD
+=======
+
+      
+   }
+
+   override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+   }
+
+   override func viewWillAppear(animated: Bool) {
+      super.viewWillAppear(animated);
+      //Question to consider, can this code be put in the viewDidLoad? Because everytime we return from the nutrition screen, this all happens all over again. Is this inefficient?
+      //Also, could I make this "previewView" a custom UIView and put all this code in there? Not sure if possible or necessary
+     
+>>>>>>> imageRecognitionTesting_JK
    }
    
    override func viewDidAppear(animated: Bool) {
@@ -97,7 +122,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       //set the bounds of the previewLayer to equal the same as the view on our screen
       previewLayer!.frame = previewView.bounds      
    }
+<<<<<<< HEAD
     
+=======
+   
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      if segue.identifier == "ShowNutritionSegue" {
+         if let destinationViewController = segue.destinationViewController as? NutritionViewController {
+            destinationViewController.data = nutritionFacts
+            //also send the data for the fruit image and meal inspiration images
+         }
+      }
+   
+   }
+   
+>>>>>>> imageRecognitionTesting_JK
    @IBAction func didPressTakePhoto(sender: UIButton) {
       //here we create a videoConnectiono object from the first connection in the array of connections on the stillImageOutput
       if let videoConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
@@ -157,7 +196,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
                 
                 
-                let my_ip = "155.41.96.55"
+
+                let my_ip = "192.168.1.7"
+             //   let my_ip = "172.20.10.2"
+
                 let myUrl = NSURL(string: "http://" + my_ip + ":3001/upload");
                 let request = NSMutableURLRequest(URL:myUrl!);
                 request.HTTPMethod = "POST";
@@ -210,6 +252,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
                 
                 task.resume()
+<<<<<<< HEAD
 
                 
                 
@@ -268,6 +311,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                }
                
              
+=======
+               
+               //var returnDataFromServer =
+                
+               if self.dataReady {
+                  //set nutritionFacts equal to the return value of the server code
+                  self.nutritionFacts = ["100g", "60", "0", "0.5g", "1%", "0g", "0%", "0g", "5mg", "2%", "30 mg", "1%", "15g", "5%", "0g", "0%", "14g", "2g", "Vitamin A 2%", "Vitamin C 16%", "Calcium 2%", "Iron 33%"]
+                  //performSegue to the tableview controller
+                  self.performSegueWithIdentifier("ShowNutritionSegue", sender: sender)
+               }
+   
+>>>>>>> imageRecognitionTesting_JK
             }
          })
       }

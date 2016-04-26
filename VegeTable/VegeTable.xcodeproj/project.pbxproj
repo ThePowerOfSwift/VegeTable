@@ -381,7 +381,7 @@
 				TargetAttributes = {
 					A187C87D1C7CA25800DC5C23 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = FBDBZVP75K;
+						DevelopmentTeam = 23HUQ32598;
 					};
 				};
 			};
@@ -723,7 +723,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = VegeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NicholasMaresco.VegeTable;
+				PRODUCT_BUNDLE_IDENTIFIER = JeremyKonz.VegeTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -739,7 +739,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = VegeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NicholasMaresco.VegeTable;
+				PRODUCT_BUNDLE_IDENTIFIER = JeremyKonz.VegeTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

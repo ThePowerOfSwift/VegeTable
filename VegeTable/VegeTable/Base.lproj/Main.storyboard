@@ -11,6 +11,16 @@
             <string>Damion</string>
             <string>Damion</string>
             <string>Damion</string>
+<<<<<<< HEAD
+=======
+            <string>Damion</string>
+            <string>Damion</string>
+            <string>Damion</string>
+            <string>Damion</string>
+            <string>Damion</string>
+            <string>Damion</string>
+            <string>Damion</string>
+>>>>>>> imageRecognitionTesting_JK
         </mutableArray>
     </customFonts>
     <scenes>
@@ -23,11 +33,24 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="0.0" width="600" height="2400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8No-YB-Zvq" customClass="PreviewView" customModule="VegeTable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="102" width="600" height="2167.5"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="2135"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8No-YB-Zvq" customClass="PreviewView" customModule="VegeTable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="600" height="1918.5"/>
+                                <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-6D-2k7">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1861.5"/>
+                                    </imageView>
+                                </subviews>
+>>>>>>> imageRecognitionTesting_JK
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8No-YB-Zvq" secondAttribute="height" multiplier="600:499" id="BPf-30-pKF"/>
@@ -39,7 +62,11 @@
                                 </variation>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XO6-S8-LMy">
+<<<<<<< HEAD
                                 <rect key="frame" x="251" y="2340" width="97" height="40"/>
+=======
+                                <rect key="frame" x="251" y="2075" width="97" height="40"/>
+>>>>>>> imageRecognitionTesting_JK
                                 <color key="backgroundColor" red="0.045515038073062897" green="0.91369086503982544" blue="0.36828351020812988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="20"/>
                                 <state key="normal" title="Retake Photo">
@@ -49,17 +76,27 @@
                                     <action selector="retakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKf-AI-Yr8"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-6D-2k7">
                                 <rect key="frame" x="0.0" y="102" width="600" height="2167.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VegeTable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-fp-6pZ">
                                 <rect key="frame" x="202" y="20" width="195" height="74.5"/>
                                 <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="54"/>
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VegeTable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-fp-6pZ">
+                                <rect key="frame" x="224" y="20" width="152" height="58"/>
+                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="42"/>
+>>>>>>> imageRecognitionTesting_JK
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-y4-aHe">
+<<<<<<< HEAD
                                 <rect key="frame" x="252" y="2284" width="96" height="96"/>
+=======
+                                <rect key="frame" x="252" y="2019" width="96" height="96"/>
+>>>>>>> imageRecognitionTesting_JK
                                 <state key="normal" image="SizedOrangeButton.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -68,10 +105,15 @@
                                 </connections>
                             </button>
                         </subviews>
+<<<<<<< HEAD
                         <color key="backgroundColor" red="0.064397431910037994" green="0.84564429521560669" blue="0.46017169952392578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lJZ-6D-2k7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="06S-Hi-yqk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lJZ-6D-2k7" secondAttribute="trailing" constant="-20" id="1Tq-W7-hlh"/>
+=======
+                        <color key="backgroundColor" red="0.062745098039215685" green="0.84705882352941175" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+>>>>>>> imageRecognitionTesting_JK
                             <constraint firstItem="8No-YB-Zvq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2E2-N6-H7w"/>
                             <constraint firstItem="ba7-y4-aHe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Om-PV-HHd"/>
                             <constraint firstItem="ba7-y4-aHe" firstAttribute="top" secondItem="8No-YB-Zvq" secondAttribute="bottom" constant="14" id="9Ub-DN-ua5"/>
@@ -79,6 +121,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XO6-S8-LMy" secondAttribute="bottom" constant="20" id="KZo-2z-SeD"/>
                             <constraint firstItem="3aH-fp-6pZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LBu-ie-lp1"/>
                             <constraint firstItem="3aH-fp-6pZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SRk-Ux-3lZ"/>
+<<<<<<< HEAD
                             <constraint firstItem="ba7-y4-aHe" firstAttribute="top" secondItem="lJZ-6D-2k7" secondAttribute="bottom" constant="21" id="TX0-ND-mBE"/>
                             <constraint firstItem="lJZ-6D-2k7" firstAttribute="top" secondItem="3aH-fp-6pZ" secondAttribute="bottom" constant="8" id="VYn-iQ-VGd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ba7-y4-aHe" secondAttribute="bottom" constant="20" id="aJq-aa-PT4"/>
@@ -87,14 +130,23 @@
                             <constraint firstItem="ba7-y4-aHe" firstAttribute="top" secondItem="8No-YB-Zvq" secondAttribute="bottom" constant="21" id="gWX-23-8wR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ba7-y4-aHe" secondAttribute="bottom" constant="20" id="hD0-ni-VWU"/>
                             <constraint firstItem="ba7-y4-aHe" firstAttribute="top" secondItem="lJZ-6D-2k7" secondAttribute="bottom" constant="14" id="i1p-z3-JdM"/>
+=======
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ba7-y4-aHe" secondAttribute="bottom" constant="20" id="aJq-aa-PT4"/>
+                            <constraint firstItem="XO6-S8-LMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgy-Zu-RDn"/>
+                            <constraint firstItem="ba7-y4-aHe" firstAttribute="top" secondItem="8No-YB-Zvq" secondAttribute="bottom" constant="21" id="gWX-23-8wR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ba7-y4-aHe" secondAttribute="bottom" constant="20" id="hD0-ni-VWU"/>
+>>>>>>> imageRecognitionTesting_JK
                             <constraint firstItem="8No-YB-Zvq" firstAttribute="top" secondItem="3aH-fp-6pZ" secondAttribute="bottom" constant="8" id="kVS-IH-Eyz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8No-YB-Zvq" secondAttribute="trailing" constant="-20" id="q55-Dr-7SS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="2E2-N6-H7w"/>
+<<<<<<< HEAD
                                 <exclude reference="dIQ-2Y-WpS"/>
                                 <exclude reference="TX0-ND-mBE"/>
+=======
+>>>>>>> imageRecognitionTesting_JK
                                 <exclude reference="gWX-23-8wR"/>
                                 <exclude reference="aJq-aa-PT4"/>
                             </mask>
@@ -121,11 +173,39 @@
                         <viewControllerLayoutGuide type="bottom" id="ZUk-lH-dqO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j99-z8-IBp">
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="0.0" width="600" height="2400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yq-i3-Inq">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="2380"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="2135"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-fA-7WA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VegeTable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxd-1r-qMi">
+                                        <rect key="frame" x="250" y="19" width="101" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Gxd-1r-qMi" secondAttribute="height" multiplier="101:33" id="YCc-NL-bqL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.062745098039215685" green="0.84705882352941175" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Gxd-1r-qMi" firstAttribute="centerX" secondItem="ROH-fA-7WA" secondAttribute="centerX" id="JtH-eF-NI5"/>
+                                    <constraint firstItem="Gxd-1r-qMi" firstAttribute="top" secondItem="ROH-fA-7WA" secondAttribute="top" constant="19" id="paA-GE-alF"/>
+                                    <constraint firstAttribute="height" constant="60" id="qRb-HZ-yfQ"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yq-i3-Inq">
+                                <rect key="frame" x="0.0" y="60" width="600" height="2075"/>
+>>>>>>> imageRecognitionTesting_JK
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKt-Ut-NM9">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="276"/>
@@ -136,7 +216,11 @@
                                                     <constraint firstAttribute="height" constant="30" id="moI-57-IBe"/>
                                                     <constraint firstAttribute="width" constant="167" id="uiJ-Dx-fUS"/>
                                                 </constraints>
+<<<<<<< HEAD
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+=======
+                                                <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="25"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <state key="normal" title="&lt; Camera">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -180,311 +264,510 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBF-F8-AtI">
+<<<<<<< HEAD
                                         <rect key="frame" x="0.0" y="276" width="600" height="511.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition Facts " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5K-zC-Y96">
                                                 <rect key="frame" x="17" y="17" width="235" height="38.5"/>
+=======
+                                        <rect key="frame" x="0.0" y="276" width="600" height="512"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition Facts " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5K-zC-Y96">
+                                                <rect key="frame" x="17" y="17" width="235" height="39"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving Size " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xK-BY-vbZ">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="56" width="99" height="20"/>
+=======
+                                                <rect key="frame" x="17" y="57" width="99" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIq-Ry-j64">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="84" width="551" height="7"/>
+=======
+                                                <rect key="frame" x="17" y="85" width="551" height="7"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="7" id="IVy-v1-2aV"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="servingSizeValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY1-Ci-jOq">
+<<<<<<< HEAD
                                                 <rect key="frame" x="113" y="56" width="129.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="113" y="56" width="130" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount per Serving" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIA-zi-sly">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="99" width="163.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="17" y="100" width="164" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="028-jD-EHY">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="122" width="67.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="17" y="123" width="68" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calorieValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLO-k1-f06">
+<<<<<<< HEAD
                                                 <rect key="frame" x="92" y="121" width="92.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="92" y="122" width="93" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udi-q3-43R">
+<<<<<<< HEAD
                                                 <rect key="frame" x="557" y="121" width="10.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="557" y="122" width="11" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories from Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrH-cV-Y1w">
+<<<<<<< HEAD
                                                 <rect key="frame" x="419" y="121" width="130.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="418" y="122" width="131" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byi-xi-C0E">
+<<<<<<< HEAD
                                                 <rect key="frame" x="16" y="149" width="551" height="7"/>
+=======
+                                                <rect key="frame" x="16" y="150" width="551" height="7"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="7" id="fNf-eF-AYw"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% Daily Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ6-qx-0ID">
+<<<<<<< HEAD
                                                 <rect key="frame" x="477" y="159" width="91" height="18"/>
+=======
+                                                <rect key="frame" x="477" y="160" width="91" height="18"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tna-oq-zfn">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="264" width="551" height="2"/>
+=======
+                                                <rect key="frame" x="17" y="266" width="551" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="IVZ-S2-oWT"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cholesterol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-oY-lVN">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="269" width="94.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="17" y="271" width="95" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cholesterolPercentage" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgN-RN-nq4">
+<<<<<<< HEAD
                                                 <rect key="frame" x="395" y="269" width="172" height="20.5"/>
+=======
+                                                <rect key="frame" x="395" y="271" width="172" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F46-lL-NI6">
+<<<<<<< HEAD
                                                 <rect key="frame" x="44" y="236" width="523" height="2"/>
+=======
+                                                <rect key="frame" x="44" y="238" width="523" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="O1n-x1-tgF"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trans Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eas-Dc-EFu">
+<<<<<<< HEAD
                                                 <rect key="frame" x="45" y="241" width="67" height="19.5"/>
+=======
+                                                <rect key="frame" x="45" y="243" width="67" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="transFatValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xck-vr-Hph">
+<<<<<<< HEAD
                                                 <rect key="frame" x="116" y="241" width="99" height="19.5"/>
+=======
+                                                <rect key="frame" x="116" y="243" width="99" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cholesterolValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qN-VY-70O">
+<<<<<<< HEAD
                                                 <rect key="frame" x="115" y="269" width="126.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="116" y="271" width="127" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Nl-D5-eTf">
+<<<<<<< HEAD
                                                 <rect key="frame" x="16" y="292" width="551" height="2"/>
+=======
+                                                <rect key="frame" x="16" y="295" width="551" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="qTJ-zQ-2od"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sodium" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSL-p5-5Eo">
+<<<<<<< HEAD
                                                 <rect key="frame" x="16" y="297" width="62.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="16" y="300" width="63" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sodiumPercentage" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WL8-wq-Vd4">
+<<<<<<< HEAD
                                                 <rect key="frame" x="422" y="297" width="143.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="422" y="300" width="144" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sodiumValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eay-oe-kff">
+<<<<<<< HEAD
                                                 <rect key="frame" x="82" y="297" width="97.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="83" y="300" width="98" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOR-Sw-ztT">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="180" width="551" height="2"/>
+=======
+                                                <rect key="frame" x="17" y="181" width="551" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="kz0-iA-R0f"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Fat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9R-D6-ocL">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="185" width="70.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="17" y="186" width="71" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalFatValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqg-kV-05o">
+<<<<<<< HEAD
                                                 <rect key="frame" x="91" y="185" width="99.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="92" y="186" width="100" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalFatPercentage" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqP-EI-N1j">
+<<<<<<< HEAD
                                                 <rect key="frame" x="422" y="184" width="145" height="20.5"/>
+=======
+                                                <rect key="frame" x="422" y="185" width="145" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saturatedFatPercentage" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYc-Up-p6d">
+<<<<<<< HEAD
                                                 <rect key="frame" x="393" y="214" width="174.5" height="19.5"/>
+=======
+                                                <rect key="frame" x="393" y="215" width="175" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AN5-Px-yLd">
+<<<<<<< HEAD
                                                 <rect key="frame" x="44" y="209" width="523" height="2"/>
+=======
+                                                <rect key="frame" x="44" y="210" width="523" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="HcF-Ur-QJn"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturated Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP2-wf-HGC">
+<<<<<<< HEAD
                                                 <rect key="frame" x="45" y="214" width="97.5" height="19.5"/>
+=======
+                                                <rect key="frame" x="45" y="215" width="98" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saturatedFatValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O01-bM-8Sh">
+<<<<<<< HEAD
                                                 <rect key="frame" x="146" y="214" width="131.5" height="19.5"/>
+=======
+                                                <rect key="frame" x="147" y="215" width="132" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0f-Pp-tGF">
+<<<<<<< HEAD
                                                 <rect key="frame" x="16" y="321" width="551" height="2"/>
+=======
+                                                <rect key="frame" x="16" y="324" width="551" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="cTb-zc-11X"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Carbohydrates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kk-5w-ngD">
+<<<<<<< HEAD
                                                 <rect key="frame" x="16" y="326" width="167" height="20.5"/>
+=======
+                                                <rect key="frame" x="16" y="329" width="167" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalCarbsValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbL-CC-icH">
+<<<<<<< HEAD
                                                 <rect key="frame" x="187" y="326" width="121" height="20.5"/>
+=======
+                                                <rect key="frame" x="187" y="329" width="121" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fiberPercentage" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHz-Q5-iPl">
+<<<<<<< HEAD
                                                 <rect key="frame" x="452" y="354" width="116" height="19.5"/>
+=======
+                                                <rect key="frame" x="452" y="358" width="116" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86b-pi-bap">
+<<<<<<< HEAD
                                                 <rect key="frame" x="44" y="349" width="523" height="2"/>
+=======
+                                                <rect key="frame" x="44" y="353" width="523" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="sEk-iA-iCk"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dietary Fiber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKW-TI-MHj">
+<<<<<<< HEAD
                                                 <rect key="frame" x="45" y="354" width="93" height="19.5"/>
+=======
+                                                <rect key="frame" x="45" y="358" width="93" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fiberValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFM-BL-3cz">
+<<<<<<< HEAD
                                                 <rect key="frame" x="142" y="353" width="73" height="19.5"/>
+=======
+                                                <rect key="frame" x="142" y="357" width="73" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOp-r0-kgF">
+<<<<<<< HEAD
                                                 <rect key="frame" x="45" y="376" width="523" height="2"/>
+=======
+                                                <rect key="frame" x="45" y="380" width="523" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="7tS-gt-xvk"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDG-Wd-Am3">
+<<<<<<< HEAD
                                                 <rect key="frame" x="44" y="381" width="51" height="19.5"/>
+=======
+                                                <rect key="frame" x="44" y="385" width="51" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sugarValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sn-MF-T1q">
+<<<<<<< HEAD
                                                 <rect key="frame" x="99" y="381" width="81" height="19.5"/>
+=======
+                                                <rect key="frame" x="99" y="385" width="81" height="20"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AaW-6D-Jcf">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="403" width="551" height="2"/>
+=======
+                                                <rect key="frame" x="17" y="408" width="551" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="B55-kF-t23"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AX4-uk-07I">
+<<<<<<< HEAD
                                                 <rect key="frame" x="16" y="466" width="551" height="2"/>
+=======
+                                                <rect key="frame" x="16" y="471" width="551" height="2"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="dit-Wh-J72"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErU-Vs-PGl">
+<<<<<<< HEAD
                                                 <rect key="frame" x="16" y="408" width="59.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="16" y="413" width="60" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="proteinValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sA5-Jx-9cl">
+<<<<<<< HEAD
                                                 <rect key="frame" x="79" y="408" width="95" height="20.5"/>
+=======
+                                                <rect key="frame" x="80" y="413" width="95" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJb-oo-u4c">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="432" width="551" height="7"/>
+=======
+                                                <rect key="frame" x="17" y="437" width="551" height="7"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="7" id="a0G-ym-E4e"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalCarbsPercentage" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ope-vA-BS2">
+<<<<<<< HEAD
                                                 <rect key="frame" x="400" y="326" width="167" height="20.5"/>
+=======
+                                                <rect key="frame" x="400" y="329" width="167" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrient/Mineral1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oF9-pq-MEc">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="442" width="131.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="17" y="447" width="132" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrient/Mineral2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-pt-19z">
+<<<<<<< HEAD
                                                 <rect key="frame" x="433" y="442" width="134" height="20.5"/>
+=======
+                                                <rect key="frame" x="433" y="447" width="134" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8s-yR-I1v">
+<<<<<<< HEAD
                                                 <rect key="frame" x="292" y="442" width="16" height="21"/>
+=======
+                                                <rect key="frame" x="292" y="447" width="16" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="Y7q-RZ-1Gk"/>
                                                     <constraint firstAttribute="width" constant="16" id="a5z-Oc-A7s"/>
@@ -494,17 +777,38 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrient/Mineral3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmH-CD-LQU">
+<<<<<<< HEAD
                                                 <rect key="frame" x="17" y="471" width="134.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="17" y="476" width="135" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrient/Mineral4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chm-hL-gP5">
+<<<<<<< HEAD
                                                 <rect key="frame" x="433" y="471" width="134.5" height="20.5"/>
+=======
+                                                <rect key="frame" x="433" y="476" width="135" height="21"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+<<<<<<< HEAD
+=======
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAV-a1-zqK">
+                                                <rect key="frame" x="292" y="471" width="16" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="0NJ-7n-gbd"/>
+                                                    <constraint firstAttribute="width" constant="16" id="5UT-wQ-qrp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+>>>>>>> imageRecognitionTesting_JK
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -517,6 +821,10 @@
                                             <constraint firstItem="Chm-hL-gP5" firstAttribute="top" secondItem="AX4-uk-07I" secondAttribute="bottom" constant="3" id="1QH-Dl-2fi"/>
                                             <constraint firstItem="JLO-k1-f06" firstAttribute="leading" secondItem="028-jD-EHY" secondAttribute="trailing" constant="7.5" id="1qc-he-acx"/>
                                             <constraint firstAttribute="trailing" secondItem="uJb-oo-u4c" secondAttribute="trailing" constant="32" id="23e-II-AZh"/>
+<<<<<<< HEAD
+=======
+                                            <constraint firstItem="QAV-a1-zqK" firstAttribute="top" secondItem="AX4-uk-07I" secondAttribute="bottom" constant="-2" id="53B-4I-Khz"/>
+>>>>>>> imageRecognitionTesting_JK
                                             <constraint firstItem="NUT-oY-lVN" firstAttribute="leading" secondItem="BBF-F8-AtI" secondAttribute="leading" constant="17" id="5sr-x8-wXj"/>
                                             <constraint firstAttribute="trailing" secondItem="TQ6-qx-0ID" secondAttribute="trailing" constant="32" id="68Z-CF-DQE"/>
                                             <constraint firstItem="WL8-wq-Vd4" firstAttribute="top" secondItem="3Nl-D5-eTf" secondAttribute="bottom" constant="3" id="8n2-ER-Ywi"/>
@@ -572,6 +880,10 @@
                                             <constraint firstItem="ZgN-RN-nq4" firstAttribute="top" secondItem="Tna-oq-zfn" secondAttribute="bottom" constant="3" id="Uu0-9b-ceZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Tna-oq-zfn" secondAttribute="trailing" constant="32" id="V6e-Av-V3M"/>
                                             <constraint firstItem="ErU-Vs-PGl" firstAttribute="leading" secondItem="BBF-F8-AtI" secondAttribute="leading" constant="16" id="Wed-8a-aiS"/>
+<<<<<<< HEAD
+=======
+                                            <constraint firstItem="QAV-a1-zqK" firstAttribute="centerX" secondItem="BBF-F8-AtI" secondAttribute="centerX" id="Wze-SJ-GZY"/>
+>>>>>>> imageRecognitionTesting_JK
                                             <constraint firstAttribute="trailing" secondItem="ope-vA-BS2" secondAttribute="trailing" constant="33" id="Ya8-Ez-ocI"/>
                                             <constraint firstItem="jIq-Ry-j64" firstAttribute="leading" secondItem="BBF-F8-AtI" secondAttribute="leading" constant="17" id="Yxk-9w-aEF"/>
                                             <constraint firstItem="TQ6-qx-0ID" firstAttribute="top" secondItem="Byi-xi-C0E" secondAttribute="bottom" constant="3" id="aGq-uV-VZQ"/>
@@ -632,6 +944,7 @@
                                             </mask>
                                         </variation>
                                     </view>
+<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP1-Ox-CwB">
                                         <rect key="frame" x="292" y="747" width="16" height="21"/>
                                         <constraints>
@@ -654,10 +967,35 @@
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fcO-pA-oCv">
                                                 <rect key="frame" x="0.0" y="53" width="600" height="600"/>
+=======
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19g-xy-mjy">
+                                        <rect key="frame" x="0.0" y="788" width="600" height="1287"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ict-4B-jN9">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTT-XR-l9x">
+                                                        <rect key="frame" x="8" y="12" width="188" height="55"/>
+                                                        <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="40"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.062745098039215685" green="0.84705882352941175" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="aTT-XR-l9x" secondAttribute="bottom" constant="8" id="QAV-3u-fsp"/>
+                                                    <constraint firstAttribute="height" constant="75" id="Qkb-hy-yM2"/>
+                                                    <constraint firstItem="aTT-XR-l9x" firstAttribute="leading" secondItem="Ict-4B-jN9" secondAttribute="leading" constant="8" id="bDf-qy-5rT"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fcO-pA-oCv">
+                                                <rect key="frame" x="0.0" y="75" width="600" height="600"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fcO-pA-oCv" secondAttribute="height" multiplier="1:1" id="DiZ-Jh-qBZ"/>
                                                 </constraints>
                                             </imageView>
+<<<<<<< HEAD
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f14-EB-E57">
                                                 <rect key="frame" x="0.0" y="653" width="600" height="1"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -673,25 +1011,72 @@
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jyf-iA-RzO">
                                                 <rect key="frame" x="0.0" y="716" width="128" height="128"/>
+=======
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7F-cF-YOP">
+                                                <rect key="frame" x="0.0" y="675" width="600" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Inspirations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zk2-Nx-ArO">
+                                                        <rect key="frame" x="8" y="12" width="271" height="55"/>
+                                                        <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="40"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.062745098039215685" green="0.84705882352941175" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Zk2-Nx-ArO" secondAttribute="bottom" constant="8" id="8su-Le-gBt"/>
+                                                    <constraint firstItem="Zk2-Nx-ArO" firstAttribute="leading" secondItem="A7F-cF-YOP" secondAttribute="leading" constant="8" id="9ig-v2-83d"/>
+                                                    <constraint firstAttribute="height" constant="75" id="ce9-n9-xjo"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jyf-iA-RzO">
+                                                <rect key="frame" x="0.0" y="750" width="128" height="128"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="F5w-Xg-Si6"/>
                                                     <constraint firstAttribute="width" constant="128" id="MHV-Ug-sb8"/>
                                                 </constraints>
                                             </imageView>
+<<<<<<< HEAD
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiH-aM-Q53">
                                                 <rect key="frame" x="0.0" y="844" width="600" height="1"/>
+=======
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Inspiration Label1" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpd-zC-xjS">
+                                                <rect key="frame" x="377" y="748" width="216" height="130"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="129.5" id="5of-cQ-VAP"/>
+                                                    <constraint firstAttribute="width" constant="215.5" id="UI4-LV-MfZ"/>
+                                                    <constraint firstAttribute="width" constant="286" id="uS6-zc-qjd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="uS6-zc-qjd"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiH-aM-Q53">
+                                                <rect key="frame" x="0.0" y="878" width="600" height="1"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="c2j-9b-VUn"/>
                                                 </constraints>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jhV-kJ-Xl4">
+<<<<<<< HEAD
                                                 <rect key="frame" x="0.0" y="845" width="128" height="128"/>
+=======
+                                                <rect key="frame" x="0.0" y="879" width="128" height="128"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="5EN-mY-xqE"/>
                                                     <constraint firstAttribute="width" constant="128" id="SPh-dA-glO"/>
                                                 </constraints>
                                             </imageView>
+<<<<<<< HEAD
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mrm-Vf-ape">
                                                 <rect key="frame" x="0.0" y="972" width="600" height="1"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -715,13 +1100,21 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Inspiration Label2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSu-M2-Cba">
                                                 <rect key="frame" x="377" y="843.5" width="215.5" height="129.5"/>
+=======
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Inspiration Label2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSu-M2-Cba">
+                                                <rect key="frame" x="377" y="877" width="216" height="130"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="215.5" id="Crn-P6-Jqp"/>
                                                     <constraint firstAttribute="width" constant="286" id="IGN-6f-ufe"/>
                                                     <constraint firstAttribute="height" constant="129.5" id="rZp-aM-9kt"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+<<<<<<< HEAD
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+=======
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -729,6 +1122,7 @@
                                                     </mask>
                                                 </variation>
                                             </label>
+<<<<<<< HEAD
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Inspiration Label1" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpd-zC-xjS">
                                                 <rect key="frame" x="377" y="714.5" width="215.5" height="129.5"/>
                                                 <constraints>
@@ -747,13 +1141,35 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Inspiration Label3" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfB-YP-kWR">
                                                 <rect key="frame" x="377" y="971" width="215.5" height="129.5"/>
+=======
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mrm-Vf-ape">
+                                                <rect key="frame" x="0.0" y="1006" width="600" height="1"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="OtB-HT-PCX"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QTy-Rh-6Bo">
+                                                <rect key="frame" x="0.0" y="1007" width="128" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="KI3-ta-c1F"/>
+                                                    <constraint firstAttribute="width" constant="128" id="twg-eJ-3ou"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Inspiration Label3" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfB-YP-kWR">
+                                                <rect key="frame" x="377" y="1005" width="216" height="130"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="286" id="A8w-np-YOU"/>
                                                     <constraint firstAttribute="height" constant="129.5" id="F7V-RH-r5f"/>
                                                     <constraint firstAttribute="width" constant="215.5" id="kBM-Xw-DVT"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+<<<<<<< HEAD
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+=======
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> imageRecognitionTesting_JK
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -761,6 +1177,7 @@
                                                     </mask>
                                                 </variation>
                                             </label>
+<<<<<<< HEAD
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pl-T4-Uat">
                                                 <rect key="frame" x="8" y="6" width="164" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
@@ -809,14 +1226,108 @@
                                             <constraint firstAttribute="height" constant="341" id="zLg-lg-3cy"/>
                                             <constraint firstItem="L4v-wI-UFH" firstAttribute="top" secondItem="19g-xy-mjy" secondAttribute="top" id="zSi-T0-egH"/>
                                             <constraint firstAttribute="height" constant="1306" id="zrf-D4-Q3Z"/>
+=======
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTn-o8-JQq">
+                                                <rect key="frame" x="0.0" y="1135" width="600" height="165"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know, were we accurate?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so4-hI-7he">
+                                                        <rect key="frame" x="160" y="8" width="280" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="279.5" id="nuz-wZ-6F8"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="24"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmS-fu-LYZ">
+                                                        <rect key="frame" x="60" y="55" width="60" height="60"/>
+                                                        <state key="normal" image="yesButton.png"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-T0-sbI">
+                                                        <rect key="frame" x="480" y="55" width="60" height="60"/>
+                                                        <state key="normal" image="noButton.png"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hi-ui-sG8">
+                                                        <rect key="frame" x="76" y="123" width="27" height="33"/>
+                                                        <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="24"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-oN-oed">
+                                                        <rect key="frame" x="496" y="123" width="28" height="33"/>
+                                                        <fontDescription key="fontDescription" name="Damion" family="Damion" pointSize="24"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.062745098039215685" green="0.84705882352941175" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="ZmS-fu-LYZ" firstAttribute="top" secondItem="so4-hI-7he" secondAttribute="bottom" constant="14" id="MQi-WV-ycp"/>
+                                                    <constraint firstItem="so4-hI-7he" firstAttribute="centerX" secondItem="tTn-o8-JQq" secondAttribute="centerX" id="Rk4-TV-X4u"/>
+                                                    <constraint firstItem="so4-hI-7he" firstAttribute="top" secondItem="tTn-o8-JQq" secondAttribute="top" constant="8" id="VWa-zo-7IG"/>
+                                                    <constraint firstItem="Byk-T0-sbI" firstAttribute="top" secondItem="so4-hI-7he" secondAttribute="bottom" constant="14" id="bEj-7n-Kyb"/>
+                                                    <constraint firstItem="5Hi-ui-sG8" firstAttribute="centerX" secondItem="ZmS-fu-LYZ" secondAttribute="centerX" id="fh2-CC-MmM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Byk-T0-sbI" secondAttribute="trailing" constant="60" id="gy5-gf-a9C"/>
+                                                    <constraint firstItem="5Hi-ui-sG8" firstAttribute="top" secondItem="ZmS-fu-LYZ" secondAttribute="bottom" constant="8" id="kHQ-1A-TPN"/>
+                                                    <constraint firstItem="7fj-oN-oed" firstAttribute="top" secondItem="Byk-T0-sbI" secondAttribute="bottom" constant="8" id="ojg-S2-lez"/>
+                                                    <constraint firstItem="7fj-oN-oed" firstAttribute="centerX" secondItem="Byk-T0-sbI" secondAttribute="centerX" id="qv8-fC-dBU"/>
+                                                    <constraint firstItem="ZmS-fu-LYZ" firstAttribute="leading" secondItem="tTn-o8-JQq" secondAttribute="leading" constant="60" id="vd2-W4-q7H"/>
+                                                    <constraint firstAttribute="height" constant="165" id="zJf-Hr-85A"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Ict-4B-jN9" firstAttribute="centerX" secondItem="19g-xy-mjy" secondAttribute="centerX" id="0YN-UZ-gip"/>
+                                            <constraint firstItem="MiH-aM-Q53" firstAttribute="top" secondItem="Jyf-iA-RzO" secondAttribute="bottom" id="0jJ-xK-Njh"/>
+                                            <constraint firstItem="QTy-Rh-6Bo" firstAttribute="leading" secondItem="19g-xy-mjy" secondAttribute="leading" id="0ue-9R-dtn"/>
+                                            <constraint firstAttribute="trailing" secondItem="RSu-M2-Cba" secondAttribute="trailing" constant="7.5" id="2iT-g4-iUH"/>
+                                            <constraint firstItem="QTy-Rh-6Bo" firstAttribute="top" secondItem="jhV-kJ-Xl4" secondAttribute="bottom" constant="10" id="44D-PZ-7mz"/>
+                                            <constraint firstItem="fcO-pA-oCv" firstAttribute="width" secondItem="19g-xy-mjy" secondAttribute="width" id="6iy-vo-iGE"/>
+                                            <constraint firstItem="Jyf-iA-RzO" firstAttribute="top" secondItem="A7F-cF-YOP" secondAttribute="bottom" id="8um-xn-23H"/>
+                                            <constraint firstItem="Kpd-zC-xjS" firstAttribute="bottom" secondItem="Jyf-iA-RzO" secondAttribute="bottom" id="DxS-3k-biw"/>
+                                            <constraint firstItem="A7F-cF-YOP" firstAttribute="centerX" secondItem="19g-xy-mjy" secondAttribute="centerX" id="Hwh-yX-vfB"/>
+                                            <constraint firstItem="A7F-cF-YOP" firstAttribute="width" secondItem="19g-xy-mjy" secondAttribute="width" id="Iz7-ea-Wb1"/>
+                                            <constraint firstItem="jhV-kJ-Xl4" firstAttribute="top" secondItem="MiH-aM-Q53" secondAttribute="bottom" id="PdT-aV-mk7"/>
+                                            <constraint firstItem="MiH-aM-Q53" firstAttribute="width" secondItem="19g-xy-mjy" secondAttribute="width" id="Q18-hf-gpn"/>
+                                            <constraint firstItem="Mrm-Vf-ape" firstAttribute="centerX" secondItem="19g-xy-mjy" secondAttribute="centerX" id="TsW-HU-aRY"/>
+                                            <constraint firstItem="tTn-o8-JQq" firstAttribute="centerX" secondItem="19g-xy-mjy" secondAttribute="centerX" id="VHp-4Y-e1h"/>
+                                            <constraint firstItem="OfB-YP-kWR" firstAttribute="bottom" secondItem="QTy-Rh-6Bo" secondAttribute="bottom" id="YmM-6N-sXC"/>
+                                            <constraint firstItem="RSu-M2-Cba" firstAttribute="bottom" secondItem="jhV-kJ-Xl4" secondAttribute="bottom" id="aSF-TT-wic"/>
+                                            <constraint firstItem="jhV-kJ-Xl4" firstAttribute="top" secondItem="Jyf-iA-RzO" secondAttribute="bottom" constant="10" id="agw-jE-len"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kpd-zC-xjS" secondAttribute="trailing" constant="7.5" id="cvP-9f-HZZ"/>
+                                            <constraint firstItem="Mrm-Vf-ape" firstAttribute="width" secondItem="19g-xy-mjy" secondAttribute="width" id="dFj-Vf-zWG"/>
+                                            <constraint firstItem="jhV-kJ-Xl4" firstAttribute="leading" secondItem="19g-xy-mjy" secondAttribute="leading" id="fL6-AF-XyH"/>
+                                            <constraint firstItem="Mrm-Vf-ape" firstAttribute="top" secondItem="jhV-kJ-Xl4" secondAttribute="bottom" constant="-1" id="jYI-5i-Xz7"/>
+                                            <constraint firstItem="fcO-pA-oCv" firstAttribute="top" secondItem="Ict-4B-jN9" secondAttribute="bottom" id="jz3-wY-ulM"/>
+                                            <constraint firstItem="fcO-pA-oCv" firstAttribute="centerX" secondItem="19g-xy-mjy" secondAttribute="centerX" id="keh-JQ-qnh"/>
+                                            <constraint firstItem="Ict-4B-jN9" firstAttribute="width" secondItem="19g-xy-mjy" secondAttribute="width" id="lOz-a8-kLj"/>
+                                            <constraint firstAttribute="trailing" secondItem="OfB-YP-kWR" secondAttribute="trailing" constant="7.5" id="mFH-OI-Du8"/>
+                                            <constraint firstItem="Jyf-iA-RzO" firstAttribute="leading" secondItem="19g-xy-mjy" secondAttribute="leading" id="oft-Mo-QtV"/>
+                                            <constraint firstItem="tTn-o8-JQq" firstAttribute="width" secondItem="19g-xy-mjy" secondAttribute="width" id="ohV-dR-WeX"/>
+                                            <constraint firstItem="MiH-aM-Q53" firstAttribute="centerX" secondItem="19g-xy-mjy" secondAttribute="centerX" id="tSs-Cg-mhT"/>
+                                            <constraint firstItem="A7F-cF-YOP" firstAttribute="top" secondItem="fcO-pA-oCv" secondAttribute="bottom" id="txD-Vg-xEz"/>
+                                            <constraint firstItem="QTy-Rh-6Bo" firstAttribute="top" secondItem="Mrm-Vf-ape" secondAttribute="bottom" id="uqZ-xT-Gem"/>
+                                            <constraint firstItem="tTn-o8-JQq" firstAttribute="top" secondItem="QTy-Rh-6Bo" secondAttribute="bottom" id="wcT-6D-sYQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="tTn-o8-JQq" secondAttribute="bottom" constant="-13" id="wfJ-Mi-bvJ"/>
+                                            <constraint firstItem="fcO-pA-oCv" firstAttribute="width" secondItem="19g-xy-mjy" secondAttribute="width" id="y7k-Z4-1P3"/>
+                                            <constraint firstAttribute="height" constant="341" id="zLg-lg-3cy"/>
+                                            <constraint firstAttribute="height" constant="1287" id="zrf-D4-Q3Z"/>
+>>>>>>> imageRecognitionTesting_JK
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="zLg-lg-3cy"/>
                                                 <exclude reference="6iy-vo-iGE"/>
+<<<<<<< HEAD
                                                 <exclude reference="Xb9-6s-6fX"/>
                                                 <exclude reference="agw-jE-len"/>
                                                 <exclude reference="44D-PZ-7mz"/>
+=======
+                                                <exclude reference="agw-jE-len"/>
+                                                <exclude reference="44D-PZ-7mz"/>
+                                                <exclude reference="wfJ-Mi-bvJ"/>
+>>>>>>> imageRecognitionTesting_JK
                                             </mask>
                                         </variation>
                                     </view>
@@ -824,6 +1335,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="KKt-Ut-NM9" secondAttribute="trailing" id="0Js-K0-MRm"/>
                                     <constraint firstItem="KKt-Ut-NM9" firstAttribute="centerX" secondItem="7Yq-i3-Inq" secondAttribute="centerX" id="1PT-Js-wgN"/>
+<<<<<<< HEAD
                                     <constraint firstItem="EP1-Ox-CwB" firstAttribute="centerX" secondItem="BBF-F8-AtI" secondAttribute="centerX" id="ALm-Mq-ZPw"/>
                                     <constraint firstItem="KKt-Ut-NM9" firstAttribute="leading" secondItem="7Yq-i3-Inq" secondAttribute="leading" id="AjB-Vq-lnL"/>
                                     <constraint firstItem="KKt-Ut-NM9" firstAttribute="top" secondItem="7Yq-i3-Inq" secondAttribute="top" id="Asq-Eg-nRR"/>
@@ -837,6 +1349,20 @@
                                     <constraint firstItem="EP1-Ox-CwB" firstAttribute="top" secondItem="AX4-uk-07I" secondAttribute="bottom" constant="3" id="lCt-aM-cOF"/>
                                     <constraint firstItem="19g-xy-mjy" firstAttribute="centerX" secondItem="7Yq-i3-Inq" secondAttribute="centerX" id="lVt-Z9-cCS"/>
                                     <constraint firstItem="0Pl-T4-Uat" firstAttribute="top" secondItem="BBF-F8-AtI" secondAttribute="bottom" constant="5.5" id="sMy-6R-VFh"/>
+=======
+                                    <constraint firstItem="KKt-Ut-NM9" firstAttribute="leading" secondItem="7Yq-i3-Inq" secondAttribute="leading" id="AjB-Vq-lnL"/>
+                                    <constraint firstItem="KKt-Ut-NM9" firstAttribute="top" secondItem="7Yq-i3-Inq" secondAttribute="top" id="Asq-Eg-nRR"/>
+                                    <constraint firstItem="BBF-F8-AtI" firstAttribute="centerX" secondItem="7Yq-i3-Inq" secondAttribute="centerX" id="Lhq-V6-Spz"/>
+                                    <constraint firstAttribute="bottom" secondItem="BBF-F8-AtI" secondAttribute="bottom" constant="1287" id="MmO-5J-co6"/>
+                                    <constraint firstItem="19g-xy-mjy" firstAttribute="top" secondItem="BBF-F8-AtI" secondAttribute="bottom" id="RAR-X3-1TO"/>
+                                    <constraint firstAttribute="bottom" secondItem="KKt-Ut-NM9" secondAttribute="bottom" constant="324" id="RP9-pq-rz2"/>
+                                    <constraint firstItem="KKt-Ut-NM9" firstAttribute="top" secondItem="7Yq-i3-Inq" secondAttribute="top" id="ZAd-vO-yvm"/>
+                                    <constraint firstItem="Ict-4B-jN9" firstAttribute="top" secondItem="BBF-F8-AtI" secondAttribute="bottom" id="bir-Dk-cz1"/>
+                                    <constraint firstItem="BBF-F8-AtI" firstAttribute="top" secondItem="KKt-Ut-NM9" secondAttribute="bottom" id="ccg-OB-Xcv"/>
+                                    <constraint firstAttribute="height" constant="2075" id="gUA-JI-8n0"/>
+                                    <constraint firstItem="19g-xy-mjy" firstAttribute="width" secondItem="7Yq-i3-Inq" secondAttribute="width" id="kWA-Hn-EDH"/>
+                                    <constraint firstItem="19g-xy-mjy" firstAttribute="centerX" secondItem="7Yq-i3-Inq" secondAttribute="centerX" id="lVt-Z9-cCS"/>
+>>>>>>> imageRecognitionTesting_JK
                                     <constraint firstItem="BBF-F8-AtI" firstAttribute="width" secondItem="7Yq-i3-Inq" secondAttribute="width" id="uCu-5Z-Ypb"/>
                                 </constraints>
                                 <variation key="default">
@@ -847,6 +1373,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
+<<<<<<< HEAD
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7Yq-i3-Inq" firstAttribute="height" secondItem="j99-z8-IBp" secondAttribute="height" constant="-20" id="MRu-0U-BEt"/>
@@ -857,12 +1384,37 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+=======
+                        <color key="backgroundColor" red="0.062745098039215685" green="0.84705882352941175" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ROH-fA-7WA" firstAttribute="leading" secondItem="j99-z8-IBp" secondAttribute="leadingMargin" constant="-20" id="7Q0-uQ-Dgb"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="height" secondItem="j99-z8-IBp" secondAttribute="height" constant="-21" id="MRu-0U-BEt"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="centerY" secondItem="j99-z8-IBp" secondAttribute="centerY" constant="115" id="NaX-L8-Tnr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ROH-fA-7WA" secondAttribute="trailing" constant="-20" id="Oy2-rc-u6s"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="top" secondItem="ROH-fA-7WA" secondAttribute="bottom" id="QK2-x1-amH"/>
+                            <constraint firstAttribute="bottom" secondItem="7Yq-i3-Inq" secondAttribute="bottom" constant="-170" id="RRU-QI-NAB"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="height" secondItem="j99-z8-IBp" secondAttribute="height" id="cFD-ob-XJZ"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="centerX" secondItem="j99-z8-IBp" secondAttribute="centerX" id="dOd-U7-YhS"/>
+                            <constraint firstItem="7Yq-i3-Inq" firstAttribute="width" secondItem="j99-z8-IBp" secondAttribute="width" id="gfU-py-wec"/>
+                            <constraint firstItem="ROH-fA-7WA" firstAttribute="top" secondItem="j99-z8-IBp" secondAttribute="top" id="iSw-ql-R5t"/>
+                            <constraint firstItem="ROH-fA-7WA" firstAttribute="centerX" secondItem="j99-z8-IBp" secondAttribute="centerX" id="ndC-td-6vm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MRu-0U-BEt"/>
+                                <exclude reference="NaX-L8-Tnr"/>
+                                <exclude reference="RRU-QI-NAB"/>
+>>>>>>> imageRecognitionTesting_JK
                                 <exclude reference="cFD-ob-XJZ"/>
                             </mask>
                         </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+<<<<<<< HEAD
                     <size key="freeformSize" width="600" height="2400"/>
+=======
+                    <size key="freeformSize" width="600" height="2135"/>
+>>>>>>> imageRecognitionTesting_JK
                     <connections>
                         <outlet property="NutritionScrollView" destination="7Yq-i3-Inq" id="x28-ZC-Sj6"/>
                         <outlet property="calorieValue" destination="JLO-k1-f06" id="K1o-ke-DmG"/>
@@ -876,6 +1428,12 @@
                         <outlet property="mealInspImage1" destination="Jyf-iA-RzO" id="6Ff-Sm-PIM"/>
                         <outlet property="mealInspImage2" destination="jhV-kJ-Xl4" id="qU3-f2-8lR"/>
                         <outlet property="mealInspImage3" destination="QTy-Rh-6Bo" id="CBE-kj-faw"/>
+<<<<<<< HEAD
+=======
+                        <outlet property="mealInspLabel1" destination="Kpd-zC-xjS" id="Wm6-Az-Srn"/>
+                        <outlet property="mealInspLabel2" destination="RSu-M2-Cba" id="vNK-TI-Jte"/>
+                        <outlet property="mealInspLabel3" destination="OfB-YP-kWR" id="N78-9a-QuU"/>
+>>>>>>> imageRecognitionTesting_JK
                         <outlet property="nutriMin1" destination="oF9-pq-MEc" id="Ulp-bc-iSP"/>
                         <outlet property="nutriMin2" destination="eHb-pt-19z" id="BdR-VU-IUE"/>
                         <outlet property="nutriMin3" destination="MmH-CD-LQU" id="nAF-99-kDl"/>
@@ -898,10 +1456,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONu-R7-D1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1051" y="294"/>
+=======
+            <point key="canvasLocation" x="1023" y="283.5"/>
+>>>>>>> imageRecognitionTesting_JK
         </scene>
     </scenes>
     <resources>
         <image name="SizedOrangeButton.png" width="96" height="96"/>
+<<<<<<< HEAD
+=======
+        <image name="noButton.png" width="60" height="60"/>
+        <image name="yesButton.png" width="60" height="60"/>
+>>>>>>> imageRecognitionTesting_JK
     </resources>
 </document>
