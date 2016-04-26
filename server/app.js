@@ -104,7 +104,7 @@ app.post('/upload', function (req, res){
 
        //string_results = "{'Count':1,'Items':[{'Niacin':{'N':'0.091'},'Vitamin_B12_unit':{'S':'ug'},'Vitamin_A_RAE_unit':{'S':'ug'},'Sodium':{'N':'1'},'Monosaturated_Fat':{'N':'0.007'},'Thiamin':{'N':'0.017'},'Sugar':{'N':'10.39'},'Water_unit':{'S':'g'},'Carbohydrate_unit':{'S':'g'},'Iron_unit':{'S':'mg'},'Trans_Fat':{'N':'0'},'Sodium_unit':{'S':'mg'},'Saturated_Fat':{'N':'0.028'},'Vitamin_E':{'N':'0.18'},'Fiber':{'N':'2.4'},'Magnesium_unit':{'S':'mg'},'Saturated_Fat_unit':{'S':'g'},'Potassium':{'S':'mg'},'Protein_unit':{'S':'g'},'Water':{'N':'85.56'},'Energy_unit':{'S':'kcal'},'Cholesterol_unit':{'S':'mg'},'Vitamin_B6':{'N':'0.041'},'Fiber_unit':{'S':'g'},'Phosphorus':{'S':'mg'},'Zinc':{'N':'0.04'},'Folate_unit':{'S':'ug'},'Vitamin_C_unit':{'S':'mg'},'Vitamin_B12':{'N':'0'},'Calcium':{'N':'6'},'Vitamin_K_unit':{'S':'ug'},'Magnesium':{'N':'5'},'Iron':{'N':'0.12'},'Cholesterol':{'N':'0'},'Sugar_unit':{'S':'g'},'Fat_unit':{'S':'g'},'Fat':{'N':'0.17'},'Niacin_unit':{'S':'mg'},'FoodName':{'S':'Apple'},'Thiamin_unit':{'S':'mg'},'Monosaturated_Fat_unit':{'S':'g'},'Vitamin_K':{'N':'2.2'},'Polyunsaturated_Fat_unit':{'S':'g'},'Vitamin_C':{'N':'4.6'},'Energy':{'N':'52'},'Calcium_unit':{'S':'mg'},'Trans_Fat_unit':{'S':'g'},'Vitamin_D':{'S':'ug'},'Polyunsaturated_Fat':{'N':'0.051'},'Carbohydrate':{'N':'13.81'},'Zinc_unit':{'S':'mg'},'Vitamin_B6_unit':{'S':'mg'},'Vitamin_A_RAE':{'N':'3'},'Vitamin_E_unit':{'S':'mg'},'Protein':{'N':'0.26'},'Folate':{'N':'3'}}],'ScannedCount':1,'ConsumedCapacity':null}";
       string_results = data;
-
+      console.log("Response data: "+data)
 
       res.writeHead(200, {'content-type': 'text/plain'}); // respond to IOS with result of the identification
       res.end(string_results);
