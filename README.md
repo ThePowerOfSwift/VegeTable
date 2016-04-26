@@ -3,14 +3,13 @@ Ever been in the grocery store unsure whether or not to buy one vegetable or ano
 
 
 # Overview
-This application is divided into several major pieces:
-1. iOS application - The iOS app is located in the gitHub at location: mrmarss/VegeTable/VegeTable.
-When opening the xcode project be sure to open the file 'VegeTable.xcworkspace', NOT 'VegeTable.xcodeproj'
-The user should be able to build this application if running OSX and xcode version 7.3.
+This application is divided into several major pieces. The dependencies and credentials are such that an average user will not be able to build the entire product.
+
+1. iOS application - The iOS app is located in the gitHub at location: mrmarss/VegeTable/VegeTable.When opening the xcode project be sure to open the file 'VegeTable.xcworkspace', NOT 'VegeTable.xcodeproj' The user should be able to build this application if running OSX and xcode version 7.3.
 
 2. nodeJS server - The nodeJS server manages communication to and from the iOS app, database, and python script server. For testing purposes this server has been executing locally on the development computer, but could be exported to a server easily. The nodeJS is located here: mrmarss/VegeTable/server/app.js
 
-3. DynamoDB database - The database is hosted by amazon. Communication to the database is controlled by credentials, currently users must be given credentials in order to access nutritional information.
+3. DynamoDB database - The database is hosted by amazon. Communication to the database is controlled by credentials, currently users must be given credentials in order to access nutritional information. 
 
 4. Python image recognition - The image recognition algorithms use OpenCV and Pybrain modules in python. Because of the time required to load the neural networks in Pybrain, a simple server was created. When the python server is started the neural networks are loaded. The server then waits for communication from the nodeJS server that will trigger image matching. The server is located: /VegeTable/VegeTable/image_recognition/VegeTableMatchServer.py
 
