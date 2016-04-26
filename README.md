@@ -12,7 +12,7 @@ The user should be able to build this application if running OSX and xcode versi
 
 3. DynamoDB database - The database is hosted by amazon. Communication to the database is controlled by credentials, currently users must be given credentials in order to access nutritional information.
 
-4. Python image recognition - The image recognition algorithms use OpenCV and Pybrain modules in python. Because of the time required to load the neural networks in Pybrain, a simple server was created. When the python server is started the neural networks are loaded. The server then waits for communication from the nodeJS server that will trigger image matching.
+4. Python image recognition - The image recognition algorithms use OpenCV and Pybrain modules in python. Because of the time required to load the neural networks in Pybrain, a simple server was created. When the python server is started the neural networks are loaded. The server then waits for communication from the nodeJS server that will trigger image matching. The server is located: /VegeTable/VegeTable/image_recognition/VegeTableMatchServer.py
 
 
 # Build Instructions / Dependencies
