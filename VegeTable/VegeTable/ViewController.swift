@@ -176,8 +176,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     return body
                 }
                 
-                let my_ip = "172.20.10.2"
-//                let my_ip = "192.168.1.7"
+//                let my_ip = "172.20.10.2"
+                let my_ip = "192.168.1.7"
 //                let my_ip = "52.90.45.148"  // EC2 instance
 
                 let myUrl = NSURL(string: "http://" + my_ip + ":3001/upload");

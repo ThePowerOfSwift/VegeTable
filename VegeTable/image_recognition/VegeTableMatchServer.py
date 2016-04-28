@@ -131,14 +131,15 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
             resLabels = ['Apple', 'Banana', 'Cucumber']
             maxIndex = results.index(max(results))
 
-            # Run other algorithm
-            # print main(imPath)
-
             # Only call this the result if the greatest match percentage is above 30%, otherwise unknown
             if results[maxIndex] > 0.3:
                 matchRes = resLabels[maxIndex]
             else:
                 matchRes = 'Unknown'
+
+            # Run other algorithm
+            # matchRes = str(main(imPath))
+            print "Other Algorithm: " + matchRes
         else:
             matchRes = "File Read Error"
 
